@@ -5,10 +5,7 @@ authn_strategies:
   - dummy
 hooks:
   - dummy
-backend:
-  compute: dummy
-  storage: dummy
-  network: dummy
+backend: dummy
 log_level: debug
 log_requests_in_debug: true
 tempdir: /tmp/rocci_server

@@ -11,7 +11,12 @@ module Backends::Ec2::Authn
     # @return [::Aws::Credentials] credentials for the AWS EC2 client
     # @effects <i>none</i>: call answered from within the backend
     def self.get_credentials(options, delegated_user, logger)
-      case delegated_user.auth_.type
+      puts "daniel:ec2_credentials_helper.rb.get_credentials(): options:" + options.inspect + ", delegated_user:" + delegated_user.inspect
+
+      #set for test
+      auth_type = "basic"
+      #case delegated_user.auth_.type
+      case auth_type
       when 'basic'
         # using provided basic credentials as access_key_id and secret_access_key
         handle_basic(options, delegated_user, logger)
@@ -28,6 +33,8 @@ module Backends::Ec2::Authn
       end
     end
 
+    private
+
     # Converts given basic credentials to credentials supported
     # by AWS. Username is used as access_key_id and password as
     # secret_access_key.
@@ -37,14 +44,22 @@ module Backends::Ec2::Authn
     # @param logger [Logger] instance of the logging facility
     # @return [::Aws::Credentials] credentials for the AWS EC2 client
     def self.handle_basic(options, delegated_user, logger)
-      fail Backends::Errors::AuthenticationError, 'User could not be authenticated, ' \
-           'username is missing!' if delegated_user.auth_.credentials_.username.blank?
-      fail Backends::Errors::AuthenticationError, 'User could not be authenticated, ' \
-           'password is missing!' if delegated_user.auth_.credentials_.password.blank?
 
+      #set for test
+      #fail Backends::Errors::AuthenticationError, 'User could not be authenticated, ' \
+      #     'username is missing!' if delegated_user.auth_.credentials_.username.blank?
+      #fail Backends::Errors::AuthenticationError, 'User could not be authenticated, ' \
+      #     'password is missing!' if delegated_user.auth_.credentials_.password.blank?
+
+           puts "daniel: ec2_credentials_helper.rb.handle_basic(): go to new ::Aws::Credentials(), delegated_user.auth_.credentials_.username:" + delegated_user.auth_.credentials_.username.inspect + ",delegated_user.auth_.credentials_.password:" + delegated_user.auth_.credentials_.password.inspect
+      #AKIAJ27CLZF7UKE66G7A:l2a0ng4T53o4NXUdQuyhBnewXPY0udZDMs8Qcncl
+      username = "AKIAJ27CLZF7UKE66G7A"
+      password = "l2a0ng4T53o4NXUdQuyhBnewXPY0udZDMs8Qcncl"
       ::Aws::Credentials.new(
-        delegated_user.auth_.credentials_.username,
-        delegated_user.auth_.credentials_.password
+        #delegated_user.auth_.credentials_.username,
+        #delegated_user.auth_.credentials_.password
+        username,
+        password
       )
     end
 
@@ -82,7 +97,7 @@ module Backends::Ec2::Authn
       fail Backends::Errors::AuthenticationError, 'Malformed VOMS credentials, ' \
            'required extension attributes are missing!' unless first_vo && !first_vo.vo.blank?
 
-      logger.debug "[Backends] [Ec2] Searching for VO -> AWS " \
+      logger.debug "[Backends] [Ec2Backend] Searching for VO -> AWS " \
                    "account mapping for #{first_vo.vo.inspect}"
       if !options.vo_aws_mapfile.blank?
         # we have a mapfile with VO -> AWS account entries
@@ -91,21 +106,21 @@ module Backends::Ec2::Authn
         # look-up the VO name
         if vo_aws_mapfile.include?(first_vo.vo)
           # mapping was provided, use it
-          logger.debug "[Backends] [Ec2] Found mapping for " \
+          logger.debug "[Backends] [Ec2Backend] Found mapping for " \
                        "#{first_vo.vo.inspect} in #{options.vo_aws_mapfile.inspect}"
           ::Aws::Credentials.new(
-            vo_aws_mapfile[first_vo.vo]['access_key_id'],
-            vo_aws_mapfile[first_vo.vo]['secret_access_key']
+            vo_aws_mapfile[first_vo.vo].access_key_id,
+            vo_aws_mapfile[first_vo.vo].secret_access_key
           )
         else
           # no mapping was provided, use the global default
-          logger.debug "[Backends] [Ec2] No mapping for " \
+          logger.debug "[Backends] [Ec2Backend] No mapping for " \
                        "#{first_vo.vo.inspect} in #{options.vo_aws_mapfile.inspect}"
           handle_x509(options, delegated_user, logger)
         end
       else
         # no mapfile was provided
-        logger.debug "[Backends] [Ec2] No VO -> AWS account mapfile was provided!"
+        logger.debug "[Backends] [Ec2Backend] No VO -> AWS account mapfile was provided!"
         handle_x509(options, delegated_user, logger)
       end
     end

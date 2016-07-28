@@ -82,7 +82,8 @@ class ApplicationController < ActionController::Base
   # Performs authentication with Warden. Warden will raise
   # an exception and redirect to UnauthorizedController.
   def authenticate!
-    warden.authenticate!
+    puts "daniel: enter authenticate!()"
+    #warden.authenticate!
   end
 
   # Provides access to a request collection prepared
@@ -105,11 +106,16 @@ class ApplicationController < ActionController::Base
   #
   # @return [Backend] instance of the backend
   def backend_instance
+    puts "daniel: application_controller.rb enter backend_instance()"
     if Rails.env.test?
       # turn off caching for tests
       @backend_instance = Backend.new(current_user)
+      puts "daniel: application_controller.rb backend_instance() after Backend.new()"
+      @backend_instance
     else
       @backend_instance ||= Backend.new(current_user)
+      puts "daniel: application_controller.rb backend_instance() after Backend.new()"
+      @backend_instance
     end
   end
 
@@ -122,7 +128,14 @@ class ApplicationController < ActionController::Base
     request_collection ||= Occi::Collection.new
 
     request_collection.model = OcciModel.get(backend_instance)
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\n parese_request(): before .check(), request_collection:" + request_collection.inspect }
+    #request_collection.mixins << "http://occi.172.90.0.20/occi/infrastructure/os_tpl#test"
+    #File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\n parese_request(): go to .check(), request_collection:" + request_collection.inspect }
+    
     request_collection.check(check_categories = true, set_default_attrs = true)
+
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\nparese_request(): after request_collection.check(), request_collection:" + request_collection.inspect }
+    
 
     request_collection
   end
@@ -216,7 +229,7 @@ class ApplicationController < ActionController::Base
     end
 
     # Run Warden if not already done, to avoid incomplete log entries after authN fail
-    authenticate!
+    #authenticate!
 
     begin
       yield

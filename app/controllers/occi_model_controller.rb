@@ -1,3 +1,5 @@
+require 'occi-api'
+
 # Controller class handling all model-related requests.
 # Implements listing of resources, retrieval of the model
 # and creation/deletion of mixins.

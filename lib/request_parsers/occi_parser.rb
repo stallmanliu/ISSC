@@ -35,6 +35,10 @@ module RequestParsers
 
     def parse_occi_messages(entity_type = nil)
       fail ::Errors::UnsupportedMediaTypeError, "Media type '#{@media_type}' is not supported by the RequestParser" unless AVAILABLE_PARSERS.key?(@media_type)
+      
+
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\nparse_occi_messages(): entity_type:" + entity_type.inspect + ", @media_type" + @media_type.inspect }
+      
 
       collection = if entity_type
                      AVAILABLE_PARSERS[@media_type].parse(@media_type, @body, @headers, @fullpath, entity_type)
@@ -42,6 +46,11 @@ module RequestParsers
                      AVAILABLE_PARSERS[@media_type].parse(@media_type, @body, @headers, @fullpath)
                    end
       Rails.logger.debug "[Parser] [#{self.class}] Parsed request into coll=#{collection.inspect}"
+      
+
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\nparse_occi_messages(): collection:" + collection.inspect }
+      
+      
 
       collection
     end

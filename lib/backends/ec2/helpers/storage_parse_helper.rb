@@ -2,18 +2,18 @@ module Backends
   module Ec2
     module Helpers
       module StorageParseHelper
-        def parse_backend_obj(backend_storage)
-          storage = ::Occi::Infrastructure::Storage.new
+
+        def storage_parse_backend_obj(backend_storage)
+          storage = Occi::Infrastructure::Storage.new
 
           storage.mixins << 'http://schemas.ec2.aws.amazon.com/occi/infrastructure/storage#aws_ec2_ebs_volume'
 
           storage.attributes['occi.core.id'] = backend_storage[:volume_id]
-          storage.attributes['occi.core.title'] =
-            if backend_storage[:tags].select { |tag| tag[:key] == 'Name' }.any?
-              backend_storage[:tags].select { |tag| tag[:key] == 'Name' }.first[:value]
-            else
-              "rOCCI-server volume #{backend_storage[:size]}GB"
-            end
+          storage.attributes['occi.core.title'] = if backend_storage[:tags].select { |tag| tag[:key] == 'Name' }.any?
+            backend_storage[:tags].select { |tag| tag[:key] == 'Name' }.first[:value]
+          else
+            "rOCCI-server volume #{backend_storage[:size]}GB"
+          end
           storage.attributes['occi.storage.size'] = backend_storage[:size]
 
           storage.attributes['com.amazon.aws.ec2.availability_zone'] = backend_storage[:availability_zone] if backend_storage[:availability_zone]
@@ -23,7 +23,7 @@ module Backends
           storage.attributes['com.amazon.aws.ec2.encrypted'] = backend_storage[:encrypted] unless backend_storage[:encrypted].nil?
 
           # include state information and available actions
-          result = parse_state(backend_storage)
+          result = storage_parse_state(backend_storage)
           storage.state = result.state
           result.actions.each { |a| storage.actions << a }
 
@@ -32,7 +32,7 @@ module Backends
 
         private
 
-        def parse_state(backend_storage)
+        def storage_parse_state(backend_storage)
           result = Hashie::Mash.new
 
           # In EC2:
@@ -51,6 +51,7 @@ module Backends
 
           result
         end
+
       end
     end
   end

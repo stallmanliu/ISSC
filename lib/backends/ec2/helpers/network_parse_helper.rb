@@ -2,18 +2,18 @@ module Backends
   module Ec2
     module Helpers
       module NetworkParseHelper
-        def parse_backend_obj(backend_network)
-          network = ::Occi::Infrastructure::Network.new
+
+        def network_parse_backend_obj(backend_network)
+          network = Occi::Infrastructure::Network.new
 
           network.mixins << 'http://schemas.ec2.aws.amazon.com/occi/infrastructure/network#aws_ec2_vpc'
 
           network.attributes['occi.core.id'] = backend_network[:vpc_id]
-          network.attributes['occi.core.title'] =
-            if backend_network[:tags].select { |tag| tag[:key] == 'Name' }.any?
-              backend_network[:tags].select { |tag| tag[:key] == 'Name' }.first[:value]
-            else
-              "rOCCI-server VPC #{backend_network[:cidr_block]}"
-            end
+          network.attributes['occi.core.title'] = if backend_network[:tags].select { |tag| tag[:key] == 'Name' }.any?
+            backend_network[:tags].select { |tag| tag[:key] == 'Name' }.first[:value]
+          else
+            "rOCCI-server VPC #{backend_network[:cidr_block]}"
+          end
           network.address = backend_network[:cidr_block] unless backend_network[:cidr_block].blank?
           network.attributes['occi.network.label'] = "AWS VPC #{backend_network[:vpc_id]}"
 
@@ -22,7 +22,7 @@ module Backends
           network.attributes['com.amazon.aws.ec2.is_default'] = backend_network[:is_default] unless backend_network[:is_default].nil?
 
           # include state information and available actions
-          result = parse_state(backend_network)
+          result = network_parse_state(backend_network)
           network.state = result.state
           result.actions.each { |a| network.actions << a }
 
@@ -31,7 +31,7 @@ module Backends
 
         private
 
-        def parse_state(backend_network)
+        def network_parse_state(backend_network)
           result = Hashie::Mash.new
 
           # In EC2:
@@ -48,7 +48,7 @@ module Backends
           result
         end
 
-        def get_raw(network_id)
+        def network_get_raw(network_id)
           filters = []
           filters << { name: 'vpc-id', values: [network_id] }
 
@@ -57,6 +57,7 @@ module Backends
             vpcs ? vpcs.first : nil
           end
         end
+
       end
     end
   end

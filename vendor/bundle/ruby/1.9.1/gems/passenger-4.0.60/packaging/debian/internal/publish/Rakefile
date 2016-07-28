@@ -1,0 +1,97 @@
+require_relative 'rakefile_support'
+require_relative '../lib/tracking'
+
+initialize_rakefile!
+initialize_tracking_database!(SHOW_OVERVIEW_PERIODICALLY)
+
+
+desc "Publish all packages"
+task "publish:all"
+
+task :init_packagecloud => PACKAGECLOUD_YANK_ALL_TASKS do
+  initialize_tracking_database_logs!
+end
+
+
+##### Tasks for the 'yank all' feature #####
+
+if PACKAGECLOUD_YANK_ALL_TASKS.any?
+  register_tracking_category(:yank, "Yanking")
+end
+PACKAGECLOUD_YANK_ALL_TASKS.each_with_index do |task_name, i|
+  name = PACKAGECLOUD_PACKAGE_NAMES[i]
+  url  = URI.parse(PACKAGECLOUD_PACKAGE_URLS[i])
+
+  register_tracking_task(:yank, name)
+  task(task_name) do
+    track_task(:yank, name, false) do |task|
+      info = nil
+
+      retry_at_most(task, 3) do
+        task.log "Yanking package #{i + 1}/#{PACKAGECLOUD_YANK_ALL_TASKS.size}: #{name}"
+
+        request = Net::HTTP::Get.new(uri_path_and_query_string(url))
+        request.basic_auth(PACKAGECLOUD_TOKEN, "")
+        response = PACKAGECLOUD_HTTP.request(url, request)
+        if response.code != "200"
+          task.log "Unable to fetch information for package #{name}:"
+          task.log "URL   : #{url}"
+          task.log "Status: #{response.code}"
+          task.log "Body  : #{response.body}"
+          abort
+        end
+
+        info = JSON.parse(response.body)
+      end
+
+      retry_at_most(task, 3) do
+        yank_package(task, info['distro_version'], info['filename'])
+      end
+    end
+  end
+end
+
+
+##### Tasks for the 'yank all' feature #####
+
+register_tracking_category(:publish, "Packages")
+
+DISTROS.each do |distro_class, distro|
+  desc "Publish #{distro} packages"
+  task "publish:#{distro}"
+
+  Dir["/output/#{distro}/*.{deb,dsc}"].each do |path|
+    basename = File.basename(path)
+
+    task "publish:all" => "publish:#{distro}:#{basename}"
+    task "publish:#{distro}" => "publish:#{distro}:#{basename}"
+
+    register_tracking_task(:publish, "#{distro} #{basename}")
+    task "publish:#{distro}:#{basename}" => [:init_packagecloud] do
+      track_task(:publish, "#{distro} #{basename}", false) do |task|
+        if YANK
+          retry_at_most(task, 3) do
+            task.log "Yanking #{basename}"
+            yank_package(task, "#{distro_class}/#{distro}", basename)
+          end
+        end
+        retry_at_most(task, 3) do
+          task.sh "package_cloud push phusion/#{REPOSITORY}/#{distro_class}/#{distro} #{path}"
+        end
+      end
+    end
+  end
+end
+
+
+task :start do
+  initialize_tracking_database_logs!
+end
+
+task :finish do
+  puts
+  TRACKING_DB.monitor.synchronize do
+    TRACKING_DB.set_finished!
+    dump_tracking_database
+  end
+end

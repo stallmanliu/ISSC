@@ -92,9 +92,9 @@ ROCCIServer::Application.routes.draw do
   ####################################################
   ## Occi::Infrastructure::OsTpl
   ####################################################
-  get '/mixin/os_tpl(/:term)', to: 'os_tpl#index', as: 'os_tpl'
+  get '/mixin/os_tpl(/:id)', to: 'os_tpl#index', as: 'os_tpl'
 
-  post '/mixin/os_tpl(/:term)', to: 'os_tpl#trigger', constraints: { query_string: /^action=\S+$/ }
+  post '/mixin/os_tpl(/:id)', to: 'os_tpl#trigger', constraints: { query_string: /^action=\S+$/ }
 
   ####################################################
   ## Occi::Infrastructure::ResourceTpl

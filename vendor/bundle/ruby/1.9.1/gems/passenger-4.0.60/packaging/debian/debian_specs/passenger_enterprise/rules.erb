@@ -1,0 +1,84 @@
+<%
+require File.dirname(File.absolute_path(__FILE__)) + '/helpers'
+-%>
+#!/usr/bin/make -f
+# export DH_VERBOSE=1
+
+<% if ['1', 'true', 'on', 'yes'].include?(ENV['USE_CCACHE']) -%>
+export USE_CCACHE=1
+NGINX_CONFIGURE_OPTIONS = CC=/usr/lib/ccache/cc CXX=/usr/lib/ccache/c++
+<% else -%>
+NGINX_CONFIGURE_OPTIONS =
+<% end -%>
+
+# Speed up ccache (reduce I/O) by lightly compressing things.
+# Always set these variables because pbuilder uses ccache transparently.
+CCACHE_COMPRESS=1
+export CCACHE_COMPRESS
+CCACHE_COMPRESS_LEVEL=3
+export CCACHE_COMPRESS_LEVEL
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	# Do nothing
+
+override_dh_auto_build:
+	vendordir=`/usr/bin/ruby<%= distro_ruby_versions[0] %> -rrbconfig -e 'puts RbConfig::CONFIG["vendordir"]'` && \
+		sed -i "s|@RUBYLIBDIR@|$$vendordir|g" \
+			debian/locations.ini \
+			debian/passenger-enterprise.install \
+			debian/passenger.conf
+<% distro_ruby_versions.each do |ruby_version| -%>
+	vendordir=`/usr/bin/ruby<%= ruby_version %> -rrbconfig -e 'puts RbConfig::CONFIG["vendordir"]'` && \
+		archdir=`/usr/bin/ruby<%= ruby_version %> -rrbconfig -e 'puts RbConfig::CONFIG["archdir"]'` && \
+		/usr/bin/ruby<%= ruby_version %> /usr/bin/rake fakeroot \
+			RUBYLIBDIR="$$vendordir" \
+			RUBYARCHDIR="$$archdir" \
+			RUBY=/usr/bin/passenger_system_ruby \
+			FREE_RUBY=/usr/bin/passenger_free_ruby
+	mv pkg/fakeroot pkg/fakeroot<%= ruby_version %>
+	/usr/bin/ruby<%= ruby_version %> -rrbconfig -e 'puts RbConfig::CONFIG["archdir"]' >> debian/passenger-enterprise.install
+<% end -%>
+	cc -Wall -Os debian/passenger_free_ruby.c -o debian/passenger_free_ruby
+	cc -Wall -Os debian/passenger_system_ruby.c -o debian/passenger_system_ruby
+	cd nginx-<%= PhusionPassenger::PREFERRED_NGINX_VERSION %> && \
+		env $(NGINX_CONFIGURE_OPTIONS) ./configure --prefix=/tmp \
+		<%= PhusionPassenger::Config::NginxEngineCompiler.configure_script_options %> \
+		--add-module=`pwd`/../src/nginx_module && \
+		make && \
+		mv objs/nginx objs/nginx-<%= PhusionPassenger::PREFERRED_NGINX_VERSION %>
+
+override_dh_auto_install:
+	mkdir debian/tmp/
+	# Merge the files for all Ruby versions into a single directory.
+<% distro_ruby_versions.each do |ruby_version| -%>
+	cp -a pkg/fakeroot<%= ruby_version %>/* debian/tmp/
+<% end -%>
+	vendordir=`/usr/bin/ruby<%= distro_ruby_versions[0] %> -rrbconfig -e 'puts RbConfig::CONFIG["vendordir"]'` && \
+		./dev/install_scripts_bootstrap_code.rb --ruby "$$vendordir" debian/tmp/usr/bin/* debian/tmp/usr/sbin/*
+	./dev/install_scripts_bootstrap_code.rb --nginx-module-config /usr/bin debian/tmp/usr/share/<%= PhusionPassenger::GLOBAL_NAMESPACE_DIRNAME %>/ngx_http_passenger_module/config
+	touch debian/tmp/usr/share/<%= PhusionPassenger::GLOBAL_NAMESPACE_DIRNAME %>/release.txt
+	cp debian/passenger_free_ruby debian/tmp/usr/bin/
+	cp debian/passenger_system_ruby debian/tmp/usr/bin/
+
+override_dh_auto_clean:
+	/usr/bin/rake clean CLEAN_DOCS=false
+<% distro_ruby_versions.each do |ruby_version| -%>
+	rm -rf pkg/fakeroot<%= ruby_version %>
+<% end -%>
+	cd nginx-<%= PhusionPassenger::PREFERRED_NGINX_VERSION %> && if test -f Makefile; then make clean; fi
+	# Hack to prevent HTML files from being renegerated
+	touch doc/*.html
+
+# Because we include Ruby extensions, the Debian package depends on libruby.
+# Since Phusion Passenger works fine without the Ruby extensions, we don't want
+# to depend on libruby.
+# https://github.com/phusion/passenger_apt_automation/issues/3
+override_dh_shlibdeps:
+	dh_shlibdeps
+	sed -i -E 's/libruby.*?, //g' debian/*.substvars
+
+override_dh_strip:
+	dh_strip --dbg-package=passenger-enterprise-dbg
