@@ -1,0 +1,54 @@
+# Logfile created on 2016-02-17 16:24:45 -0500 by logger.rb/31641
+2016-02-17 16:24:45.765 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1719)
+2016-02-17 16:24:45.769 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1719)
+2016-02-17 16:24:45.771 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/ec2 for ENV production. (pid:1719)
+2016-02-17 16:24:45.773 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1719)
+2016-02-17 16:24:45.776 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1719)
+2016-02-17 16:24:45.776 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1719)
+2016-02-17 16:24:45.777 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1719)
+2016-02-17 16:24:45.779 [ INFO  ] [Backend] Checking backend API version (pid:1719)
+2016-02-17 16:24:45.789 [ INFO  ] [Backend] Loading Backends::Ec2Backend (pid:1719)
+2016-02-17 16:24:45.916 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1719)
+2016-02-17 16:24:45.919 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1719)
+2016-02-17 16:24:45.920 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1719)
+2016-02-17 16:24:45.925 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1719)
+2016-02-17 16:24:45.925 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1719)
+2016-02-17 16:24:47.199 [ INFO  ] [ee911013-4a21-4c0f-894e-866c28f744e4] Started GET "/" for 172.90.0.8 at 2016-02-17 16:24:47 -0500 (pid:1737)
+2016-02-17 16:24:47.220 [ INFO  ] [ee911013-4a21-4c0f-894e-866c28f744e4] Processing by OcciModelController#welcome as HTML (pid:1737)
+2016-02-17 16:24:47.235 [ INFO  ] [ee911013-4a21-4c0f-894e-866c28f744e4]   Rendered shared/header.html.erb (1.3ms) (pid:1737)
+2016-02-17 16:24:47.238 [ INFO  ] [ee911013-4a21-4c0f-894e-866c28f744e4]   Rendered shared/footer.html.erb (1.2ms) (pid:1737)
+2016-02-17 16:24:47.238 [ INFO  ] [ee911013-4a21-4c0f-894e-866c28f744e4]   Rendered occi_model/welcome.html.erb (7.8ms) (pid:1737)
+2016-02-17 16:24:47.240 [ INFO  ] [ee911013-4a21-4c0f-894e-866c28f744e4] Completed 200 OK in 19ms (Views: 17.3ms) (pid:1737)
+2016-02-17 17:06:27.170 [ INFO  ] [e7a424a6-a25d-4c3b-bbc7-204ffa2d20cc] Started GET "/" for 172.90.0.8 at 2016-02-17 17:06:27 -0500 (pid:1737)
+2016-02-17 17:06:27.172 [ INFO  ] [e7a424a6-a25d-4c3b-bbc7-204ffa2d20cc] Processing by OcciModelController#welcome as HTML (pid:1737)
+2016-02-17 17:06:27.173 [ INFO  ] [e7a424a6-a25d-4c3b-bbc7-204ffa2d20cc]   Rendered shared/header.html.erb (0.1ms) (pid:1737)
+2016-02-17 17:06:27.173 [ INFO  ] [e7a424a6-a25d-4c3b-bbc7-204ffa2d20cc]   Rendered shared/footer.html.erb (0.0ms) (pid:1737)
+2016-02-17 17:06:27.173 [ INFO  ] [e7a424a6-a25d-4c3b-bbc7-204ffa2d20cc]   Rendered occi_model/welcome.html.erb (0.6ms) (pid:1737)
+2016-02-17 17:06:27.174 [ INFO  ] [e7a424a6-a25d-4c3b-bbc7-204ffa2d20cc] Completed 200 OK in 1ms (Views: 1.1ms) (pid:1737)
+2016-02-17 17:20:28.573 [ INFO  ] [d5ea78f4-9d0e-4285-92dc-d20e86a2657e] Started GET "/" for ::1 at 2016-02-17 17:20:28 -0500 (pid:1737)
+2016-02-17 17:20:28.574 [ INFO  ] [d5ea78f4-9d0e-4285-92dc-d20e86a2657e] Processing by OcciModelController#welcome as */* (pid:1737)
+2016-02-17 17:20:28.577 [ INFO  ] [d5ea78f4-9d0e-4285-92dc-d20e86a2657e] Completed 500 Internal Server Error in 3ms (pid:1737)
+2016-02-17 17:20:28.579 [ FATAL ] [d5ea78f4-9d0e-4285-92dc-d20e86a2657e] 
+ActionView::MissingTemplate (Missing template occi_model/welcome, application/welcome with {:locale=>[:en], :formats=>[:text], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby]}. Searched in:
+  * "/opt/rOCCI-server/app/views"
+):
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:1737)
+2016-02-17 17:22:26.189 [ INFO  ] [2f66a51d-9bfa-468e-9e26-cb695232b132] Started GET "/" for ::1 at 2016-02-17 17:22:26 -0500 (pid:1737)
+2016-02-17 17:22:26.191 [ INFO  ] [2f66a51d-9bfa-468e-9e26-cb695232b132] Processing by OcciModelController#welcome as */* (pid:1737)
+2016-02-17 17:22:26.193 [ INFO  ] [2f66a51d-9bfa-468e-9e26-cb695232b132] Completed 500 Internal Server Error in 2ms (pid:1737)
+2016-02-17 17:22:26.195 [ FATAL ] [2f66a51d-9bfa-468e-9e26-cb695232b132] 
+ActionView::MissingTemplate (Missing template occi_model/welcome, application/welcome with {:locale=>[:en], :formats=>[:text], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby]}. Searched in:
+  * "/opt/rOCCI-server/app/views"
+):
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:1737)
+2016-02-17 17:22:35.878 [ INFO  ] [0876d851-f832-488f-8fb2-37ad1a3ea3a4] Started GET "/" for ::1 at 2016-02-17 17:22:35 -0500 (pid:1737)
+2016-02-17 17:22:35.879 [ INFO  ] [0876d851-f832-488f-8fb2-37ad1a3ea3a4] Processing by OcciModelController#welcome as */* (pid:1737)
+2016-02-17 17:22:35.881 [ INFO  ] [0876d851-f832-488f-8fb2-37ad1a3ea3a4] Completed 500 Internal Server Error in 2ms (pid:1737)
+2016-02-17 17:22:35.883 [ FATAL ] [0876d851-f832-488f-8fb2-37ad1a3ea3a4] 
+ActionView::MissingTemplate (Missing template occi_model/welcome, application/welcome with {:locale=>[:en], :formats=>[:text], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby]}. Searched in:
+  * "/opt/rOCCI-server/app/views"
+):
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:1737)

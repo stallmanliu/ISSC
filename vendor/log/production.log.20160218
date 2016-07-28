@@ -1,0 +1,313 @@
+# Logfile created on 2016-02-18 09:07:00 -0500 by logger.rb/31641
+2016-02-18 09:07:00.323 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1359)
+2016-02-18 09:07:00.327 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1359)
+2016-02-18 09:07:00.328 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/ec2 for ENV production. (pid:1359)
+2016-02-18 09:07:00.331 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1359)
+2016-02-18 09:07:00.333 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1359)
+2016-02-18 09:07:00.334 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1359)
+2016-02-18 09:07:00.335 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1359)
+2016-02-18 09:07:00.336 [ INFO  ] [Backend] Checking backend API version (pid:1359)
+2016-02-18 09:07:00.346 [ INFO  ] [Backend] Loading Backends::Ec2Backend (pid:1359)
+2016-02-18 09:07:00.463 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1359)
+2016-02-18 09:07:00.466 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1359)
+2016-02-18 09:07:00.468 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1359)
+2016-02-18 09:07:00.472 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1359)
+2016-02-18 09:07:00.472 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1359)
+2016-02-18 09:07:01.622 [ INFO  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] Started GET "/-/" for ::1 at 2016-02-18 09:07:01 -0500 (pid:1378)
+2016-02-18 09:07:01.643 [ INFO  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] Processing by OcciModelController#index as */* (pid:1378)
+2016-02-18 09:07:01.644 [ INFO  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] [Backend] Loading Backends::Ec2Backend (pid:1378)
+2016-02-18 09:07:01.733 [ INFO  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] [Backends] [Ec2Backend] EC2 image filtering policy "only_listed" with image list "ami-896c96fe ami-f7f03d80 ami-4a5fb53d" (pid:1378)
+2016-02-18 09:07:02.419 [ WARN  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] [Backend] Failed to authenticate user: Authentication strategy nil is not supported by the EC2 backend! (pid:1378)
+2016-02-18 09:07:02.420 [ INFO  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] Completed 401 Unauthorized in 777ms (Views: 0.2ms) (pid:1378)
+2016-02-18 09:07:02.422 [ WARN  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:1378)
+2016-02-18 09:07:02.422 [ WARN  ] [be61cc4f-96ad-4f1d-8ee9-e51a17286025] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:1378)
+2016-02-18 09:35:35.619 [ INFO  ] [eb7e4b78-33df-4154-a963-0399434cd243] Started GET "/-/" for ::1 at 2016-02-18 09:35:35 -0500 (pid:1378)
+2016-02-18 09:35:35.621 [ INFO  ] [eb7e4b78-33df-4154-a963-0399434cd243] Processing by OcciModelController#index as */* (pid:1378)
+2016-02-18 09:35:35.621 [ INFO  ] [eb7e4b78-33df-4154-a963-0399434cd243] [Backend] Loading Backends::Ec2Backend (pid:1378)
+2016-02-18 09:35:35.705 [ INFO  ] [eb7e4b78-33df-4154-a963-0399434cd243] [Backends] [Ec2Backend] EC2 image filtering policy "only_listed" with image list "ami-896c96fe ami-f7f03d80 ami-4a5fb53d" (pid:1378)
+2016-02-18 09:35:35.706 [ WARN  ] [eb7e4b78-33df-4154-a963-0399434cd243] [Backend] Failed to authenticate user: Authentication strategy nil is not supported by the EC2 backend! (pid:1378)
+2016-02-18 09:35:35.706 [ INFO  ] [eb7e4b78-33df-4154-a963-0399434cd243] Completed 401 Unauthorized in 85ms (Views: 0.2ms) (pid:1378)
+2016-02-18 09:35:35.707 [ WARN  ] [eb7e4b78-33df-4154-a963-0399434cd243] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:1378)
+2016-02-18 09:35:35.707 [ WARN  ] [eb7e4b78-33df-4154-a963-0399434cd243] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:1378)
+2016-02-18 09:36:49.897 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:2406)
+2016-02-18 09:36:49.898 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:2406)
+2016-02-18 09:36:49.899 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/ec2 for ENV production. (pid:2406)
+2016-02-18 09:36:49.900 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:2406)
+2016-02-18 09:36:49.901 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:2406)
+2016-02-18 09:36:49.901 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:2406)
+2016-02-18 09:36:49.902 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:2406)
+2016-02-18 09:36:49.902 [ INFO  ] [Backend] Checking backend API version (pid:2406)
+2016-02-18 09:36:49.908 [ INFO  ] [Backend] Loading Backends::Ec2Backend (pid:2406)
+2016-02-18 09:36:50.401 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:2406)
+2016-02-18 09:36:50.658 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:2406)
+2016-02-18 09:36:50.745 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:2406)
+2016-02-18 09:36:50.101 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:2406)
+2016-02-18 09:36:50.103 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:2406)
+2016-02-18 09:36:51.834 [ INFO  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] Started GET "/-/" for ::1 at 2016-02-18 09:36:51 -0500 (pid:2424)
+2016-02-18 09:36:51.958 [ INFO  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] Processing by OcciModelController#index as */* (pid:2424)
+2016-02-18 09:36:51.969 [ INFO  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] [Backend] Loading Backends::Ec2Backend (pid:2424)
+2016-02-18 09:36:51.157 [ INFO  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] [Backends] [Ec2Backend] EC2 image filtering policy "only_listed" with image list "ami-896c96fe ami-f7f03d80 ami-4a5fb53d" (pid:2424)
+2016-02-18 09:36:51.726 [ WARN  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] [Backend] Failed to authenticate user: Authentication strategy nil is not supported by the EC2 backend! (pid:2424)
+2016-02-18 09:36:51.727 [ INFO  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] Completed 401 Unauthorized in 631ms (Views: 0.2ms) (pid:2424)
+2016-02-18 09:36:51.728 [ WARN  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:2424)
+2016-02-18 09:36:51.728 [ WARN  ] [06786231-86c8-4dd5-a970-18ba43e7f84e] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:2424)
+2016-02-18 09:39:37.718 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:2741)
+2016-02-18 09:39:37.720 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:2741)
+2016-02-18 09:39:37.721 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/dummy for ENV production. (pid:2741)
+2016-02-18 09:39:37.724 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:2741)
+2016-02-18 09:39:37.725 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:2741)
+2016-02-18 09:39:37.726 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:2741)
+2016-02-18 09:39:37.726 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:2741)
+2016-02-18 09:39:37.727 [ INFO  ] [Backend] Checking backend API version (pid:2741)
+2016-02-18 09:39:37.736 [ INFO  ] [Backend] Loading Backends::DummyBackend (pid:2741)
+2016-02-18 09:39:37.799 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:2741)
+2016-02-18 09:39:37.801 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:2741)
+2016-02-18 09:39:37.802 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:2741)
+2016-02-18 09:39:37.805 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:2741)
+2016-02-18 09:39:37.805 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:2741)
+2016-02-18 09:39:38.851 [ INFO  ] [6cee9dc4-4505-4013-851e-7a6decc1089b] Started GET "/-/" for ::1 at 2016-02-18 09:39:38 -0500 (pid:2759)
+2016-02-18 09:39:38.864 [ INFO  ] [6cee9dc4-4505-4013-851e-7a6decc1089b] Processing by OcciModelController#index as */* (pid:2759)
+2016-02-18 09:39:38.865 [ INFO  ] [6cee9dc4-4505-4013-851e-7a6decc1089b] [Backend] Loading Backends::DummyBackend (pid:2759)
+2016-02-18 09:39:38.867 [ INFO  ] [6cee9dc4-4505-4013-851e-7a6decc1089b] localhost:11211 failed (count: 0) Errno::ECONNREFUSED: Connection refused - send (pid:2759)
+2016-02-18 09:39:38.880 [ INFO  ] [6cee9dc4-4505-4013-851e-7a6decc1089b] Completed 500 Internal Server Error in 15ms (pid:2759)
+2016-02-18 09:39:38.883 [ FATAL ] [6cee9dc4-4505-4013-851e-7a6decc1089b] 
+Dalli::RingError (No server available):
+  lib/backends/dummy_backend.rb:20:in `block in read_fixtures'
+  lib/backends/dummy_backend.rb:20:in `each'
+  lib/backends/dummy_backend.rb:20:in `read_fixtures'
+  lib/backends/dummy_backend.rb:15:in `initialize'
+  app/models/backend.rb:22:in `new'
+  app/models/backend.rb:22:in `initialize'
+  app/controllers/application_controller.rb:114:in `new'
+  app/controllers/application_controller.rb:114:in `backend_instance'
+  app/controllers/occi_model_controller.rb:34:in `index'
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:2759)
+2016-02-18 10:33:23.540 [ INFO  ] [ad6ea4f1-7c0d-4609-b90d-30513dfcdaf1] Started GET "/-/" for ::1 at 2016-02-18 10:33:23 -0500 (pid:2759)
+2016-02-18 10:33:23.542 [ INFO  ] [ad6ea4f1-7c0d-4609-b90d-30513dfcdaf1] Processing by OcciModelController#index as */* (pid:2759)
+2016-02-18 10:33:23.543 [ INFO  ] [ad6ea4f1-7c0d-4609-b90d-30513dfcdaf1] [Backend] Loading Backends::DummyBackend (pid:2759)
+2016-02-18 10:33:23.544 [ INFO  ] [ad6ea4f1-7c0d-4609-b90d-30513dfcdaf1] localhost:11211 failed (count: 0) Errno::ECONNREFUSED: Connection refused - send (pid:2759)
+2016-02-18 10:33:23.557 [ INFO  ] [ad6ea4f1-7c0d-4609-b90d-30513dfcdaf1] Completed 500 Internal Server Error in 14ms (pid:2759)
+2016-02-18 10:33:23.559 [ FATAL ] [ad6ea4f1-7c0d-4609-b90d-30513dfcdaf1] 
+Dalli::RingError (No server available):
+  lib/backends/dummy_backend.rb:20:in `block in read_fixtures'
+  lib/backends/dummy_backend.rb:20:in `each'
+  lib/backends/dummy_backend.rb:20:in `read_fixtures'
+  lib/backends/dummy_backend.rb:15:in `initialize'
+  app/models/backend.rb:22:in `new'
+  app/models/backend.rb:22:in `initialize'
+  app/controllers/application_controller.rb:114:in `new'
+  app/controllers/application_controller.rb:114:in `backend_instance'
+  app/controllers/occi_model_controller.rb:34:in `index'
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:2759)
+2016-02-18 10:34:10.858 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:4493)
+2016-02-18 10:34:10.860 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:4493)
+2016-02-18 10:34:10.860 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/dummy for ENV production. (pid:4493)
+2016-02-18 10:34:10.861 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:4493)
+2016-02-18 10:34:10.862 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:4493)
+2016-02-18 10:34:10.862 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:4493)
+2016-02-18 10:34:10.863 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:4493)
+2016-02-18 10:34:10.863 [ INFO  ] [Backend] Checking backend API version (pid:4493)
+2016-02-18 10:34:10.870 [ INFO  ] [Backend] Loading Backends::DummyBackend (pid:4493)
+2016-02-18 10:34:10.934 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:4493)
+2016-02-18 10:34:10.936 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:4493)
+2016-02-18 10:34:10.937 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:4493)
+2016-02-18 10:34:10.941 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:4493)
+2016-02-18 10:34:10.941 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:4493)
+2016-02-18 10:34:12.286 [ INFO  ] [615b0d33-b034-47f4-870b-81713c70bf82] Started GET "/-/" for ::1 at 2016-02-18 10:34:12 -0500 (pid:4527)
+2016-02-18 10:34:12.437 [ INFO  ] [615b0d33-b034-47f4-870b-81713c70bf82] Processing by OcciModelController#index as */* (pid:4527)
+2016-02-18 10:34:35.471 [ INFO  ] [615b0d33-b034-47f4-870b-81713c70bf82] Completed 500 Internal Server Error in 23427ms (pid:4527)
+2016-02-18 10:34:35.473 [ FATAL ] [615b0d33-b034-47f4-870b-81713c70bf82] 
+ActionView::MissingTemplate (Missing template occi_model/index, application/index with {:locale=>[:en], :formats=>[:text], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby]}. Searched in:
+  * "/opt/rOCCI-server/app/views"
+):
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:4527)
+2016-02-18 11:08:22.221 [ INFO  ] [14cefbb2-a34d-40f5-b079-fbdadbafdde0] Started GET "/" for 172.90.0.2 at 2016-02-18 11:08:22 -0500 (pid:4527)
+2016-02-18 11:08:22.223 [ INFO  ] [14cefbb2-a34d-40f5-b079-fbdadbafdde0] Processing by OcciModelController#welcome as HTML (pid:4527)
+2016-02-18 11:08:22.232 [ INFO  ] [14cefbb2-a34d-40f5-b079-fbdadbafdde0]   Rendered shared/header.html.erb (0.7ms) (pid:4527)
+2016-02-18 11:08:22.234 [ INFO  ] [14cefbb2-a34d-40f5-b079-fbdadbafdde0]   Rendered shared/footer.html.erb (0.5ms) (pid:4527)
+2016-02-18 11:08:22.234 [ INFO  ] [14cefbb2-a34d-40f5-b079-fbdadbafdde0]   Rendered occi_model/welcome.html.erb (5.5ms) (pid:4527)
+2016-02-18 11:08:22.235 [ INFO  ] [14cefbb2-a34d-40f5-b079-fbdadbafdde0] Completed 200 OK in 12ms (Views: 11.7ms) (pid:4527)
+2016-02-18 11:08:31.127 [ INFO  ] [b300d4a3-87e5-4037-af9a-99e33646fedb] Started GET "/-/" for 172.90.0.2 at 2016-02-18 11:08:31 -0500 (pid:4527)
+2016-02-18 11:08:31.149 [ INFO  ] [b300d4a3-87e5-4037-af9a-99e33646fedb] Processing by OcciModelController#index as HTML (pid:4527)
+2016-02-18 11:08:52.716 [ INFO  ] [b300d4a3-87e5-4037-af9a-99e33646fedb]   Rendered shared/header.html.erb (0.2ms) (pid:4527)
+2016-02-18 11:08:52.717 [ INFO  ] [b300d4a3-87e5-4037-af9a-99e33646fedb]   Rendered occi_model/index.html.erb (1.8ms) (pid:4527)
+2016-02-18 11:08:52.720 [ INFO  ] [b300d4a3-87e5-4037-af9a-99e33646fedb] Completed 500 Internal Server Error in 21705ms (pid:4527)
+2016-02-18 11:08:52.722 [ FATAL ] [b300d4a3-87e5-4037-af9a-99e33646fedb] 
+ActionView::Template::Error (undefined method `resources' for #<Array:0x00000003ee12b0>):
+    1: <%= render template: "shared/header" %>
+    2: 
+    3: <h1>Resource Types</h1>
+    4: <% @local_resource_types = @resources.resources.to_a.collect { |r| r.kind }.uniq %>
+    5: <%= render template: "shared/resource_types_table" %>
+    6: 
+    7: <%= render template: "shared/footer" %>
+  app/views/occi_model/index.html.erb:4:in `_app_views_occi_model_index_html_erb__3507960876058233172_32962520'
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:4527)
+2016-02-18 19:40:45.561 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:2328)
+2016-02-18 19:40:45.567 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:2328)
+2016-02-18 19:40:45.569 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/dummy for ENV production. (pid:2328)
+2016-02-18 19:40:45.572 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:2328)
+2016-02-18 19:40:45.574 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:2328)
+2016-02-18 19:40:45.575 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:2328)
+2016-02-18 19:40:45.576 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:2328)
+2016-02-18 19:40:45.577 [ INFO  ] [Backend] Checking backend API version (pid:2328)
+2016-02-18 19:40:45.592 [ INFO  ] [Backend] Loading Backends::DummyBackend (pid:2328)
+2016-02-18 19:40:45.680 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:2328)
+2016-02-18 19:40:45.684 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:2328)
+2016-02-18 19:40:45.687 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:2328)
+2016-02-18 19:40:45.699 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:2328)
+2016-02-18 19:40:45.699 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:2328)
+2016-02-18 19:40:47.760 [ INFO  ] [de3f0505-6c8a-4093-af4b-5c91557952d6] Started GET "/" for 172.90.0.2 at 2016-02-18 19:40:47 -0500 (pid:2346)
+2016-02-18 19:40:47.136 [ INFO  ] [de3f0505-6c8a-4093-af4b-5c91557952d6] Processing by OcciModelController#welcome as HTML (pid:2346)
+2016-02-18 19:40:47.170 [ INFO  ] [de3f0505-6c8a-4093-af4b-5c91557952d6]   Rendered shared/header.html.erb (1.6ms) (pid:2346)
+2016-02-18 19:40:47.172 [ INFO  ] [de3f0505-6c8a-4093-af4b-5c91557952d6]   Rendered shared/footer.html.erb (0.8ms) (pid:2346)
+2016-02-18 19:40:47.172 [ INFO  ] [de3f0505-6c8a-4093-af4b-5c91557952d6]   Rendered occi_model/welcome.html.erb (9.8ms) (pid:2346)
+2016-02-18 19:40:47.175 [ INFO  ] [de3f0505-6c8a-4093-af4b-5c91557952d6] Completed 200 OK in 38ms (Views: 32.1ms) (pid:2346)
+2016-02-18 19:40:53.493 [ INFO  ] [3c4773af-1bc9-40fd-a87f-247cd7bb9454] Started GET "/-/" for 172.90.0.2 at 2016-02-18 19:40:53 -0500 (pid:2346)
+2016-02-18 19:40:53.495 [ INFO  ] [3c4773af-1bc9-40fd-a87f-247cd7bb9454] Processing by OcciModelController#index as HTML (pid:2346)
+2016-02-18 19:41:01.951 [ INFO  ] [3c4773af-1bc9-40fd-a87f-247cd7bb9454] Completed 500 Internal Server Error in 8456ms (pid:2346)
+2016-02-18 19:41:01.954 [ FATAL ] [3c4773af-1bc9-40fd-a87f-247cd7bb9454] 
+Occi::Api::Client::Errors::AuthnError (Response does not contain the www-authenticate header, fallback failed!):
+  app/controllers/occi_model_controller.rb:91:in `new'
+  app/controllers/occi_model_controller.rb:91:in `init_client'
+  app/controllers/occi_model_controller.rb:152:in `index'
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:2346)
+2016-02-18 20:08:33.724 [ INFO  ] [98b4e5f2-e13a-4829-8c32-ce171e9cd6d0] Started GET "/-/" for 172.90.0.2 at 2016-02-18 20:08:33 -0500 (pid:2346)
+2016-02-18 20:08:33.734 [ INFO  ] [98b4e5f2-e13a-4829-8c32-ce171e9cd6d0] Processing by OcciModelController#index as HTML (pid:2346)
+2016-02-18 20:08:35.546 [ INFO  ] [98b4e5f2-e13a-4829-8c32-ce171e9cd6d0] Completed 500 Internal Server Error in 1811ms (pid:2346)
+2016-02-18 20:08:35.549 [ FATAL ] [98b4e5f2-e13a-4829-8c32-ce171e9cd6d0] 
+Occi::Api::Client::Errors::AuthnError (Response does not contain the www-authenticate header, fallback failed!):
+  app/controllers/occi_model_controller.rb:91:in `new'
+  app/controllers/occi_model_controller.rb:91:in `init_client'
+  app/controllers/occi_model_controller.rb:152:in `index'
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:2346)
+2016-02-18 20:11:54.262 [ INFO  ] [c7219c4b-ea05-4562-87aa-f04a4d04484e] Started GET "/-/" for 172.90.0.2 at 2016-02-18 20:11:54 -0500 (pid:2346)
+2016-02-18 20:11:54.296 [ INFO  ] [c7219c4b-ea05-4562-87aa-f04a4d04484e] Processing by OcciModelController#index as HTML (pid:2346)
+2016-02-18 20:12:17.166 [ INFO  ] [c7219c4b-ea05-4562-87aa-f04a4d04484e]   Rendered shared/header.html.erb (0.1ms) (pid:2346)
+2016-02-18 20:12:17.167 [ INFO  ] [c7219c4b-ea05-4562-87aa-f04a4d04484e]   Rendered occi_model/index.html.erb (3.6ms) (pid:2346)
+2016-02-18 20:12:17.170 [ INFO  ] [c7219c4b-ea05-4562-87aa-f04a4d04484e] Completed 500 Internal Server Error in 22873ms (pid:2346)
+2016-02-18 20:12:17.172 [ FATAL ] [c7219c4b-ea05-4562-87aa-f04a4d04484e] 
+ActionView::Template::Error (undefined method `resources' for #<Array:0x00000003fcade8>):
+    1: <%= render template: "shared/header" %>
+    2: 
+    3: <h1>Resource Types</h1>
+    4: <% @local_resource_types = @resources.resources.to_a.collect { |r| r.kind }.uniq %>
+    5: <%= render template: "shared/resource_types_table" %>
+    6: 
+    7: <%= render template: "shared/footer" %>
+  app/views/occi_model/index.html.erb:4:in `_app_views_occi_model_index_html_erb___1583401872442445372_30516700'
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:2346)
+2016-02-18 20:16:44.311 [ INFO  ] [045ca58d-d833-454e-a1c8-8a01222744e3] Started GET "/-/" for 172.90.0.2 at 2016-02-18 20:16:44 -0500 (pid:2346)
+2016-02-18 20:16:44.317 [ INFO  ] [045ca58d-d833-454e-a1c8-8a01222744e3] Processing by OcciModelController#index as HTML (pid:2346)
+2016-02-18 20:17:06.181 [ INFO  ] [045ca58d-d833-454e-a1c8-8a01222744e3]   Rendered shared/header.html.erb (0.1ms) (pid:2346)
+2016-02-18 20:17:06.181 [ INFO  ] [045ca58d-d833-454e-a1c8-8a01222744e3]   Rendered occi_model/index.html.erb (1.2ms) (pid:2346)
+2016-02-18 20:17:06.184 [ INFO  ] [045ca58d-d833-454e-a1c8-8a01222744e3] Completed 500 Internal Server Error in 21867ms (pid:2346)
+2016-02-18 20:17:06.186 [ FATAL ] [045ca58d-d833-454e-a1c8-8a01222744e3] 
+ActionView::Template::Error (undefined method `resources' for #<Array:0x00000003e68428>):
+    1: <%= render template: "shared/header" %>
+    2: 
+    3: <h1>Resource Types</h1>
+    4: <% @local_resource_types = @resources.resources.to_a.collect { |r| r.kind }.uniq %>
+    5: <%= render template: "shared/resource_types_table" %>
+    6: 
+    7: <%= render template: "shared/footer" %>
+  app/views/occi_model/index.html.erb:4:in `_app_views_occi_model_index_html_erb___1583401872442445372_30516700'
+  lib/hooks/dummy_hook.rb:12:in `call'
+  lib/request_parsers/occi_parser.rb:39:in `call' (pid:2346)
+2016-02-18 23:54:41.314 [ INFO  ] [80b35e61-c45e-4470-a59d-da1673ffe40e] Started GET "/" for 172.90.0.2 at 2016-02-18 23:54:41 -0500 (pid:2346)
+2016-02-18 23:54:41.342 [ INFO  ] [80b35e61-c45e-4470-a59d-da1673ffe40e] Processing by OcciModelController#welcome as HTML (pid:2346)
+2016-02-18 23:54:41.350 [ INFO  ] [80b35e61-c45e-4470-a59d-da1673ffe40e]   Rendered shared/header.html.erb (0.7ms) (pid:2346)
+2016-02-18 23:54:41.351 [ INFO  ] [80b35e61-c45e-4470-a59d-da1673ffe40e]   Rendered shared/footer.html.erb (0.2ms) (pid:2346)
+2016-02-18 23:54:41.351 [ INFO  ] [80b35e61-c45e-4470-a59d-da1673ffe40e]   Rendered occi_model/welcome.html.erb (2.5ms) (pid:2346)
+2016-02-18 23:54:41.354 [ INFO  ] [80b35e61-c45e-4470-a59d-da1673ffe40e] Completed 200 OK in 11ms (Views: 7.1ms) (pid:2346)
+2016-02-18 23:55:12.351 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:9332)
+2016-02-18 23:55:12.380 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:9332)
+2016-02-18 23:55:12.384 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/dummy for ENV production. (pid:9332)
+2016-02-18 23:55:12.391 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:9332)
+2016-02-18 23:55:12.401 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:9332)
+2016-02-18 23:55:12.405 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:9332)
+2016-02-18 23:55:12.410 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:9332)
+2016-02-18 23:55:12.416 [ INFO  ] [Backend] Checking backend API version (pid:9332)
+2016-02-18 23:55:12.485 [ INFO  ] [Backend] Loading Backends::DummyBackend (pid:9332)
+2016-02-18 23:55:12.121 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:9332)
+2016-02-18 23:55:12.123 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:9332)
+2016-02-18 23:55:12.124 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:9332)
+2016-02-18 23:55:12.128 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:9332)
+2016-02-18 23:55:12.128 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:9332)
+2016-02-18 23:55:13.416 [ INFO  ] [877e70c9-bbec-471d-8896-e710f54e599e] Started GET "/" for 172.90.0.2 at 2016-02-18 23:55:13 -0500 (pid:9350)
+2016-02-18 23:55:13.430 [ INFO  ] [877e70c9-bbec-471d-8896-e710f54e599e] Processing by OcciModelController#welcome as HTML (pid:9350)
+2016-02-18 23:55:13.443 [ INFO  ] [877e70c9-bbec-471d-8896-e710f54e599e]   Rendered shared/header.html.erb (0.7ms) (pid:9350)
+2016-02-18 23:55:13.444 [ INFO  ] [877e70c9-bbec-471d-8896-e710f54e599e]   Rendered shared/footer.html.erb (0.5ms) (pid:9350)
+2016-02-18 23:55:13.444 [ INFO  ] [877e70c9-bbec-471d-8896-e710f54e599e]   Rendered occi_model/welcome.html.erb (4.2ms) (pid:9350)
+2016-02-18 23:55:13.445 [ INFO  ] [877e70c9-bbec-471d-8896-e710f54e599e] Completed 200 OK in 14ms (Views: 12.9ms) (pid:9350)
+2016-02-18 23:55:17.238 [ INFO  ] [ec088e0c-b1ce-4c41-801f-2f1a8c3143d2] Started GET "/compoute" for 172.90.0.2 at 2016-02-18 23:55:17 -0500 (pid:9350)
+2016-02-18 23:55:17.239 [ FATAL ] [ec088e0c-b1ce-4c41-801f-2f1a8c3143d2] 
+ActionController::RoutingError (No route matches [GET] "/compoute"):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/1.9.1/gems/request_store-1.2.1/lib/request_store/middleware.rb:8:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/1.9.1/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/ssl.rb:24:in `call'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads' (pid:9350)
+2016-02-18 23:55:31.472 [ INFO  ] [cb433888-88f9-462a-b9fa-732a6eca11c3] Started GET "/compoute" for 172.90.0.2 at 2016-02-18 23:55:31 -0500 (pid:9350)
+2016-02-18 23:55:31.473 [ FATAL ] [cb433888-88f9-462a-b9fa-732a6eca11c3] 
+ActionController::RoutingError (No route matches [GET] "/compoute"):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/1.9.1/gems/request_store-1.2.1/lib/request_store/middleware.rb:8:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/1.9.1/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-4.2.5/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/ssl.rb:24:in `call'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/1.9.1/gems/railties-4.2.5/lib/rails/application.rb:165:in `call'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/rack/thread_handler_extension.rb:74:in `process_request'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/request_handler/thread_handler.rb:141:in `accept_and_process_next_request'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/request_handler/thread_handler.rb:109:in `main_loop'
+  vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/lib/phusion_passenger/request_handler.rb:455:in `block (3 levels) in start_threads' (pid:9350)
+2016-02-18 23:57:38.152 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:9603)
+2016-02-18 23:57:38.170 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:9603)
+2016-02-18 23:57:38.174 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/dummy for ENV production. (pid:9603)
+2016-02-18 23:57:38.181 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:9603)
+2016-02-18 23:57:38.189 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:9603)
+2016-02-18 23:57:38.192 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:9603)
+2016-02-18 23:57:38.197 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:9603)
+2016-02-18 23:57:38.202 [ INFO  ] [Backend] Checking backend API version (pid:9603)
+2016-02-18 23:57:38.268 [ INFO  ] [Backend] Loading Backends::DummyBackend (pid:9603)
+2016-02-18 23:57:38.959 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:9603)
+2016-02-18 23:57:38.985 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:9603)
+2016-02-18 23:57:38.994 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:9603)
+2016-02-18 23:57:38.104 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:9603)
+2016-02-18 23:57:38.105 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:9603)
+2016-02-18 23:57:39.285 [ INFO  ] [caa57085-38ef-4dd4-9799-2ca1f050d030] Started GET "/" for 172.90.0.2 at 2016-02-18 23:57:39 -0500 (pid:9629)
+2016-02-18 23:57:39.298 [ INFO  ] [caa57085-38ef-4dd4-9799-2ca1f050d030] Processing by OcciModelController#welcome as HTML (pid:9629)
+2016-02-18 23:57:39.308 [ INFO  ] [caa57085-38ef-4dd4-9799-2ca1f050d030]   Rendered shared/header.html.erb (1.4ms) (pid:9629)
+2016-02-18 23:57:39.310 [ INFO  ] [caa57085-38ef-4dd4-9799-2ca1f050d030]   Rendered shared/footer.html.erb (0.6ms) (pid:9629)
+2016-02-18 23:57:39.310 [ INFO  ] [caa57085-38ef-4dd4-9799-2ca1f050d030]   Rendered occi_model/welcome.html.erb (5.4ms) (pid:9629)
+2016-02-18 23:57:39.311 [ INFO  ] [caa57085-38ef-4dd4-9799-2ca1f050d030] Completed 200 OK in 13ms (Views: 11.7ms) (pid:9629)

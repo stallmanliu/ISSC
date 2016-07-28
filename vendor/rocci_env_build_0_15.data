@@ -1,0 +1,8 @@
+begin to build sim env opennebula: 0.
+Wed Jan 27 15:00:34 EST 2016
+Wed Jan 27 15:00:56 EST 2016
+end build sim env opennebula
+begin to build sim env ec2: 15.
+Wed Jan 27 15:00:56 EST 2016
+Wed Jan 27 15:03:57 EST 2016
+end build sim env ec2

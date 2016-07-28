@@ -1,0 +1,185 @@
+<%
+require File.dirname(File.absolute_path(__FILE__)) + '/helpers'
+-%>
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+
+<% if is_distribution?(">= vivid") -%>
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+<% end -%>
+<% if is_distribution?("<= saucy") || is_distribution?("<= wheezy") -%>
+CFLAGS := $(shell dpkg-buildflags --get CFLAGS)
+CFLAGS += -Wall -DFORTIFY_SOURCE=2 -fstack-protector
+CFLAGS += $(shell dpkg-buildflags --get CPPFLAGS)
+LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
+export CFLAGS LDFLAGS
+
+debian_cflags = $(CFLAGS)
+debian_ldflags = $(LDFLAGS)
+<% else -%>
+debian_cflags:=$(shell dpkg-buildflags --get CFLAGS | sed 's/-O3/-O2/') $(shell dpkg-buildflags --get CPPFLAGS)
+debian_ldflags:=$(shell dpkg-buildflags --get LDFLAGS)
+<% end -%>
+
+# export necessary perl hardenging flags
+# see: src/http/modules/perl/Makefile.PL
+<% if is_distribution?(">= vivid") -%>
+DEBIAN_NGINX_PERL_LDFLAGS:= $(shell DEB_BUILD_MAINT_OPTIONS=hardening=+all,-pie dpkg-buildflags --get LDFLAGS)
+<% else -%>
+DEBIAN_NGINX_PERL_LDFLAGS:= $(debian_ldflags)
+<% end -%>
+export DEBIAN_NGINX_PERL_LDFLAGS
+
+# Speed up ccache (reduce I/O) by lightly compressing things.
+# Always set these variables because pbuilder uses ccache transparently.
+CCACHE_COMPRESS=1
+export CCACHE_COMPRESS
+CCACHE_COMPRESS_LEVEL=3
+export CCACHE_COMPRESS_LEVEL
+
+FLAVOURS := extras
+
+MODULESDIR = $(CURDIR)/debian/modules
+BASEDIR = $(CURDIR)
+$(foreach flavour,$(FLAVOURS),$(eval BUILDDIR_$(flavour) = $(CURDIR)/debian/build-$(flavour)))
+
+DEB_BUILD_ARCH ?=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
+ifeq ($(DEB_BUILD_ARCH),sparc)
+<% if is_distribution?(">= trusty") || is_distribution?(">= jessie") -%>
+	debian_cflags += -m32 -mcpu=ultrasparc
+<% else -%>
+	CONFIGURE_OPTS = --with-cc-opt="-m32 -mcpu=ultrasparc"
+<% end -%>
+endif
+
+# Compile Passenger support libraries without Debian's default optimization
+# level. Passenger has its own recommended optimization levels.
+debian_cflags_nooptimize := $(shell echo "$(debian_cflags)" | sed -E 's/-O[0-3]?//g')
+
+
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	ifeq (${NUMJOBS}, 0)
+		NUMJOBS = 1
+	endif
+	MAKEFLAGS += -j$(NUMJOBS)
+else
+	NUMJOBS = 1
+endif
+
+# configure flags
+common_configure_flags := \
+			--with-cc-opt="$(debian_cflags)" \
+			--with-ld-opt="$(debian_ldflags)" \
+			--prefix=/usr/share/nginx \
+			--conf-path=/etc/nginx/nginx.conf \
+			--http-log-path=/var/log/nginx/access.log \
+			--error-log-path=/var/log/nginx/error.log \
+			--lock-path=/var/lock/nginx.lock \
+<% if is_distribution?("<= quantal") || is_distribution?("<= wheezy") -%>
+			--pid-path=/var/run/nginx.pid \
+<% else -%>
+			--pid-path=/run/nginx.pid \
+<% end -%>
+			--http-client-body-temp-path=/var/lib/nginx/body \
+			--http-fastcgi-temp-path=/var/lib/nginx/fastcgi \
+			--http-proxy-temp-path=/var/lib/nginx/proxy \
+			--http-scgi-temp-path=/var/lib/nginx/scgi \
+			--http-uwsgi-temp-path=/var/lib/nginx/uwsgi \
+			--with-debug \
+<% if is_distribution?(">= quantal") || is_distribution?(">= wheezy") -%>
+			--with-pcre-jit \
+<% end -%>
+			--with-ipv6 \
+			--with-http_ssl_module \
+			--with-http_stub_status_module \
+			--with-http_realip_module \
+			--with-http_auth_request_module
+
+extras_configure_flags := \
+			$(common_configure_flags) \
+			--with-http_addition_module \
+			--with-http_dav_module \
+			--with-http_flv_module \
+			--with-http_geoip_module \
+			--with-http_gzip_static_module \
+			--with-http_image_filter_module \
+			--with-http_mp4_module \
+			--with-http_perl_module \
+			--with-http_random_index_module \
+			--with-http_secure_link_module \
+<% if is_distribution?(">= precise") || is_distribution?(">= wheezy") -%>
+			--with-http_spdy_module \
+<% end -%>
+			--with-http_sub_module \
+			--with-http_xslt_module \
+			--with-mail \
+			--with-mail_ssl_module \
+			--add-module=$(MODULESDIR)/headers-more-nginx-module \
+			--add-module=$(MODULESDIR)/nginx-auth-pam \
+			--add-module=$(MODULESDIR)/nginx-cache-purge \
+			--add-module=$(MODULESDIR)/nginx-dav-ext-module \
+			--add-module=$(MODULESDIR)/nginx-development-kit \
+			--add-module=$(MODULESDIR)/nginx-echo \
+			--add-module=$(MODULESDIR)/ngx-fancyindex \
+			--add-module=$(MODULESDIR)/nginx-http-push \
+			--add-module=$(MODULESDIR)/nginx-lua \
+			--add-module=$(MODULESDIR)/nginx-upload-progress \
+			--add-module=$(MODULESDIR)/nginx-upstream-fair \
+			--add-module=$(MODULESDIR)/ngx_http_substitutions_filter_module \
+			--add-module=$(MODULESDIR)/passenger/src/nginx_module
+
+<% if is_distribution?(">= utopic") || is_distribution?(">= jessie") -%>
+%:
+	dh $@ --with systemd
+<% else -%>
+%:
+	dh $@
+<% end -%>
+
+override_dh_auto_configure: $(foreach flavour,$(FLAVOURS),config.arch.$(flavour))
+
+override_dh_auto_build:     $(foreach flavour,$(FLAVOURS),build.arch.$(flavour))
+	vendordir=`/usr/bin/ruby -rrbconfig -e 'puts RbConfig::CONFIG["vendordir"]'` && \
+		sed -i "s|@RUBYLIBDIR@|$$vendordir|g" debian/conf/nginx.conf
+
+override_dh_strip:          $(foreach flavour,$(FLAVOURS),strip.arch.$(flavour))
+override_dh_clean:          $(foreach flavour,$(FLAVOURS),clean.$(flavour))
+	dh_clean
+
+override_dh_installinit:
+	dh_installinit --no-restart-on-upgrade --no-start --name=nginx
+
+override_dh_systemd_enable:
+	dh_systemd_enable --name=nginx
+
+override_dh_installlogrotate:
+	dh_installlogrotate --package nginx-common --name=nginx
+
+build.arch.%:
+	$(MAKE) -C $(BUILDDIR_$*) build
+
+strip.arch.%:
+	dh_strip --package=nginx-$(*) --dbg-package=nginx-$(*)-dbg
+
+passenger_nginx_libs:
+	cd $(MODULESDIR)/passenger/src/nginx_module && \
+		EXTRA_CFLAGS="$(debian_cflags_nooptimize)" \
+		EXTRA_CXXFLAGS="$(debian_cflags_nooptimize)" \
+		EXTRA_LDFLAGS="$(debian_ldflags)" \
+		OPTIMIZE=yes \
+		rake nginx
+
+config.arch.%: passenger_nginx_libs
+	dh_testdir
+	mkdir -p $(BUILDDIR_$*)
+	cp -Pa $(CURDIR)/auto $(BUILDDIR_$*)/
+	cp -Pa $(CURDIR)/conf $(BUILDDIR_$*)/
+	cp -Pa $(CURDIR)/configure $(BUILDDIR_$*)/
+	cp -Pa $(CURDIR)/contrib $(BUILDDIR_$*)/
+	cp -Pa $(CURDIR)/src $(BUILDDIR_$*)/
+	cp -Pa $(CURDIR)/man $(BUILDDIR_$*)/
+	cd $(BUILDDIR_$*) && ./configure $($*_configure_flags)
+
+clean.%:
+	rm -rf $(BUILDDIR_$*)
