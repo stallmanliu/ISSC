@@ -2,9 +2,10 @@ module Backends
   module Ec2
     module Helpers
       module ComputeDeleteHelper
+
         # TODO: look for ways to DRY this up by re-using ComputeNetworkHelper
 
-        def delete_release_public(instance_ids)
+        def compute_delete_release_public(instance_ids)
           filters = []
           filters << { name: 'instance-id', values: instance_ids }
 
@@ -13,9 +14,9 @@ module Backends
             addresses = @ec2_client.describe_addresses(filters: filters).addresses
             addresses.each do |address|
               if address[:allocation_id] && address[:association_id]
-                delete_release_public_vpc(address)
+                compute_delete_release_public_vpc(address)
               else
-                delete_release_public_nonvpc(address)
+                compute_delete_release_public_nonvpc(address)
               end
             end
           end
@@ -23,15 +24,16 @@ module Backends
 
         private
 
-        def delete_release_public_vpc(address)
+        def compute_delete_release_public_vpc(address)
           @ec2_client.disassociate_address(association_id: address[:association_id])
           @ec2_client.release_address(allocation_id: address[:allocation_id])
         end
 
-        def delete_release_public_nonvpc(address)
+        def compute_delete_release_public_nonvpc(address)
           @ec2_client.disassociate_address(public_ip: address[:public_ip])
           @ec2_client.release_address(public_ip: address[:public_ip])
         end
+
       end
     end
   end

@@ -9,6 +9,7 @@ module Hooks
     # @param app [Object] application object
     # @param options [Hashie::Mash] options in a hash-like structure
     def initialize(app, options)
+      puts "daniel: oneuser_hook.rb enter initialize()"
       @app = app
       @options = options
       @vo_names = @options.vo_names.kind_of?(Array) ? @options.vo_names : @options.vo_names.split(' ')
@@ -25,6 +26,7 @@ module Hooks
     # @param env [Object] request environment
     def call(env)
       # get the request and explore it
+      puts "daniel: enter oneuser_hook.rb enter call()"
       request = ::ActionDispatch::Request.new(env)
       start_autocreate(request) unless @vo_names.blank?
 
@@ -41,6 +43,7 @@ module Hooks
     # @param request [ActionDispatch::Request] incoming request containing user data
     def start_autocreate(request)
       # trigger Warden early to get user information
+      puts "daniel: oneuser_hook.rb enter start_autocreate()"
       request.env['warden'].authenticate!
       user_struct = request.env['warden'].user || ::Hashie::Mash.new
 
@@ -64,6 +67,8 @@ module Hooks
       # pass it along
       Rails.logger.debug "[Hooks] [OneuserAutocreateHook] Evaluating incoming " \
                          "user: #{user_struct.inspect}"
+
+      puts "daniel: oneuser_hook.rb go to do_autocreate()"
       do_autocreate(user_struct)
     end
 

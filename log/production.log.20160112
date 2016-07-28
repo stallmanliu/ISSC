@@ -1,0 +1,1186 @@
+# Logfile created on 2016-01-12 00:10:20 -0500 by logger.rb/31641
+2016-01-12 00:10:20.665 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:8121)
+2016-01-12 00:10:20.672 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:8121)
+2016-01-12 00:10:20.672 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:8121)
+2016-01-12 00:10:20.673 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:8121)
+2016-01-12 00:10:20.674 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:8121)
+2016-01-12 00:10:20.674 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:8121)
+2016-01-12 00:10:20.675 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:8121)
+2016-01-12 00:10:20.675 [ INFO  ] [Backend] Checking backend API version (pid:8121)
+2016-01-12 00:10:20.681 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:8121)
+2016-01-12 00:10:20.739 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:8121)
+2016-01-12 00:10:20.741 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:8121)
+2016-01-12 00:10:20.742 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:8121)
+2016-01-12 00:10:20.744 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:8121)
+2016-01-12 00:10:20.744 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:8121)
+2016-01-12 00:10:21.589 [ INFO  ] [fb33a7a1-f416-421a-8683-85ca6e9444da] Started GET "/-/" for ::1 at 2016-01-12 00:10:21 -0500 (pid:8139)
+2016-01-12 00:10:21.606 [ INFO  ] [fb33a7a1-f416-421a-8683-85ca6e9444da] Processing by OcciModelController#show as */* (pid:8139)
+2016-01-12 00:10:21.624 [ INFO  ] [fb33a7a1-f416-421a-8683-85ca6e9444da] [Backend] Loading Backends::OpennebulaBackend (pid:8139)
+2016-01-12 00:10:22.107 [ WARN  ] [fb33a7a1-f416-421a-8683-85ca6e9444da] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:8139)
+2016-01-12 00:10:22.108 [ INFO  ] [fb33a7a1-f416-421a-8683-85ca6e9444da] Completed 401 Unauthorized in 501ms (Views: 0.3ms) (pid:8139)
+2016-01-12 00:10:22.109 [ WARN  ] [fb33a7a1-f416-421a-8683-85ca6e9444da] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:8139)
+2016-01-12 00:10:22.109 [ WARN  ] [fb33a7a1-f416-421a-8683-85ca6e9444da] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:8139)
+2016-01-12 00:23:39.495 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:8683)
+2016-01-12 00:23:39.497 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:8683)
+2016-01-12 00:23:39.497 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:8683)
+2016-01-12 00:23:39.498 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:8683)
+2016-01-12 00:23:39.499 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:8683)
+2016-01-12 00:23:39.499 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:8683)
+2016-01-12 00:23:39.500 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:8683)
+2016-01-12 00:23:39.500 [ INFO  ] [Backend] Checking backend API version (pid:8683)
+2016-01-12 00:23:39.505 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:8683)
+2016-01-12 00:23:39.563 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:8683)
+2016-01-12 00:23:39.565 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:8683)
+2016-01-12 00:23:39.566 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:8683)
+2016-01-12 00:23:39.568 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:8683)
+2016-01-12 00:23:39.568 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:8683)
+2016-01-12 00:23:40.405 [ INFO  ] [ea27ef0f-b0c9-484d-9e50-7238db4a2949] Started GET "/-/" for ::1 at 2016-01-12 00:23:40 -0500 (pid:8701)
+2016-01-12 00:23:40.418 [ INFO  ] [ea27ef0f-b0c9-484d-9e50-7238db4a2949] Processing by OcciModelController#show as */* (pid:8701)
+2016-01-12 00:23:40.429 [ INFO  ] [ea27ef0f-b0c9-484d-9e50-7238db4a2949] [Backend] Loading Backends::OpennebulaBackend (pid:8701)
+2016-01-12 00:23:41.242 [ WARN  ] [ea27ef0f-b0c9-484d-9e50-7238db4a2949] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:8701)
+2016-01-12 00:23:41.242 [ INFO  ] [ea27ef0f-b0c9-484d-9e50-7238db4a2949] Completed 401 Unauthorized in 824ms (Views: 0.3ms) (pid:8701)
+2016-01-12 00:23:41.244 [ WARN  ] [ea27ef0f-b0c9-484d-9e50-7238db4a2949] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:8701)
+2016-01-12 00:23:41.244 [ WARN  ] [ea27ef0f-b0c9-484d-9e50-7238db4a2949] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:8701)
+2016-01-12 00:31:14.975 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:9125)
+2016-01-12 00:31:14.977 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:9125)
+2016-01-12 00:31:14.977 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:9125)
+2016-01-12 00:31:14.978 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:9125)
+2016-01-12 00:31:14.979 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:9125)
+2016-01-12 00:31:14.980 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:9125)
+2016-01-12 00:31:14.980 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:9125)
+2016-01-12 00:31:14.981 [ INFO  ] [Backend] Checking backend API version (pid:9125)
+2016-01-12 00:31:14.986 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:9125)
+2016-01-12 00:31:15.453 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:9125)
+2016-01-12 00:31:15.476 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:9125)
+2016-01-12 00:31:15.483 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:9125)
+2016-01-12 00:31:15.507 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:9125)
+2016-01-12 00:31:15.508 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:9125)
+2016-01-12 00:31:15.872 [ INFO  ] [48ad6407-fbf5-4ca3-b0c6-b93db96c1727] Started GET "/-/" for ::1 at 2016-01-12 00:31:15 -0500 (pid:9143)
+2016-01-12 00:31:15.886 [ INFO  ] [48ad6407-fbf5-4ca3-b0c6-b93db96c1727] Processing by OcciModelController#show as */* (pid:9143)
+2016-01-12 00:31:15.896 [ INFO  ] [48ad6407-fbf5-4ca3-b0c6-b93db96c1727] [Backend] Loading Backends::OpennebulaBackend (pid:9143)
+2016-01-12 00:31:16.377 [ WARN  ] [48ad6407-fbf5-4ca3-b0c6-b93db96c1727] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:9143)
+2016-01-12 00:31:16.378 [ INFO  ] [48ad6407-fbf5-4ca3-b0c6-b93db96c1727] Completed 401 Unauthorized in 491ms (Views: 0.4ms) (pid:9143)
+2016-01-12 00:31:16.379 [ WARN  ] [48ad6407-fbf5-4ca3-b0c6-b93db96c1727] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:9143)
+2016-01-12 00:31:16.379 [ WARN  ] [48ad6407-fbf5-4ca3-b0c6-b93db96c1727] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:9143)
+2016-01-12 00:34:47.506 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:9438)
+2016-01-12 00:34:47.508 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:9438)
+2016-01-12 00:34:47.508 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:9438)
+2016-01-12 00:34:47.509 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:9438)
+2016-01-12 00:34:47.510 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:9438)
+2016-01-12 00:34:47.510 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:9438)
+2016-01-12 00:34:47.511 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:9438)
+2016-01-12 00:34:47.511 [ INFO  ] [Backend] Checking backend API version (pid:9438)
+2016-01-12 00:34:47.517 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:9438)
+2016-01-12 00:34:47.575 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:9438)
+2016-01-12 00:34:47.577 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:9438)
+2016-01-12 00:34:47.578 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:9438)
+2016-01-12 00:34:47.580 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:9438)
+2016-01-12 00:34:47.580 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:9438)
+2016-01-12 00:34:48.413 [ INFO  ] [1b9f3fe7-6097-41be-9e66-7694b8e095b0] Started GET "/-/" for ::1 at 2016-01-12 00:34:48 -0500 (pid:9456)
+2016-01-12 00:34:48.426 [ INFO  ] [1b9f3fe7-6097-41be-9e66-7694b8e095b0] Processing by OcciModelController#show as */* (pid:9456)
+2016-01-12 00:34:48.438 [ INFO  ] [1b9f3fe7-6097-41be-9e66-7694b8e095b0] [Backend] Loading Backends::OpennebulaBackend (pid:9456)
+2016-01-12 00:34:48.952 [ WARN  ] [1b9f3fe7-6097-41be-9e66-7694b8e095b0] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:9456)
+2016-01-12 00:34:48.953 [ INFO  ] [1b9f3fe7-6097-41be-9e66-7694b8e095b0] Completed 401 Unauthorized in 527ms (Views: 0.3ms) (pid:9456)
+2016-01-12 00:34:48.954 [ WARN  ] [1b9f3fe7-6097-41be-9e66-7694b8e095b0] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:9456)
+2016-01-12 00:34:48.954 [ WARN  ] [1b9f3fe7-6097-41be-9e66-7694b8e095b0] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:9456)
+2016-01-12 00:43:25.875 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:9863)
+2016-01-12 00:43:25.877 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:9863)
+2016-01-12 00:43:25.878 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:9863)
+2016-01-12 00:43:25.879 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:9863)
+2016-01-12 00:43:25.879 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:9863)
+2016-01-12 00:43:25.880 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:9863)
+2016-01-12 00:43:25.880 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:9863)
+2016-01-12 00:43:25.881 [ INFO  ] [Backend] Checking backend API version (pid:9863)
+2016-01-12 00:43:25.886 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:9863)
+2016-01-12 00:43:25.944 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:9863)
+2016-01-12 00:43:25.946 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:9863)
+2016-01-12 00:43:25.947 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:9863)
+2016-01-12 00:43:25.949 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:9863)
+2016-01-12 00:43:25.949 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:9863)
+2016-01-12 00:43:26.778 [ INFO  ] [e11ef418-e9d8-4915-8642-c2c686cea8c9] Started GET "/-/" for ::1 at 2016-01-12 00:43:26 -0500 (pid:9881)
+2016-01-12 00:43:26.792 [ INFO  ] [e11ef418-e9d8-4915-8642-c2c686cea8c9] Processing by OcciModelController#show as */* (pid:9881)
+2016-01-12 00:43:26.804 [ INFO  ] [e11ef418-e9d8-4915-8642-c2c686cea8c9] [Backend] Loading Backends::OpennebulaBackend (pid:9881)
+2016-01-12 00:43:27.275 [ WARN  ] [e11ef418-e9d8-4915-8642-c2c686cea8c9] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:9881)
+2016-01-12 00:43:27.276 [ INFO  ] [e11ef418-e9d8-4915-8642-c2c686cea8c9] Completed 401 Unauthorized in 484ms (Views: 0.3ms) (pid:9881)
+2016-01-12 00:43:27.277 [ WARN  ] [e11ef418-e9d8-4915-8642-c2c686cea8c9] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:9881)
+2016-01-12 00:43:27.277 [ WARN  ] [e11ef418-e9d8-4915-8642-c2c686cea8c9] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:9881)
+2016-01-12 00:51:43.655 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:10278)
+2016-01-12 00:51:43.658 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:10278)
+2016-01-12 00:51:43.658 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:10278)
+2016-01-12 00:51:43.659 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:10278)
+2016-01-12 00:51:43.660 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:10278)
+2016-01-12 00:51:43.661 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:10278)
+2016-01-12 00:51:43.661 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:10278)
+2016-01-12 00:51:43.662 [ INFO  ] [Backend] Checking backend API version (pid:10278)
+2016-01-12 00:51:43.668 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:10278)
+2016-01-12 00:51:43.728 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:10278)
+2016-01-12 00:51:43.730 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:10278)
+2016-01-12 00:51:43.731 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:10278)
+2016-01-12 00:51:43.734 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:10278)
+2016-01-12 00:51:43.734 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:10278)
+2016-01-12 00:51:44.580 [ INFO  ] [3742cfec-6ff8-4136-9776-508b396acb61] Started GET "/-/" for ::1 at 2016-01-12 00:51:44 -0500 (pid:10296)
+2016-01-12 00:51:44.593 [ INFO  ] [3742cfec-6ff8-4136-9776-508b396acb61] Processing by OcciModelController#show as */* (pid:10296)
+2016-01-12 00:51:44.609 [ INFO  ] [3742cfec-6ff8-4136-9776-508b396acb61] [Backend] Loading Backends::OpennebulaBackend (pid:10296)
+2016-01-12 00:51:45.356 [ WARN  ] [3742cfec-6ff8-4136-9776-508b396acb61] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:10296)
+2016-01-12 00:51:45.356 [ INFO  ] [3742cfec-6ff8-4136-9776-508b396acb61] Completed 401 Unauthorized in 763ms (Views: 0.3ms) (pid:10296)
+2016-01-12 00:51:45.358 [ WARN  ] [3742cfec-6ff8-4136-9776-508b396acb61] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:10296)
+2016-01-12 00:51:45.358 [ WARN  ] [3742cfec-6ff8-4136-9776-508b396acb61] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:10296)
+2016-01-12 00:59:30.206 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:10685)
+2016-01-12 00:59:30.208 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:10685)
+2016-01-12 00:59:30.208 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:10685)
+2016-01-12 00:59:30.209 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:10685)
+2016-01-12 00:59:30.210 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:10685)
+2016-01-12 00:59:30.210 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:10685)
+2016-01-12 00:59:30.211 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:10685)
+2016-01-12 00:59:30.211 [ INFO  ] [Backend] Checking backend API version (pid:10685)
+2016-01-12 00:59:30.217 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:10685)
+2016-01-12 00:59:30.275 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:10685)
+2016-01-12 00:59:30.278 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:10685)
+2016-01-12 00:59:30.279 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:10685)
+2016-01-12 00:59:30.281 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:10685)
+2016-01-12 00:59:30.281 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:10685)
+2016-01-12 00:59:31.102 [ INFO  ] [489ad0d9-8f6a-48cd-a58b-10714c1511b8] Started GET "/-/" for ::1 at 2016-01-12 00:59:31 -0500 (pid:10703)
+2016-01-12 00:59:31.115 [ INFO  ] [489ad0d9-8f6a-48cd-a58b-10714c1511b8] Processing by OcciModelController#show as */* (pid:10703)
+2016-01-12 00:59:31.126 [ INFO  ] [489ad0d9-8f6a-48cd-a58b-10714c1511b8] [Backend] Loading Backends::OpennebulaBackend (pid:10703)
+2016-01-12 00:59:31.645 [ WARN  ] [489ad0d9-8f6a-48cd-a58b-10714c1511b8] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:10703)
+2016-01-12 00:59:31.646 [ INFO  ] [489ad0d9-8f6a-48cd-a58b-10714c1511b8] Completed 401 Unauthorized in 530ms (Views: 0.3ms) (pid:10703)
+2016-01-12 00:59:31.647 [ WARN  ] [489ad0d9-8f6a-48cd-a58b-10714c1511b8] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:10703)
+2016-01-12 00:59:31.647 [ WARN  ] [489ad0d9-8f6a-48cd-a58b-10714c1511b8] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:10703)
+2016-01-12 01:14:32.379 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1349)
+2016-01-12 01:14:32.433 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1349)
+2016-01-12 01:14:32.448 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:1349)
+2016-01-12 01:14:32.473 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1349)
+2016-01-12 01:14:32.492 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1349)
+2016-01-12 01:14:32.508 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1349)
+2016-01-12 01:14:32.523 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1349)
+2016-01-12 01:14:32.535 [ INFO  ] [Backend] Checking backend API version (pid:1349)
+2016-01-12 01:14:32.622 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:1349)
+2016-01-12 01:14:32.141 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1349)
+2016-01-12 01:14:32.144 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1349)
+2016-01-12 01:14:32.145 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1349)
+2016-01-12 01:14:32.148 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1349)
+2016-01-12 01:14:32.148 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1349)
+2016-01-12 01:14:33.195 [ INFO  ] [718ca59a-cc6c-4ae5-89bd-b9cada688bfc] Started GET "/-/" for ::1 at 2016-01-12 01:14:33 -0500 (pid:1367)
+2016-01-12 01:14:33.240 [ INFO  ] [718ca59a-cc6c-4ae5-89bd-b9cada688bfc] Processing by OcciModelController#show as */* (pid:1367)
+2016-01-12 01:14:33.363 [ INFO  ] [718ca59a-cc6c-4ae5-89bd-b9cada688bfc] [Backend] Loading Backends::OpennebulaBackend (pid:1367)
+2016-01-12 01:14:33.963 [ WARN  ] [718ca59a-cc6c-4ae5-89bd-b9cada688bfc] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:1367)
+2016-01-12 01:14:33.965 [ INFO  ] [718ca59a-cc6c-4ae5-89bd-b9cada688bfc] Completed 401 Unauthorized in 724ms (Views: 1.1ms) (pid:1367)
+2016-01-12 01:14:33.967 [ WARN  ] [718ca59a-cc6c-4ae5-89bd-b9cada688bfc] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:1367)
+2016-01-12 01:14:33.968 [ WARN  ] [718ca59a-cc6c-4ae5-89bd-b9cada688bfc] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:1367)
+2016-01-12 01:42:39.130 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:2279)
+2016-01-12 01:42:39.132 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:2279)
+2016-01-12 01:42:39.132 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:2279)
+2016-01-12 01:42:39.133 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:2279)
+2016-01-12 01:42:39.134 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:2279)
+2016-01-12 01:42:39.135 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:2279)
+2016-01-12 01:42:39.135 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:2279)
+2016-01-12 01:42:39.136 [ INFO  ] [Backend] Checking backend API version (pid:2279)
+2016-01-12 01:42:39.141 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:2279)
+2016-01-12 01:42:39.197 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:2279)
+2016-01-12 01:42:39.200 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:2279)
+2016-01-12 01:42:39.200 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:2279)
+2016-01-12 01:42:39.203 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:2279)
+2016-01-12 01:42:39.203 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:2279)
+2016-01-12 01:42:40.639 [ INFO  ] [273f1598-9c5a-428c-b97e-9941d52401ea] Started GET "/-/" for ::1 at 2016-01-12 01:42:40 -0500 (pid:2297)
+2016-01-12 01:42:40.193 [ INFO  ] [273f1598-9c5a-428c-b97e-9941d52401ea] Processing by OcciModelController#show as */* (pid:2297)
+2016-01-12 01:42:40.371 [ INFO  ] [273f1598-9c5a-428c-b97e-9941d52401ea] [Backend] Loading Backends::OpennebulaBackend (pid:2297)
+2016-01-12 01:42:40.510 [ WARN  ] [273f1598-9c5a-428c-b97e-9941d52401ea] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:2297)
+2016-01-12 01:42:40.511 [ INFO  ] [273f1598-9c5a-428c-b97e-9941d52401ea] Completed 401 Unauthorized in 491ms (Views: 0.3ms) (pid:2297)
+2016-01-12 01:42:40.512 [ WARN  ] [273f1598-9c5a-428c-b97e-9941d52401ea] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:2297)
+2016-01-12 01:42:40.528 [ WARN  ] [273f1598-9c5a-428c-b97e-9941d52401ea] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:2297)
+2016-01-12 02:04:42.980 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:3049)
+2016-01-12 02:04:42.982 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:3049)
+2016-01-12 02:04:42.983 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:3049)
+2016-01-12 02:04:42.984 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:3049)
+2016-01-12 02:04:42.985 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:3049)
+2016-01-12 02:04:42.985 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:3049)
+2016-01-12 02:04:42.986 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:3049)
+2016-01-12 02:04:42.986 [ INFO  ] [Backend] Checking backend API version (pid:3049)
+2016-01-12 02:04:42.992 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:3049)
+2016-01-12 02:04:43.539 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:3049)
+2016-01-12 02:04:43.563 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:3049)
+2016-01-12 02:04:43.571 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:3049)
+2016-01-12 02:04:43.596 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:3049)
+2016-01-12 02:04:43.598 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:3049)
+2016-01-12 02:04:43.905 [ INFO  ] [29e0b273-6b4d-4960-9346-e6b71e834fc6] Started GET "/-/" for ::1 at 2016-01-12 02:04:43 -0500 (pid:3067)
+2016-01-12 02:04:43.921 [ INFO  ] [29e0b273-6b4d-4960-9346-e6b71e834fc6] Processing by OcciModelController#show as */* (pid:3067)
+2016-01-12 02:04:43.941 [ INFO  ] [29e0b273-6b4d-4960-9346-e6b71e834fc6] [Backend] Loading Backends::OpennebulaBackend (pid:3067)
+2016-01-12 02:04:44.194 [ WARN  ] [29e0b273-6b4d-4960-9346-e6b71e834fc6] [Backend] Failed to authenticate user: undefined method `insepct' for "userpool.info":String (pid:3067)
+2016-01-12 02:04:44.204 [ INFO  ] [29e0b273-6b4d-4960-9346-e6b71e834fc6] Completed 401 Unauthorized in 99ms (Views: 0.4ms) (pid:3067)
+2016-01-12 02:04:44.217 [ WARN  ] [29e0b273-6b4d-4960-9346-e6b71e834fc6] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:3067)
+2016-01-12 02:04:44.218 [ WARN  ] [29e0b273-6b4d-4960-9346-e6b71e834fc6] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:3067)
+2016-01-12 02:16:58.584 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:3572)
+2016-01-12 02:16:58.586 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:3572)
+2016-01-12 02:16:58.586 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:3572)
+2016-01-12 02:16:58.587 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:3572)
+2016-01-12 02:16:58.588 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:3572)
+2016-01-12 02:16:58.588 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:3572)
+2016-01-12 02:16:58.589 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:3572)
+2016-01-12 02:16:58.589 [ INFO  ] [Backend] Checking backend API version (pid:3572)
+2016-01-12 02:16:58.594 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:3572)
+2016-01-12 02:16:58.651 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:3572)
+2016-01-12 02:16:58.654 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:3572)
+2016-01-12 02:16:58.654 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:3572)
+2016-01-12 02:16:58.657 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:3572)
+2016-01-12 02:16:58.657 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:3572)
+2016-01-12 02:16:59.471 [ INFO  ] [a301adb3-a1fc-4c62-a473-b9fa768c066f] Started GET "/-/" for ::1 at 2016-01-12 02:16:59 -0500 (pid:3590)
+2016-01-12 02:16:59.484 [ INFO  ] [a301adb3-a1fc-4c62-a473-b9fa768c066f] Processing by OcciModelController#show as */* (pid:3590)
+2016-01-12 02:16:59.495 [ INFO  ] [a301adb3-a1fc-4c62-a473-b9fa768c066f] [Backend] Loading Backends::OpennebulaBackend (pid:3590)
+2016-01-12 02:16:59.573 [ WARN  ] [a301adb3-a1fc-4c62-a473-b9fa768c066f] [Backend] Failed to authenticate user: undefined method `insepct' for "userpool.info":String (pid:3590)
+2016-01-12 02:16:59.574 [ INFO  ] [a301adb3-a1fc-4c62-a473-b9fa768c066f] Completed 401 Unauthorized in 89ms (Views: 0.3ms) (pid:3590)
+2016-01-12 02:16:59.575 [ WARN  ] [a301adb3-a1fc-4c62-a473-b9fa768c066f] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:3590)
+2016-01-12 02:16:59.575 [ WARN  ] [a301adb3-a1fc-4c62-a473-b9fa768c066f] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:3590)
+2016-01-12 02:54:22.997 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:4721)
+2016-01-12 02:54:22.999 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:4721)
+2016-01-12 02:54:23.  2 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:4721)
+2016-01-12 02:54:23.896 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:4721)
+2016-01-12 02:54:23.172 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:4721)
+2016-01-12 02:54:23.207 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:4721)
+2016-01-12 02:54:23.255 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:4721)
+2016-01-12 02:54:23.302 [ INFO  ] [Backend] Checking backend API version (pid:4721)
+2016-01-12 02:54:23.899 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:4721)
+2016-01-12 02:54:23.722 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:4721)
+2016-01-12 02:54:23.745 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:4721)
+2016-01-12 02:54:23.753 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:4721)
+2016-01-12 02:54:23.777 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:4721)
+2016-01-12 02:54:23.778 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:4721)
+2016-01-12 02:54:24.251 [ INFO  ] [7d609ffe-1fcb-4c25-82c4-95d5292eed14] Started GET "/-/" for ::1 at 2016-01-12 02:54:24 -0500 (pid:4741)
+2016-01-12 02:54:24.265 [ INFO  ] [7d609ffe-1fcb-4c25-82c4-95d5292eed14] Processing by OcciModelController#show as */* (pid:4741)
+2016-01-12 02:54:24.274 [ INFO  ] [7d609ffe-1fcb-4c25-82c4-95d5292eed14] [Backend] Loading Backends::OpennebulaBackend (pid:4741)
+2016-01-12 02:54:24.755 [ WARN  ] [7d609ffe-1fcb-4c25-82c4-95d5292eed14] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:4741)
+2016-01-12 02:54:24.756 [ INFO  ] [7d609ffe-1fcb-4c25-82c4-95d5292eed14] Completed 401 Unauthorized in 491ms (Views: 0.4ms) (pid:4741)
+2016-01-12 02:54:24.757 [ WARN  ] [7d609ffe-1fcb-4c25-82c4-95d5292eed14] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:4741)
+2016-01-12 02:54:24.757 [ WARN  ] [7d609ffe-1fcb-4c25-82c4-95d5292eed14] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:4741)
+2016-01-12 02:57:25.491 [ INFO  ] [72c71321-d47d-4e15-b8a5-5ac0c5ac8d32] Started GET "/-/" for ::1 at 2016-01-12 02:57:25 -0500 (pid:4741)
+2016-01-12 02:57:25.493 [ INFO  ] [72c71321-d47d-4e15-b8a5-5ac0c5ac8d32] Processing by OcciModelController#show as */* (pid:4741)
+2016-01-12 02:57:25.494 [ INFO  ] [72c71321-d47d-4e15-b8a5-5ac0c5ac8d32] [Backend] Loading Backends::OpennebulaBackend (pid:4741)
+2016-01-12 02:57:25.967 [ WARN  ] [72c71321-d47d-4e15-b8a5-5ac0c5ac8d32] [Backend] Failed to authenticate user: [UserPoolInfo] User couldn't be authenticated, aborting call. (pid:4741)
+2016-01-12 02:57:25.968 [ INFO  ] [72c71321-d47d-4e15-b8a5-5ac0c5ac8d32] Completed 401 Unauthorized in 475ms (Views: 0.2ms) (pid:4741)
+2016-01-12 02:57:25.969 [ WARN  ] [72c71321-d47d-4e15-b8a5-5ac0c5ac8d32] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:4741)
+2016-01-12 02:57:25.969 [ WARN  ] [72c71321-d47d-4e15-b8a5-5ac0c5ac8d32] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:4741)
+2016-01-12 03:10:17.894 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:5350)
+2016-01-12 03:10:17.914 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:5350)
+2016-01-12 03:10:17.918 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:5350)
+2016-01-12 03:10:17.927 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:5350)
+2016-01-12 03:10:17.935 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:5350)
+2016-01-12 03:10:17.938 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:5350)
+2016-01-12 03:10:17.943 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:5350)
+2016-01-12 03:10:17.948 [ INFO  ] [Backend] Checking backend API version (pid:5350)
+2016-01-12 03:10:17.100 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:5350)
+2016-01-12 03:10:17.159 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:5350)
+2016-01-12 03:10:17.161 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:5350)
+2016-01-12 03:10:17.162 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:5350)
+2016-01-12 03:10:17.165 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:5350)
+2016-01-12 03:10:17.165 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:5350)
+2016-01-12 03:10:18.457 [ INFO  ] [282442da-9256-4cfb-aa4d-3d41c21d2440] Started GET "/-/" for ::1 at 2016-01-12 03:10:18 -0500 (pid:5370)
+2016-01-12 03:10:18.620 [ INFO  ] [282442da-9256-4cfb-aa4d-3d41c21d2440] Processing by OcciModelController#show as */* (pid:5370)
+2016-01-12 03:10:18.812 [ INFO  ] [282442da-9256-4cfb-aa4d-3d41c21d2440] [Backend] Loading Backends::OpennebulaBackend (pid:5370)
+2016-01-12 03:10:18.662 [ WARN  ] [282442da-9256-4cfb-aa4d-3d41c21d2440] [Backend] Failed to authenticate user: User could not be authenticated! (pid:5370)
+2016-01-12 03:10:18.663 [ INFO  ] [282442da-9256-4cfb-aa4d-3d41c21d2440] Completed 401 Unauthorized in 601ms (Views: 0.3ms) (pid:5370)
+2016-01-12 03:10:18.664 [ WARN  ] [282442da-9256-4cfb-aa4d-3d41c21d2440] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:5370)
+2016-01-12 03:10:18.664 [ WARN  ] [282442da-9256-4cfb-aa4d-3d41c21d2440] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:5370)
+2016-01-12 03:17:13.364 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:5796)
+2016-01-12 03:17:13.383 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:5796)
+2016-01-12 03:17:13.387 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:5796)
+2016-01-12 03:17:13.396 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:5796)
+2016-01-12 03:17:13.405 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:5796)
+2016-01-12 03:17:13.409 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:5796)
+2016-01-12 03:17:13.414 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:5796)
+2016-01-12 03:17:13.418 [ INFO  ] [Backend] Checking backend API version (pid:5796)
+2016-01-12 03:17:13.473 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:5796)
+2016-01-12 03:17:13.106 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:5796)
+2016-01-12 03:17:13.108 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:5796)
+2016-01-12 03:17:13.109 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:5796)
+2016-01-12 03:17:13.112 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:5796)
+2016-01-12 03:17:13.112 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:5796)
+2016-01-12 03:17:14.493 [ INFO  ] [f1148c50-f6fc-4fab-a194-e753263e6818] Started GET "/-/" for ::1 at 2016-01-12 03:17:14 -0500 (pid:5818)
+2016-01-12 03:17:14.721 [ INFO  ] [f1148c50-f6fc-4fab-a194-e753263e6818] Processing by OcciModelController#show as */* (pid:5818)
+2016-01-12 03:17:14.320 [ INFO  ] [f1148c50-f6fc-4fab-a194-e753263e6818] [Backend] Loading Backends::OpennebulaBackend (pid:5818)
+2016-01-12 03:17:15.180 [ WARN  ] [f1148c50-f6fc-4fab-a194-e753263e6818] [Backend] Failed to authenticate user: User could not be authenticated! (pid:5818)
+2016-01-12 03:17:15.188 [ INFO  ] [f1148c50-f6fc-4fab-a194-e753263e6818] Completed 401 Unauthorized in 946ms (Views: 0.3ms) (pid:5818)
+2016-01-12 03:17:15.200 [ WARN  ] [f1148c50-f6fc-4fab-a194-e753263e6818] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:5818)
+2016-01-12 03:17:15.202 [ WARN  ] [f1148c50-f6fc-4fab-a194-e753263e6818] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:5818)
+2016-01-12 03:17:43.717 [ INFO  ] [b7b9a076-9e6d-4ed4-badc-137f18d3f945] Started GET "/-/" for ::1 at 2016-01-12 03:17:43 -0500 (pid:5818)
+2016-01-12 03:17:43.719 [ INFO  ] [b7b9a076-9e6d-4ed4-badc-137f18d3f945] Processing by OcciModelController#show as */* (pid:5818)
+2016-01-12 03:17:43.720 [ INFO  ] [b7b9a076-9e6d-4ed4-badc-137f18d3f945] [Backend] Loading Backends::OpennebulaBackend (pid:5818)
+2016-01-12 03:17:44.243 [ WARN  ] [b7b9a076-9e6d-4ed4-badc-137f18d3f945] [Backend] Failed to authenticate user: User could not be authenticated! (pid:5818)
+2016-01-12 03:17:44.244 [ INFO  ] [b7b9a076-9e6d-4ed4-badc-137f18d3f945] Completed 401 Unauthorized in 524ms (Views: 0.2ms) (pid:5818)
+2016-01-12 03:17:44.245 [ WARN  ] [b7b9a076-9e6d-4ed4-badc-137f18d3f945] [AuthN] [UnauthorizedController] Authentication failed: Authentication failed! The following strategies are supported "voms, x509, basic"! (pid:5818)
+2016-01-12 03:17:44.245 [ WARN  ] [b7b9a076-9e6d-4ed4-badc-137f18d3f945] [AuthN] [UnauthorizedController] Responding with 401 {"X-Frame-Options"=>"SAMEORIGIN", "X-XSS-Protection"=>"1; mode=block", "X-Content-Type-Options"=>"nosniff"} (pid:5818)
+2016-01-12 03:29:42.234 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:6320)
+2016-01-12 03:29:42.237 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:6320)
+2016-01-12 03:29:42.237 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:6320)
+2016-01-12 03:29:42.238 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:6320)
+2016-01-12 03:29:42.239 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:6320)
+2016-01-12 03:29:42.239 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:6320)
+2016-01-12 03:29:42.240 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:6320)
+2016-01-12 03:29:42.240 [ INFO  ] [Backend] Checking backend API version (pid:6320)
+2016-01-12 03:29:42.246 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:6320)
+2016-01-12 03:29:42.305 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:6320)
+2016-01-12 03:29:42.307 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:6320)
+2016-01-12 03:29:42.308 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:6320)
+2016-01-12 03:29:42.310 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:6320)
+2016-01-12 03:29:42.310 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:6320)
+2016-01-12 03:29:43.188 [ INFO  ] [6e0ed603-f796-468c-a5ef-1fc911fc7d5b] Started GET "/-/" for ::1 at 2016-01-12 03:29:43 -0500 (pid:6340)
+2016-01-12 03:29:43.202 [ INFO  ] [6e0ed603-f796-468c-a5ef-1fc911fc7d5b] Processing by OcciModelController#show as */* (pid:6340)
+2016-01-12 03:29:43.213 [ INFO  ] [6e0ed603-f796-468c-a5ef-1fc911fc7d5b] [Backend] Loading Backends::OpennebulaBackend (pid:6340)
+2016-01-12 03:29:45.427 [ INFO  ] [6e0ed603-f796-468c-a5ef-1fc911fc7d5b] Completed 200 OK in 2224ms (Views: 6.9ms) (pid:6340)
+2016-01-12 04:28:55.300 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1247)
+2016-01-12 04:28:55.305 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1247)
+2016-01-12 04:28:55.307 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:1247)
+2016-01-12 04:28:55.310 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1247)
+2016-01-12 04:28:55.312 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1247)
+2016-01-12 04:28:55.314 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1247)
+2016-01-12 04:28:55.316 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1247)
+2016-01-12 04:28:55.317 [ INFO  ] [Backend] Checking backend API version (pid:1247)
+2016-01-12 04:28:55.329 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:1247)
+2016-01-12 04:28:55.418 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1247)
+2016-01-12 04:28:55.421 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1247)
+2016-01-12 04:28:55.422 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1247)
+2016-01-12 04:28:55.426 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1247)
+2016-01-12 04:28:55.426 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1247)
+2016-01-12 04:28:56.420 [ INFO  ] [5324025b-a318-4121-b47a-ab22bd60f9f9] Started GET "/-/" for ::1 at 2016-01-12 04:28:56 -0500 (pid:1266)
+2016-01-12 04:28:56.487 [ INFO  ] [5324025b-a318-4121-b47a-ab22bd60f9f9] Processing by OcciModelController#show as */* (pid:1266)
+2016-01-12 04:28:56.584 [ INFO  ] [5324025b-a318-4121-b47a-ab22bd60f9f9] [Backend] Loading Backends::OpennebulaBackend (pid:1266)
+2016-01-12 04:28:58.988 [ INFO  ] [5324025b-a318-4121-b47a-ab22bd60f9f9] Completed 200 OK in 2501ms (Views: 7.9ms) (pid:1266)
+2016-01-12 13:26:08.884 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1279)
+2016-01-12 13:26:08.888 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1279)
+2016-01-12 13:26:08.889 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:1279)
+2016-01-12 13:26:08.890 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1279)
+2016-01-12 13:26:08.892 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1279)
+2016-01-12 13:26:08.893 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1279)
+2016-01-12 13:26:08.894 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1279)
+2016-01-12 13:26:08.895 [ INFO  ] [Backend] Checking backend API version (pid:1279)
+2016-01-12 13:26:08.902 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:1279)
+2016-01-12 13:26:08.972 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1279)
+2016-01-12 13:26:08.975 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1279)
+2016-01-12 13:26:08.978 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1279)
+2016-01-12 13:26:08.987 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1279)
+2016-01-12 13:26:08.987 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1279)
+2016-01-12 13:26:09.976 [ INFO  ] [b6f5962e-70db-404a-9670-6ab209524d25] Started GET "/-/" for ::1 at 2016-01-12 13:26:09 -0500 (pid:1299)
+2016-01-12 13:26:09.988 [ INFO  ] [b6f5962e-70db-404a-9670-6ab209524d25] Processing by OcciModelController#show as */* (pid:1299)
+2016-01-12 13:26:10.603 [ INFO  ] [b6f5962e-70db-404a-9670-6ab209524d25] [Backend] Loading Backends::OpennebulaBackend (pid:1299)
+2016-01-12 13:26:12.324 [ INFO  ] [b6f5962e-70db-404a-9670-6ab209524d25] Completed 200 OK in 2335ms (Views: 7.9ms) (pid:1299)
+2016-01-12 13:27:10.603 [ INFO  ] [b68ed46c-a47f-4ec5-ab57-7132eb925734] Started GET "/-/" for ::1 at 2016-01-12 13:27:10 -0500 (pid:1299)
+2016-01-12 13:27:10.604 [ INFO  ] [b68ed46c-a47f-4ec5-ab57-7132eb925734] Processing by OcciModelController#show as */* (pid:1299)
+2016-01-12 13:27:10.605 [ INFO  ] [b68ed46c-a47f-4ec5-ab57-7132eb925734] [Backend] Loading Backends::OpennebulaBackend (pid:1299)
+2016-01-12 13:27:12.903 [ INFO  ] [b68ed46c-a47f-4ec5-ab57-7132eb925734] Completed 200 OK in 2298ms (Views: 5.7ms) (pid:1299)
+2016-01-12 13:30:10.230 [ INFO  ] [6c646b6b-5d54-4f13-be41-0cad70b16132] Started GET "/-/" for ::1 at 2016-01-12 13:30:10 -0500 (pid:1299)
+2016-01-12 13:30:10.232 [ INFO  ] [6c646b6b-5d54-4f13-be41-0cad70b16132] Processing by OcciModelController#show as */* (pid:1299)
+2016-01-12 13:30:10.232 [ INFO  ] [6c646b6b-5d54-4f13-be41-0cad70b16132] [Backend] Loading Backends::OpennebulaBackend (pid:1299)
+2016-01-12 13:30:12.493 [ INFO  ] [6c646b6b-5d54-4f13-be41-0cad70b16132] Completed 200 OK in 2261ms (Views: 21.2ms) (pid:1299)
+2016-01-12 13:30:47.409 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1648)
+2016-01-12 13:30:47.411 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1648)
+2016-01-12 13:30:47.412 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:1648)
+2016-01-12 13:30:47.413 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1648)
+2016-01-12 13:30:47.413 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1648)
+2016-01-12 13:30:47.414 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1648)
+2016-01-12 13:30:47.414 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1648)
+2016-01-12 13:30:47.415 [ INFO  ] [Backend] Checking backend API version (pid:1648)
+2016-01-12 13:30:47.420 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:1648)
+2016-01-12 13:30:47.480 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1648)
+2016-01-12 13:30:47.483 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1648)
+2016-01-12 13:30:47.485 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1648)
+2016-01-12 13:30:47.500 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1648)
+2016-01-12 13:30:47.500 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1648)
+2016-01-12 13:35:19.348 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1734)
+2016-01-12 13:35:19.350 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1734)
+2016-01-12 13:35:19.350 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:1734)
+2016-01-12 13:35:19.351 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1734)
+2016-01-12 13:35:19.352 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1734)
+2016-01-12 13:35:19.352 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1734)
+2016-01-12 13:35:19.352 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1734)
+2016-01-12 13:35:19.353 [ INFO  ] [Backend] Checking backend API version (pid:1734)
+2016-01-12 13:35:19.358 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:1734)
+2016-01-12 13:35:19.414 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1734)
+2016-01-12 13:35:19.416 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1734)
+2016-01-12 13:35:19.417 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1734)
+2016-01-12 13:35:19.420 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1734)
+2016-01-12 13:35:19.420 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1734)
+2016-01-12 13:43:06.841 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1768)
+2016-01-12 13:43:06.843 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1768)
+2016-01-12 13:43:06.843 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:1768)
+2016-01-12 13:43:06.844 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1768)
+2016-01-12 13:43:06.845 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1768)
+2016-01-12 13:43:06.845 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1768)
+2016-01-12 13:43:06.846 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1768)
+2016-01-12 13:43:06.846 [ INFO  ] [Backend] Checking backend API version (pid:1768)
+2016-01-12 13:43:06.851 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:1768)
+2016-01-12 13:43:06.907 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1768)
+2016-01-12 13:43:06.909 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1768)
+2016-01-12 13:43:06.910 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1768)
+2016-01-12 13:43:06.913 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1768)
+2016-01-12 13:43:06.914 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1768)
+2016-01-12 13:43:19.819 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:1933)
+2016-01-12 13:43:19.100 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:1933)
+2016-01-12 13:43:19.103 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:1933)
+2016-01-12 13:43:19.112 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:1933)
+2016-01-12 13:43:19.121 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:1933)
+2016-01-12 13:43:19.124 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:1933)
+2016-01-12 13:43:19.129 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:1933)
+2016-01-12 13:43:19.133 [ INFO  ] [Backend] Checking backend API version (pid:1933)
+2016-01-12 13:43:19.185 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:1933)
+2016-01-12 13:43:19.734 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:1933)
+2016-01-12 13:43:19.755 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:1933)
+2016-01-12 13:43:19.764 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:1933)
+2016-01-12 13:43:19.789 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:1933)
+2016-01-12 13:43:19.790 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:1933)
+2016-01-12 13:58:50.266 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:2289)
+2016-01-12 13:58:50.268 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:2289)
+2016-01-12 13:58:50.268 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:2289)
+2016-01-12 13:58:50.269 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:2289)
+2016-01-12 13:58:50.270 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:2289)
+2016-01-12 13:58:50.270 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:2289)
+2016-01-12 13:58:50.270 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:2289)
+2016-01-12 13:58:50.271 [ INFO  ] [Backend] Checking backend API version (pid:2289)
+2016-01-12 13:58:50.277 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:2289)
+2016-01-12 13:58:50.339 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:2289)
+2016-01-12 13:58:50.341 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:2289)
+2016-01-12 13:58:50.342 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:2289)
+2016-01-12 13:58:50.345 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:2289)
+2016-01-12 13:58:50.345 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:2289)
+2016-01-12 13:58:51.219 [ INFO  ] [edba7e25-b75a-46aa-9e4d-ea81018ed065] Started GET "/-/" for ::1 at 2016-01-12 13:58:51 -0500 (pid:2307)
+2016-01-12 13:58:51.230 [ INFO  ] [edba7e25-b75a-46aa-9e4d-ea81018ed065] Processing by OcciModelController#show as */* (pid:2307)
+2016-01-12 13:58:51.253 [ INFO  ] [da2cab6a-7769-4b68-bb33-26c3222ad255] Started GET "/-/" for ::1 at 2016-01-12 13:58:51 -0500 (pid:2314)
+2016-01-12 13:58:51.267 [ INFO  ] [da2cab6a-7769-4b68-bb33-26c3222ad255] Processing by OcciModelController#show as TEXT (pid:2314)
+2016-01-12 13:58:51.290 [ INFO  ] [b5c8d645-6492-4135-b6e9-07d597156016] Started GET "/-/" for ::1 at 2016-01-12 13:58:51 -0500 (pid:2321)
+2016-01-12 13:58:51.321 [ INFO  ] [b5c8d645-6492-4135-b6e9-07d597156016] Processing by OcciModelController#show as TEXT (pid:2321)
+2016-01-12 13:58:51.382 [ INFO  ] [929598b0-5323-4bbb-ab67-48804279cc79] Started GET "/-/" for ::1 at 2016-01-12 13:58:51 -0500 (pid:2329)
+2016-01-12 13:58:51.395 [ INFO  ] [929598b0-5323-4bbb-ab67-48804279cc79] Processing by OcciModelController#show as TEXT (pid:2329)
+2016-01-12 13:58:51.451 [ INFO  ] [9af53f79-64c7-4c32-8aec-cf048885d804] Started GET "/-/" for ::1 at 2016-01-12 13:58:51 -0500 (pid:2337)
+2016-01-12 13:58:51.465 [ INFO  ] [9af53f79-64c7-4c32-8aec-cf048885d804] Processing by OcciModelController#show as TEXT (pid:2337)
+2016-01-12 13:58:51.516 [ INFO  ] [9c987c77-accf-4421-a848-185724637da6] Started GET "/-/" for ::1 at 2016-01-12 13:58:51 -0500 (pid:2345)
+2016-01-12 13:58:51.531 [ INFO  ] [9c987c77-accf-4421-a848-185724637da6] Processing by OcciModelController#show as TEXT (pid:2345)
+2016-01-12 13:59:51.288 [ INFO  ] [da2cab6a-7769-4b68-bb33-26c3222ad255] Completed 500 Internal Server Error in 60021ms (pid:2314)
+2016-01-12 13:59:51.288 [ INFO  ] [edba7e25-b75a-46aa-9e4d-ea81018ed065] Completed 500 Internal Server Error in 60057ms (pid:2307)
+2016-01-12 13:59:51.295 [ FATAL ] [edba7e25-b75a-46aa-9e4d-ea81018ed065] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2307)
+2016-01-12 13:59:51.296 [ FATAL ] [da2cab6a-7769-4b68-bb33-26c3222ad255] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2314)
+2016-01-12 13:59:51.323 [ INFO  ] [708d421b-3640-4284-8e54-0bffe63e9427] Started GET "/-/" for ::1 at 2016-01-12 13:59:51 -0500 (pid:2314)
+2016-01-12 13:59:51.324 [ INFO  ] [708d421b-3640-4284-8e54-0bffe63e9427] Processing by OcciModelController#show as TEXT (pid:2314)
+2016-01-12 13:59:51.330 [ INFO  ] [e136ac7f-ea3a-4ca0-a776-82a78654ad4e] Started GET "/-/" for ::1 at 2016-01-12 13:59:51 -0500 (pid:2307)
+2016-01-12 13:59:51.331 [ INFO  ] [e136ac7f-ea3a-4ca0-a776-82a78654ad4e] Processing by OcciModelController#show as TEXT (pid:2307)
+2016-01-12 13:59:51.373 [ INFO  ] [b5c8d645-6492-4135-b6e9-07d597156016] Completed 500 Internal Server Error in 60052ms (pid:2321)
+2016-01-12 13:59:51.375 [ FATAL ] [b5c8d645-6492-4135-b6e9-07d597156016] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2321)
+2016-01-12 13:59:51.398 [ INFO  ] [d9c574c1-ece9-4970-8a8d-4206d826bb8c] Started GET "/-/" for ::1 at 2016-01-12 13:59:51 -0500 (pid:2321)
+2016-01-12 13:59:51.399 [ INFO  ] [d9c574c1-ece9-4970-8a8d-4206d826bb8c] Processing by OcciModelController#show as TEXT (pid:2321)
+2016-01-12 13:59:51.478 [ INFO  ] [929598b0-5323-4bbb-ab67-48804279cc79] Completed 500 Internal Server Error in 60082ms (pid:2329)
+2016-01-12 13:59:51.483 [ FATAL ] [929598b0-5323-4bbb-ab67-48804279cc79] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2329)
+2016-01-12 13:59:51.506 [ INFO  ] [875ae3a1-870f-428b-bbd6-567df369db90] Started GET "/-/" for ::1 at 2016-01-12 13:59:51 -0500 (pid:2329)
+2016-01-12 13:59:51.507 [ INFO  ] [875ae3a1-870f-428b-bbd6-567df369db90] Processing by OcciModelController#show as TEXT (pid:2329)
+2016-01-12 13:59:51.537 [ INFO  ] [9af53f79-64c7-4c32-8aec-cf048885d804] Completed 500 Internal Server Error in 60072ms (pid:2337)
+2016-01-12 13:59:51.541 [ FATAL ] [9af53f79-64c7-4c32-8aec-cf048885d804] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2337)
+2016-01-12 13:59:51.563 [ INFO  ] [bfca878a-a37f-4c03-a329-25ede3cb8b1a] Started GET "/-/" for ::1 at 2016-01-12 13:59:51 -0500 (pid:2337)
+2016-01-12 13:59:51.565 [ INFO  ] [bfca878a-a37f-4c03-a329-25ede3cb8b1a] Processing by OcciModelController#show as TEXT (pid:2337)
+2016-01-12 13:59:51.609 [ INFO  ] [9c987c77-accf-4421-a848-185724637da6] Completed 500 Internal Server Error in 60078ms (pid:2345)
+2016-01-12 13:59:51.614 [ FATAL ] [9c987c77-accf-4421-a848-185724637da6] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2345)
+2016-01-12 13:59:51.675 [ INFO  ] [9494c0d7-a48f-402f-8c4e-11a91e7fb63d] Started GET "/-/" for ::1 at 2016-01-12 13:59:51 -0500 (pid:2345)
+2016-01-12 13:59:51.676 [ INFO  ] [9494c0d7-a48f-402f-8c4e-11a91e7fb63d] Processing by OcciModelController#show as TEXT (pid:2345)
+2016-01-12 14:00:30.562 [ INFO  ] [875ae3a1-870f-428b-bbd6-567df369db90] Completed 500 Internal Server Error in 39055ms (pid:2329)
+2016-01-12 14:00:30.562 [ INFO  ] [d9c574c1-ece9-4970-8a8d-4206d826bb8c] Completed 500 Internal Server Error in 39163ms (pid:2321)
+2016-01-12 14:00:30.565 [ FATAL ] [d9c574c1-ece9-4970-8a8d-4206d826bb8c] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2321)
+2016-01-12 14:00:30.566 [ INFO  ] [25f008a9-f763-42c0-83ad-94b9039660d0] Started GET "/-/" for ::1 at 2016-01-12 14:00:30 -0500 (pid:2321)
+2016-01-12 14:00:30.567 [ INFO  ] [25f008a9-f763-42c0-83ad-94b9039660d0] Processing by OcciModelController#show as TEXT (pid:2321)
+2016-01-12 14:00:30.570 [ INFO  ] [9494c0d7-a48f-402f-8c4e-11a91e7fb63d] Completed 500 Internal Server Error in 38894ms (pid:2345)
+2016-01-12 14:00:30.571 [ INFO  ] [708d421b-3640-4284-8e54-0bffe63e9427] Completed 500 Internal Server Error in 39247ms (pid:2314)
+2016-01-12 14:00:30.574 [ INFO  ] [bfca878a-a37f-4c03-a329-25ede3cb8b1a] Completed 500 Internal Server Error in 39009ms (pid:2337)
+2016-01-12 14:00:30.574 [ INFO  ] [e136ac7f-ea3a-4ca0-a776-82a78654ad4e] Completed 500 Internal Server Error in 39243ms (pid:2307)
+2016-01-12 14:00:30.577 [ FATAL ] [bfca878a-a37f-4c03-a329-25ede3cb8b1a] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2337)
+2016-01-12 14:00:30.579 [ FATAL ] [e136ac7f-ea3a-4ca0-a776-82a78654ad4e] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2307)
+2016-01-12 14:00:30.577 [ FATAL ] [9494c0d7-a48f-402f-8c4e-11a91e7fb63d] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2345)
+2016-01-12 14:00:30.582 [ FATAL ] [875ae3a1-870f-428b-bbd6-567df369db90] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2329)
+2016-01-12 14:00:30.583 [ FATAL ] [708d421b-3640-4284-8e54-0bffe63e9427] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2314)
+2016-01-12 14:00:40.953 [ INFO  ] [25f008a9-f763-42c0-83ad-94b9039660d0] Completed 500 Internal Server Error in 10386ms (pid:2321)
+2016-01-12 14:00:40.955 [ FATAL ] [25f008a9-f763-42c0-83ad-94b9039660d0] 
+Errno::ECONNRESET (Connection reset by peer - SSL_connect):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2321)
+2016-01-12 14:00:45.536 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:2559)
+2016-01-12 14:00:45.538 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:2559)
+2016-01-12 14:00:45.538 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:2559)
+2016-01-12 14:00:45.539 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:2559)
+2016-01-12 14:00:45.540 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:2559)
+2016-01-12 14:00:45.540 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:2559)
+2016-01-12 14:00:45.541 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:2559)
+2016-01-12 14:00:45.541 [ INFO  ] [Backend] Checking backend API version (pid:2559)
+2016-01-12 14:00:45.547 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:2559)
+2016-01-12 14:00:45.606 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:2559)
+2016-01-12 14:00:45.609 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:2559)
+2016-01-12 14:00:45.610 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:2559)
+2016-01-12 14:00:45.618 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:2559)
+2016-01-12 14:00:45.619 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:2559)
+2016-01-12 14:00:47.149 [ INFO  ] [44faa6a6-0380-40af-b8c8-193237ed6844] Started GET "/-/" for ::1 at 2016-01-12 14:00:47 -0500 (pid:2581)
+2016-01-12 14:00:47.337 [ INFO  ] [44faa6a6-0380-40af-b8c8-193237ed6844] Processing by OcciModelController#show as */* (pid:2581)
+2016-01-12 14:00:47.634 [ INFO  ] [811b8765-ecd2-4693-8723-1a5e8fcb1294] Started GET "/-/" for ::1 at 2016-01-12 14:00:47 -0500 (pid:2588)
+2016-01-12 14:00:47.731 [ INFO  ] [811b8765-ecd2-4693-8723-1a5e8fcb1294] Processing by OcciModelController#show as TEXT (pid:2588)
+2016-01-12 14:00:47.976 [ INFO  ] [75f25118-5a4b-4286-8cad-06067d97af9e] Started GET "/-/" for ::1 at 2016-01-12 14:00:47 -0500 (pid:2595)
+2016-01-12 14:00:48.388 [ INFO  ] [75f25118-5a4b-4286-8cad-06067d97af9e] Processing by OcciModelController#show as TEXT (pid:2595)
+2016-01-12 14:00:48.421 [ INFO  ] [488bc15a-35c7-4cc0-b664-b773dcae010c] Started GET "/-/" for ::1 at 2016-01-12 14:00:48 -0500 (pid:2611)
+2016-01-12 14:00:48.552 [ INFO  ] [488bc15a-35c7-4cc0-b664-b773dcae010c] Processing by OcciModelController#show as TEXT (pid:2611)
+2016-01-12 14:00:48.895 [ INFO  ] [ec83ab12-536f-48b5-a277-7bcf13907fbe] Started GET "/-/" for ::1 at 2016-01-12 14:00:48 -0500 (pid:2619)
+2016-01-12 14:00:48.970 [ INFO  ] [ec83ab12-536f-48b5-a277-7bcf13907fbe] Processing by OcciModelController#show as TEXT (pid:2619)
+2016-01-12 14:00:49.343 [ INFO  ] [9c411b33-1a2a-4e0f-9c45-bf374f83265c] Started GET "/-/" for ::1 at 2016-01-12 14:00:49 -0500 (pid:2627)
+2016-01-12 14:00:49.478 [ INFO  ] [9c411b33-1a2a-4e0f-9c45-bf374f83265c] Processing by OcciModelController#show as TEXT (pid:2627)
+2016-01-12 14:01:47.626 [ INFO  ] [44faa6a6-0380-40af-b8c8-193237ed6844] Completed 500 Internal Server Error in 60288ms (pid:2581)
+2016-01-12 14:01:47.630 [ FATAL ] [44faa6a6-0380-40af-b8c8-193237ed6844] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2581)
+2016-01-12 14:01:47.659 [ INFO  ] [2332f980-4ced-4c3b-957e-2eb04cc84223] Started GET "/-/" for ::1 at 2016-01-12 14:01:47 -0500 (pid:2581)
+2016-01-12 14:01:47.660 [ INFO  ] [2332f980-4ced-4c3b-957e-2eb04cc84223] Processing by OcciModelController#show as TEXT (pid:2581)
+2016-01-12 14:01:47.968 [ INFO  ] [811b8765-ecd2-4693-8723-1a5e8fcb1294] Completed 500 Internal Server Error in 60237ms (pid:2588)
+2016-01-12 14:01:47.971 [ FATAL ] [811b8765-ecd2-4693-8723-1a5e8fcb1294] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2588)
+2016-01-12 14:01:47.992 [ INFO  ] [9ae6fd30-a31c-4338-8d54-34e44851ec36] Started GET "/-/" for ::1 at 2016-01-12 14:01:47 -0500 (pid:2588)
+2016-01-12 14:01:47.993 [ INFO  ] [9ae6fd30-a31c-4338-8d54-34e44851ec36] Processing by OcciModelController#show as TEXT (pid:2588)
+2016-01-12 14:01:48.214 [ INFO  ] [75f25118-5a4b-4286-8cad-06067d97af9e] Completed 500 Internal Server Error in 60176ms (pid:2595)
+2016-01-12 14:01:48.217 [ FATAL ] [75f25118-5a4b-4286-8cad-06067d97af9e] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2595)
+2016-01-12 14:01:48.238 [ INFO  ] [bda09aa9-9e1c-40a8-8da8-cf33c65a9cf0] Started GET "/-/" for ::1 at 2016-01-12 14:01:48 -0500 (pid:2595)
+2016-01-12 14:01:48.239 [ INFO  ] [bda09aa9-9e1c-40a8-8da8-cf33c65a9cf0] Processing by OcciModelController#show as TEXT (pid:2595)
+2016-01-12 14:01:48.749 [ INFO  ] [488bc15a-35c7-4cc0-b664-b773dcae010c] Completed 500 Internal Server Error in 60197ms (pid:2611)
+2016-01-12 14:01:48.752 [ FATAL ] [488bc15a-35c7-4cc0-b664-b773dcae010c] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2611)
+2016-01-12 14:01:48.773 [ INFO  ] [56a848a9-e136-4a93-a86c-9e6561d9d638] Started GET "/-/" for ::1 at 2016-01-12 14:01:48 -0500 (pid:2611)
+2016-01-12 14:01:48.775 [ INFO  ] [56a848a9-e136-4a93-a86c-9e6561d9d638] Processing by OcciModelController#show as TEXT (pid:2611)
+2016-01-12 14:01:49.976 [ INFO  ] [ec83ab12-536f-48b5-a277-7bcf13907fbe] Completed 500 Internal Server Error in 60127ms (pid:2619)
+2016-01-12 14:01:49.100 [ FATAL ] [ec83ab12-536f-48b5-a277-7bcf13907fbe] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2619)
+2016-01-12 14:01:49.120 [ INFO  ] [14816d6c-0749-40fd-92bb-62ac88c96506] Started GET "/-/" for ::1 at 2016-01-12 14:01:49 -0500 (pid:2619)
+2016-01-12 14:01:49.122 [ INFO  ] [14816d6c-0749-40fd-92bb-62ac88c96506] Processing by OcciModelController#show as TEXT (pid:2619)
+2016-01-12 14:01:49.630 [ INFO  ] [9c411b33-1a2a-4e0f-9c45-bf374f83265c] Completed 500 Internal Server Error in 60151ms (pid:2627)
+2016-01-12 14:01:49.633 [ FATAL ] [9c411b33-1a2a-4e0f-9c45-bf374f83265c] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2627)
+2016-01-12 14:01:49.664 [ INFO  ] [832882fa-c567-4a2e-a754-46d43fdaee68] Started GET "/-/" for ::1 at 2016-01-12 14:01:49 -0500 (pid:2627)
+2016-01-12 14:01:49.666 [ INFO  ] [832882fa-c567-4a2e-a754-46d43fdaee68] Processing by OcciModelController#show as TEXT (pid:2627)
+2016-01-12 14:02:47.716 [ INFO  ] [2332f980-4ced-4c3b-957e-2eb04cc84223] Completed 500 Internal Server Error in 60056ms (pid:2581)
+2016-01-12 14:02:47.718 [ FATAL ] [2332f980-4ced-4c3b-957e-2eb04cc84223] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2581)
+2016-01-12 14:02:47.719 [ INFO  ] [befa60ef-f8a0-4f52-9181-d39e4cf6d47e] Started GET "/-/" for ::1 at 2016-01-12 14:02:47 -0500 (pid:2581)
+2016-01-12 14:02:47.720 [ INFO  ] [befa60ef-f8a0-4f52-9181-d39e4cf6d47e] Processing by OcciModelController#show as TEXT (pid:2581)
+2016-01-12 14:02:48.262 [ INFO  ] [9ae6fd30-a31c-4338-8d54-34e44851ec36] Completed 500 Internal Server Error in 60032ms (pid:2588)
+2016-01-12 14:02:48.283 [ FATAL ] [9ae6fd30-a31c-4338-8d54-34e44851ec36] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2588)
+2016-01-12 14:02:48.294 [ INFO  ] [18bb202f-9ef3-483b-bf51-b04439ff0a11] Started GET "/-/" for ::1 at 2016-01-12 14:02:48 -0500 (pid:2588)
+2016-01-12 14:02:48.303 [ INFO  ] [18bb202f-9ef3-483b-bf51-b04439ff0a11] Processing by OcciModelController#show as TEXT (pid:2588)
+2016-01-12 14:02:48.306 [ INFO  ] [bda09aa9-9e1c-40a8-8da8-cf33c65a9cf0] Completed 500 Internal Server Error in 60067ms (pid:2595)
+2016-01-12 14:02:48.310 [ FATAL ] [bda09aa9-9e1c-40a8-8da8-cf33c65a9cf0] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2595)
+2016-01-12 14:02:48.311 [ INFO  ] [6493e1ae-715e-4f82-9b4e-79a89bc4786e] Started GET "/-/" for ::1 at 2016-01-12 14:02:48 -0500 (pid:2595)
+2016-01-12 14:02:48.312 [ INFO  ] [6493e1ae-715e-4f82-9b4e-79a89bc4786e] Processing by OcciModelController#show as TEXT (pid:2595)
+2016-01-12 14:02:48.818 [ INFO  ] [56a848a9-e136-4a93-a86c-9e6561d9d638] Completed 500 Internal Server Error in 60043ms (pid:2611)
+2016-01-12 14:02:48.821 [ FATAL ] [56a848a9-e136-4a93-a86c-9e6561d9d638] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2611)
+2016-01-12 14:02:48.823 [ INFO  ] [440d72d0-d1f2-4a34-98d2-7830ff2773c4] Started GET "/-/" for ::1 at 2016-01-12 14:02:48 -0500 (pid:2611)
+2016-01-12 14:02:48.824 [ INFO  ] [440d72d0-d1f2-4a34-98d2-7830ff2773c4] Processing by OcciModelController#show as TEXT (pid:2611)
+2016-01-12 14:02:49.130 [ INFO  ] [14816d6c-0749-40fd-92bb-62ac88c96506] Completed 500 Internal Server Error in 60008ms (pid:2619)
+2016-01-12 14:02:49.132 [ FATAL ] [14816d6c-0749-40fd-92bb-62ac88c96506] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2619)
+2016-01-12 14:02:49.133 [ INFO  ] [1b84cbcd-9e61-4e1c-b461-295454766cd1] Started GET "/-/" for ::1 at 2016-01-12 14:02:49 -0500 (pid:2619)
+2016-01-12 14:02:49.134 [ INFO  ] [1b84cbcd-9e61-4e1c-b461-295454766cd1] Processing by OcciModelController#show as TEXT (pid:2619)
+2016-01-12 14:02:49.732 [ INFO  ] [832882fa-c567-4a2e-a754-46d43fdaee68] Completed 500 Internal Server Error in 60067ms (pid:2627)
+2016-01-12 14:02:49.735 [ FATAL ] [832882fa-c567-4a2e-a754-46d43fdaee68] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2627)
+2016-01-12 14:02:49.736 [ INFO  ] [4dfe6dec-fff9-44d9-a0cd-e4418e6af6be] Started GET "/-/" for ::1 at 2016-01-12 14:02:49 -0500 (pid:2627)
+2016-01-12 14:02:49.737 [ INFO  ] [4dfe6dec-fff9-44d9-a0cd-e4418e6af6be] Processing by OcciModelController#show as TEXT (pid:2627)
+2016-01-12 14:03:47.786 [ INFO  ] [befa60ef-f8a0-4f52-9181-d39e4cf6d47e] Completed 500 Internal Server Error in 60066ms (pid:2581)
+2016-01-12 14:03:47.788 [ FATAL ] [befa60ef-f8a0-4f52-9181-d39e4cf6d47e] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2581)
+2016-01-12 14:03:47.789 [ INFO  ] [6e01d5ce-43ac-4dae-915b-948314b21ef3] Started GET "/-/" for ::1 at 2016-01-12 14:03:47 -0500 (pid:2581)
+2016-01-12 14:03:47.790 [ INFO  ] [6e01d5ce-43ac-4dae-915b-948314b21ef3] Processing by OcciModelController#show as */* (pid:2581)
+2016-01-12 14:03:48.946 [ INFO  ] [18bb202f-9ef3-483b-bf51-b04439ff0a11] Completed 500 Internal Server Error in 60064ms (pid:2588)
+2016-01-12 14:03:48.965 [ FATAL ] [18bb202f-9ef3-483b-bf51-b04439ff0a11] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2588)
+2016-01-12 14:03:48.975 [ INFO  ] [66323ac3-235f-4063-bb4d-93525be3bbb6] Started GET "/-/" for ::1 at 2016-01-12 14:03:48 -0500 (pid:2588)
+2016-01-12 14:03:48.983 [ INFO  ] [66323ac3-235f-4063-bb4d-93525be3bbb6] Processing by OcciModelController#show as TEXT (pid:2588)
+2016-01-12 14:03:48.379 [ INFO  ] [6493e1ae-715e-4f82-9b4e-79a89bc4786e] Completed 500 Internal Server Error in 60067ms (pid:2595)
+2016-01-12 14:03:48.381 [ FATAL ] [6493e1ae-715e-4f82-9b4e-79a89bc4786e] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2595)
+2016-01-12 14:03:48.382 [ INFO  ] [f857495a-3c08-4aa7-a700-af47f755f7c7] Started GET "/-/" for ::1 at 2016-01-12 14:03:48 -0500 (pid:2595)
+2016-01-12 14:03:48.383 [ INFO  ] [f857495a-3c08-4aa7-a700-af47f755f7c7] Processing by OcciModelController#show as TEXT (pid:2595)
+2016-01-12 14:03:48.890 [ INFO  ] [440d72d0-d1f2-4a34-98d2-7830ff2773c4] Completed 500 Internal Server Error in 60065ms (pid:2611)
+2016-01-12 14:03:48.892 [ FATAL ] [440d72d0-d1f2-4a34-98d2-7830ff2773c4] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2611)
+2016-01-12 14:03:48.892 [ INFO  ] [4ee670ce-f3ee-4496-a407-5b4ff5d741e3] Started GET "/-/" for ::1 at 2016-01-12 14:03:48 -0500 (pid:2611)
+2016-01-12 14:03:48.893 [ INFO  ] [4ee670ce-f3ee-4496-a407-5b4ff5d741e3] Processing by OcciModelController#show as TEXT (pid:2611)
+2016-01-12 14:03:49.193 [ INFO  ] [1b84cbcd-9e61-4e1c-b461-295454766cd1] Completed 500 Internal Server Error in 60059ms (pid:2619)
+2016-01-12 14:03:49.195 [ FATAL ] [1b84cbcd-9e61-4e1c-b461-295454766cd1] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2619)
+2016-01-12 14:03:49.196 [ INFO  ] [d7ceb130-210c-4f42-ac70-e063731a7f3f] Started GET "/-/" for ::1 at 2016-01-12 14:03:49 -0500 (pid:2619)
+2016-01-12 14:03:49.197 [ INFO  ] [d7ceb130-210c-4f42-ac70-e063731a7f3f] Processing by OcciModelController#show as TEXT (pid:2619)
+2016-01-12 14:03:49.803 [ INFO  ] [4dfe6dec-fff9-44d9-a0cd-e4418e6af6be] Completed 500 Internal Server Error in 60066ms (pid:2627)
+2016-01-12 14:03:49.804 [ FATAL ] [4dfe6dec-fff9-44d9-a0cd-e4418e6af6be] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2627)
+2016-01-12 14:03:49.805 [ INFO  ] [da365423-9a21-4265-8dc2-075fc772e237] Started GET "/-/" for ::1 at 2016-01-12 14:03:49 -0500 (pid:2627)
+2016-01-12 14:03:49.806 [ INFO  ] [da365423-9a21-4265-8dc2-075fc772e237] Processing by OcciModelController#show as TEXT (pid:2627)
+2016-01-12 14:04:47.856 [ INFO  ] [6e01d5ce-43ac-4dae-915b-948314b21ef3] Completed 500 Internal Server Error in 60066ms (pid:2581)
+2016-01-12 14:04:47.858 [ FATAL ] [6e01d5ce-43ac-4dae-915b-948314b21ef3] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2581)
+2016-01-12 14:04:47.859 [ INFO  ] [d9c49776-b66c-45d3-9aee-43925a9474c0] Started GET "/-/" for ::1 at 2016-01-12 14:04:47 -0500 (pid:2581)
+2016-01-12 14:04:47.860 [ INFO  ] [d9c49776-b66c-45d3-9aee-43925a9474c0] Processing by OcciModelController#show as TEXT (pid:2581)
+2016-01-12 14:04:48.164 [ INFO  ] [66323ac3-235f-4063-bb4d-93525be3bbb6] Completed 500 Internal Server Error in 60066ms (pid:2588)
+2016-01-12 14:04:48.166 [ FATAL ] [66323ac3-235f-4063-bb4d-93525be3bbb6] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2588)
+2016-01-12 14:04:48.167 [ INFO  ] [748e6ab2-1360-4c95-9e7d-5aa1877f2a9e] Started GET "/-/" for ::1 at 2016-01-12 14:04:48 -0500 (pid:2588)
+2016-01-12 14:04:48.168 [ INFO  ] [748e6ab2-1360-4c95-9e7d-5aa1877f2a9e] Processing by OcciModelController#show as TEXT (pid:2588)
+2016-01-12 14:04:48.448 [ INFO  ] [f857495a-3c08-4aa7-a700-af47f755f7c7] Completed 500 Internal Server Error in 60065ms (pid:2595)
+2016-01-12 14:04:48.450 [ FATAL ] [f857495a-3c08-4aa7-a700-af47f755f7c7] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2595)
+2016-01-12 14:04:48.451 [ INFO  ] [1364776c-816a-4911-8d65-d12094752a15] Started GET "/-/" for ::1 at 2016-01-12 14:04:48 -0500 (pid:2595)
+2016-01-12 14:04:48.452 [ INFO  ] [1364776c-816a-4911-8d65-d12094752a15] Processing by OcciModelController#show as TEXT (pid:2595)
+2016-01-12 14:04:48.960 [ INFO  ] [4ee670ce-f3ee-4496-a407-5b4ff5d741e3] Completed 500 Internal Server Error in 60066ms (pid:2611)
+2016-01-12 14:04:48.962 [ FATAL ] [4ee670ce-f3ee-4496-a407-5b4ff5d741e3] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2611)
+2016-01-12 14:04:48.963 [ INFO  ] [5e500b74-b2b4-4cca-bd2c-338b184f8a43] Started GET "/-/" for ::1 at 2016-01-12 14:04:48 -0500 (pid:2611)
+2016-01-12 14:04:48.963 [ INFO  ] [5e500b74-b2b4-4cca-bd2c-338b184f8a43] Processing by OcciModelController#show as TEXT (pid:2611)
+2016-01-12 14:04:49.262 [ INFO  ] [d7ceb130-210c-4f42-ac70-e063731a7f3f] Completed 500 Internal Server Error in 60065ms (pid:2619)
+2016-01-12 14:04:49.264 [ FATAL ] [d7ceb130-210c-4f42-ac70-e063731a7f3f] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2619)
+2016-01-12 14:04:49.265 [ INFO  ] [b38581e9-bf48-4181-8974-eb43ddc21637] Started GET "/-/" for ::1 at 2016-01-12 14:04:49 -0500 (pid:2619)
+2016-01-12 14:04:49.266 [ INFO  ] [b38581e9-bf48-4181-8974-eb43ddc21637] Processing by OcciModelController#show as TEXT (pid:2619)
+2016-01-12 14:04:49.873 [ INFO  ] [da365423-9a21-4265-8dc2-075fc772e237] Completed 500 Internal Server Error in 60066ms (pid:2627)
+2016-01-12 14:04:49.874 [ FATAL ] [da365423-9a21-4265-8dc2-075fc772e237] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2627)
+2016-01-12 14:04:49.875 [ INFO  ] [36525616-840c-4af4-ae54-7119d4bfc591] Started GET "/-/" for ::1 at 2016-01-12 14:04:49 -0500 (pid:2627)
+2016-01-12 14:04:49.876 [ INFO  ] [36525616-840c-4af4-ae54-7119d4bfc591] Processing by OcciModelController#show as TEXT (pid:2627)
+2016-01-12 14:05:47.869 [ INFO  ] [d9c49776-b66c-45d3-9aee-43925a9474c0] Completed 500 Internal Server Error in 60008ms (pid:2581)
+2016-01-12 14:05:47.870 [ FATAL ] [d9c49776-b66c-45d3-9aee-43925a9474c0] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2581)
+2016-01-12 14:05:47.872 [ INFO  ] [a85807cf-f349-4ed8-a203-d3bf5352a9e4] Started GET "/-/" for ::1 at 2016-01-12 14:05:47 -0500 (pid:2581)
+2016-01-12 14:05:47.872 [ INFO  ] [a85807cf-f349-4ed8-a203-d3bf5352a9e4] Processing by OcciModelController#show as TEXT (pid:2581)
+2016-01-12 14:05:48.177 [ INFO  ] [748e6ab2-1360-4c95-9e7d-5aa1877f2a9e] Completed 500 Internal Server Error in 60009ms (pid:2588)
+2016-01-12 14:05:48.179 [ FATAL ] [748e6ab2-1360-4c95-9e7d-5aa1877f2a9e] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2588)
+2016-01-12 14:05:48.180 [ INFO  ] [901114be-68ee-47ff-8647-0bbb8d5bd6a3] Started GET "/-/" for ::1 at 2016-01-12 14:05:48 -0500 (pid:2588)
+2016-01-12 14:05:48.181 [ INFO  ] [901114be-68ee-47ff-8647-0bbb8d5bd6a3] Processing by OcciModelController#show as TEXT (pid:2588)
+2016-01-12 14:05:48.485 [ INFO  ] [1364776c-816a-4911-8d65-d12094752a15] Completed 500 Internal Server Error in 60033ms (pid:2595)
+2016-01-12 14:05:48.487 [ FATAL ] [1364776c-816a-4911-8d65-d12094752a15] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2595)
+2016-01-12 14:05:48.488 [ INFO  ] [1687b741-cc12-4e97-969a-614c433a6330] Started GET "/-/" for ::1 at 2016-01-12 14:05:48 -0500 (pid:2595)
+2016-01-12 14:05:48.489 [ INFO  ] [1687b741-cc12-4e97-969a-614c433a6330] Processing by OcciModelController#show as TEXT (pid:2595)
+2016-01-12 14:05:48.993 [ INFO  ] [5e500b74-b2b4-4cca-bd2c-338b184f8a43] Completed 500 Internal Server Error in 60030ms (pid:2611)
+2016-01-12 14:05:48.995 [ FATAL ] [5e500b74-b2b4-4cca-bd2c-338b184f8a43] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2611)
+2016-01-12 14:05:48.996 [ INFO  ] [8fc29f70-1e8c-4826-9662-eb2b2d7f7b20] Started GET "/-/" for ::1 at 2016-01-12 14:05:48 -0500 (pid:2611)
+2016-01-12 14:05:48.997 [ INFO  ] [8fc29f70-1e8c-4826-9662-eb2b2d7f7b20] Processing by OcciModelController#show as TEXT (pid:2611)
+2016-01-12 14:05:49.301 [ INFO  ] [b38581e9-bf48-4181-8974-eb43ddc21637] Completed 500 Internal Server Error in 60035ms (pid:2619)
+2016-01-12 14:05:49.303 [ FATAL ] [b38581e9-bf48-4181-8974-eb43ddc21637] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2619)
+2016-01-12 14:05:49.304 [ INFO  ] [b0801dd5-a5ab-40a2-86c6-87217634529c] Started GET "/-/" for ::1 at 2016-01-12 14:05:49 -0500 (pid:2619)
+2016-01-12 14:05:49.305 [ INFO  ] [b0801dd5-a5ab-40a2-86c6-87217634529c] Processing by OcciModelController#show as TEXT (pid:2619)
+2016-01-12 14:05:49.942 [ INFO  ] [36525616-840c-4af4-ae54-7119d4bfc591] Completed 500 Internal Server Error in 60066ms (pid:2627)
+2016-01-12 14:05:49.944 [ FATAL ] [36525616-840c-4af4-ae54-7119d4bfc591] 
+Timeout::Error (Timeout::Error):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2627)
+2016-01-12 14:05:49.945 [ INFO  ] [a95dd9fa-f22f-4522-b048-5ddcd6cfa3dc] Started GET "/-/" for ::1 at 2016-01-12 14:05:49 -0500 (pid:2627)
+2016-01-12 14:05:49.946 [ INFO  ] [a95dd9fa-f22f-4522-b048-5ddcd6cfa3dc] Processing by OcciModelController#show as TEXT (pid:2627)
+2016-01-12 14:06:31.765 [ INFO  ] [a85807cf-f349-4ed8-a203-d3bf5352a9e4] Completed 500 Internal Server Error in 43203ms (pid:2581)
+2016-01-12 14:06:31.765 [ INFO  ] [8fc29f70-1e8c-4826-9662-eb2b2d7f7b20] Completed 500 Internal Server Error in 42079ms (pid:2611)
+2016-01-12 14:06:31.784 [ FATAL ] [8fc29f70-1e8c-4826-9662-eb2b2d7f7b20] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2611)
+2016-01-12 14:06:31.784 [ FATAL ] [a85807cf-f349-4ed8-a203-d3bf5352a9e4] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2581)
+2016-01-12 14:06:31.817 [ INFO  ] [b0801dd5-a5ab-40a2-86c6-87217634529c] Completed 500 Internal Server Error in 41776ms (pid:2619)
+2016-01-12 14:06:31.826 [ INFO  ] [901114be-68ee-47ff-8647-0bbb8d5bd6a3] Completed 500 Internal Server Error in 42901ms (pid:2588)
+2016-01-12 14:06:31.849 [ FATAL ] [901114be-68ee-47ff-8647-0bbb8d5bd6a3] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2588)
+2016-01-12 14:06:31.858 [ INFO  ] [a95dd9fa-f22f-4522-b048-5ddcd6cfa3dc] Completed 500 Internal Server Error in 41139ms (pid:2627)
+2016-01-12 14:06:31.892 [ FATAL ] [a95dd9fa-f22f-4522-b048-5ddcd6cfa3dc] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2627)
+2016-01-12 14:06:31.893 [ INFO  ] [1687b741-cc12-4e97-969a-614c433a6330] Completed 500 Internal Server Error in 42600ms (pid:2595)
+2016-01-12 14:06:31.910 [ INFO  ] [c359b9d0-2641-4c3b-b25e-84eb148e474d] Started GET "/-/" for ::1 at 2016-01-12 14:06:31 -0500 (pid:2588)
+2016-01-12 14:06:31.911 [ FATAL ] [1687b741-cc12-4e97-969a-614c433a6330] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2595)
+2016-01-12 14:06:31.836 [ FATAL ] [b0801dd5-a5ab-40a2-86c6-87217634529c] 
+EOFError (end of file reached):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2619)
+2016-01-12 14:06:31.926 [ INFO  ] [f1cbcc58-8e01-4e39-afbd-ad1ff8d6d670] Started GET "/-/" for ::1 at 2016-01-12 14:06:31 -0500 (pid:2581)
+2016-01-12 14:06:31.934 [ INFO  ] [f1cbcc58-8e01-4e39-afbd-ad1ff8d6d670] Processing by OcciModelController#show as TEXT (pid:2581)
+2016-01-12 14:06:31.953 [ INFO  ] [c359b9d0-2641-4c3b-b25e-84eb148e474d] Processing by OcciModelController#show as TEXT (pid:2588)
+2016-01-12 14:06:41.461 [ INFO  ] [c359b9d0-2641-4c3b-b25e-84eb148e474d] Completed 500 Internal Server Error in 10366ms (pid:2588)
+2016-01-12 14:06:41.463 [ FATAL ] [c359b9d0-2641-4c3b-b25e-84eb148e474d] 
+Errno::ECONNRESET (Connection reset by peer - SSL_connect):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2588)
+2016-01-12 14:06:41.465 [ INFO  ] [f1cbcc58-8e01-4e39-afbd-ad1ff8d6d670] Completed 500 Internal Server Error in 10371ms (pid:2581)
+2016-01-12 14:06:41.466 [ FATAL ] [f1cbcc58-8e01-4e39-afbd-ad1ff8d6d670] 
+Errno::ECONNRESET (Connection reset by peer - SSL_connect):
+  app/controllers/occi_model_controller.rb:32:in `new'
+  app/controllers/occi_model_controller.rb:32:in `show'
+  lib/hooks/dummy_hook.rb:9:in `call'
+  lib/request_parsers/occi_parser.rb:33:in `call' (pid:2581)
+2016-01-12 14:06:46.309 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:2955)
+2016-01-12 14:06:46.312 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:2955)
+2016-01-12 14:06:46.312 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:2955)
+2016-01-12 14:06:46.313 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:2955)
+2016-01-12 14:06:46.314 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:2955)
+2016-01-12 14:06:46.314 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:2955)
+2016-01-12 14:06:46.315 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:2955)
+2016-01-12 14:06:46.315 [ INFO  ] [Backend] Checking backend API version (pid:2955)
+2016-01-12 14:06:46.322 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:2955)
+2016-01-12 14:06:46.382 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:2955)
+2016-01-12 14:06:46.384 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:2955)
+2016-01-12 14:06:46.385 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:2955)
+2016-01-12 14:06:46.388 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:2955)
+2016-01-12 14:06:46.389 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:2955)
+2016-01-12 14:06:47.461 [ INFO  ] [f653f3af-27c3-4c34-9ac7-1936e60b50e7] Started GET "/-/" for ::1 at 2016-01-12 14:06:47 -0500 (pid:2977)
+2016-01-12 14:06:47.474 [ INFO  ] [f653f3af-27c3-4c34-9ac7-1936e60b50e7] Processing by OcciModelController#show as */* (pid:2977)
+2016-01-12 14:06:47.485 [ INFO  ] [f653f3af-27c3-4c34-9ac7-1936e60b50e7] [Backend] Loading Backends::OpennebulaBackend (pid:2977)
+2016-01-12 14:06:49.771 [ INFO  ] [f653f3af-27c3-4c34-9ac7-1936e60b50e7] Completed 200 OK in 2296ms (Views: 6.4ms) (pid:2977)
+2016-01-12 14:07:17.175 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:3176)
+2016-01-12 14:07:17.177 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:3176)
+2016-01-12 14:07:17.177 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:3176)
+2016-01-12 14:07:17.178 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:3176)
+2016-01-12 14:07:17.179 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:3176)
+2016-01-12 14:07:17.179 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:3176)
+2016-01-12 14:07:17.180 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:3176)
+2016-01-12 14:07:17.180 [ INFO  ] [Backend] Checking backend API version (pid:3176)
+2016-01-12 14:07:17.186 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:3176)
+2016-01-12 14:07:17.243 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:3176)
+2016-01-12 14:07:17.246 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:3176)
+2016-01-12 14:07:17.246 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:3176)
+2016-01-12 14:07:17.249 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:3176)
+2016-01-12 14:07:17.249 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:3176)
+2016-01-12 14:07:18.193 [ INFO  ] [cfa3a585-79c9-45fe-a023-422d47ee64aa] Started GET "/-/" for ::1 at 2016-01-12 14:07:18 -0500 (pid:3198)
+2016-01-12 14:07:18.205 [ INFO  ] [cfa3a585-79c9-45fe-a023-422d47ee64aa] Processing by OcciModelController#show as */* (pid:3198)
+2016-01-12 14:07:18.215 [ INFO  ] [cfa3a585-79c9-45fe-a023-422d47ee64aa] [Backend] Loading Backends::OpennebulaBackend (pid:3198)
+2016-01-12 14:07:20.314 [ INFO  ] [cfa3a585-79c9-45fe-a023-422d47ee64aa] Completed 200 OK in 2109ms (Views: 6.6ms) (pid:3198)
+2016-01-12 14:08:33.899 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:3421)
+2016-01-12 14:08:33.919 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:3421)
+2016-01-12 14:08:33.922 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:3421)
+2016-01-12 14:08:33.931 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:3421)
+2016-01-12 14:08:33.940 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:3421)
+2016-01-12 14:08:33.943 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:3421)
+2016-01-12 14:08:33.948 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:3421)
+2016-01-12 14:08:33.952 [ INFO  ] [Backend] Checking backend API version (pid:3421)
+2016-01-12 14:08:33.100 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:3421)
+2016-01-12 14:08:33.159 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:3421)
+2016-01-12 14:08:33.161 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:3421)
+2016-01-12 14:08:33.162 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:3421)
+2016-01-12 14:08:33.180 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:3421)
+2016-01-12 14:08:33.180 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:3421)
+2016-01-12 14:09:14.151 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:3657)
+2016-01-12 14:09:14.153 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:3657)
+2016-01-12 14:09:14.153 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:3657)
+2016-01-12 14:09:14.154 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:3657)
+2016-01-12 14:09:14.155 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:3657)
+2016-01-12 14:09:14.155 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:3657)
+2016-01-12 14:09:14.156 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:3657)
+2016-01-12 14:09:14.156 [ INFO  ] [Backend] Checking backend API version (pid:3657)
+2016-01-12 14:09:14.162 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:3657)
+2016-01-12 14:09:14.219 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:3657)
+2016-01-12 14:09:14.221 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:3657)
+2016-01-12 14:09:14.222 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:3657)
+2016-01-12 14:09:14.225 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:3657)
+2016-01-12 14:09:14.225 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:3657)
+2016-01-12 14:09:15.854 [ INFO  ] [4c980491-e26b-4f71-825c-eb25c386fce3] Started GET "/-/" for ::1 at 2016-01-12 14:09:15 -0500 (pid:3677)
+2016-01-12 14:09:15.978 [ INFO  ] [4c980491-e26b-4f71-825c-eb25c386fce3] Processing by OcciModelController#show as */* (pid:3677)
+2016-01-12 14:09:15.108 [ INFO  ] [4c980491-e26b-4f71-825c-eb25c386fce3] [Backend] Loading Backends::OpennebulaBackend (pid:3677)
+2016-01-12 14:09:17.423 [ INFO  ] [4c980491-e26b-4f71-825c-eb25c386fce3] Completed 200 OK in 2325ms (Views: 6.6ms) (pid:3677)
+2016-01-12 14:10:56.159 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:3909)
+2016-01-12 14:10:56.161 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:3909)
+2016-01-12 14:10:56.161 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:3909)
+2016-01-12 14:10:56.162 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:3909)
+2016-01-12 14:10:56.163 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:3909)
+2016-01-12 14:10:56.164 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:3909)
+2016-01-12 14:10:56.164 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:3909)
+2016-01-12 14:10:56.165 [ INFO  ] [Backend] Checking backend API version (pid:3909)
+2016-01-12 14:10:56.171 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:3909)
+2016-01-12 14:10:56.241 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:3909)
+2016-01-12 14:10:56.244 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:3909)
+2016-01-12 14:10:56.245 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:3909)
+2016-01-12 14:10:56.248 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:3909)
+2016-01-12 14:10:56.249 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:3909)
+2016-01-12 14:10:57.144 [ INFO  ] [0ca7a6c1-a5cd-4aed-a75a-9f6861cd08ea] Started GET "/-/" for ::1 at 2016-01-12 14:10:57 -0500 (pid:3929)
+2016-01-12 14:10:57.156 [ INFO  ] [0ca7a6c1-a5cd-4aed-a75a-9f6861cd08ea] Processing by OcciModelController#show as */* (pid:3929)
+2016-01-12 14:10:57.166 [ INFO  ] [0ca7a6c1-a5cd-4aed-a75a-9f6861cd08ea] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 14:10:59.340 [ INFO  ] [0ca7a6c1-a5cd-4aed-a75a-9f6861cd08ea] Completed 200 OK in 2183ms (Views: 6.2ms) (pid:3929)
+2016-01-12 14:15:16.929 [ INFO  ] [52cc2a6e-d824-4ff1-b922-052d933c8069] Started GET "/-/" for 172.90.0.3 at 2016-01-12 14:15:16 -0500 (pid:3929)
+2016-01-12 14:15:16.930 [ INFO  ] [52cc2a6e-d824-4ff1-b922-052d933c8069] Processing by OcciModelController#show as TEXT (pid:3929)
+2016-01-12 14:15:16.931 [ INFO  ] [52cc2a6e-d824-4ff1-b922-052d933c8069] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 14:15:19.449 [ INFO  ] [52cc2a6e-d824-4ff1-b922-052d933c8069] Completed 200 OK in 2114ms (Views: 5.9ms) (pid:3929)
+2016-01-12 14:15:20.603 [ INFO  ] [570808f8-cf04-481b-9969-11022451bd9e] Started GET "/" for 172.90.0.3 at 2016-01-12 14:15:20 -0500 (pid:3929)
+2016-01-12 14:15:20.616 [ INFO  ] [570808f8-cf04-481b-9969-11022451bd9e] Processing by OcciModelController#index as TEXT (pid:3929)
+2016-01-12 14:15:20.622 [ INFO  ] [570808f8-cf04-481b-9969-11022451bd9e] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 14:15:22.826 [ INFO  ] [570808f8-cf04-481b-9969-11022451bd9e] Completed 200 OK in 2765ms (Views: 0.2ms) (pid:3929)
+2016-01-12 14:15:23.727 [ INFO  ] [69910e23-1f1a-4104-a0ca-b35681728606] Started GET "/-/" for 172.90.0.3 at 2016-01-12 14:15:23 -0500 (pid:3929)
+2016-01-12 14:15:23.728 [ INFO  ] [69910e23-1f1a-4104-a0ca-b35681728606] Processing by OcciModelController#show as TEXT (pid:3929)
+2016-01-12 14:15:23.729 [ INFO  ] [69910e23-1f1a-4104-a0ca-b35681728606] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 14:15:25.933 [ INFO  ] [69910e23-1f1a-4104-a0ca-b35681728606] Completed 200 OK in 2204ms (Views: 5.9ms) (pid:3929)
+2016-01-12 15:34:26.834 [ INFO  ] [41d0d7cd-b5b4-42bd-a5ed-cf4a9eaaa2e8] Started GET "/-/" for 172.90.0.3 at 2016-01-12 15:34:26 -0500 (pid:3929)
+2016-01-12 15:34:26.866 [ INFO  ] [41d0d7cd-b5b4-42bd-a5ed-cf4a9eaaa2e8] Processing by OcciModelController#show as TEXT (pid:3929)
+2016-01-12 15:34:26.874 [ INFO  ] [41d0d7cd-b5b4-42bd-a5ed-cf4a9eaaa2e8] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 15:34:29.254 [ INFO  ] [41d0d7cd-b5b4-42bd-a5ed-cf4a9eaaa2e8] Completed 200 OK in 2159ms (Views: 5.8ms) (pid:3929)
+2016-01-12 15:34:30.986 [ INFO  ] [16b0ad4f-51e6-4fb3-ab0f-606c83ea516c] Started GET "/" for 172.90.0.3 at 2016-01-12 15:34:30 -0500 (pid:3929)
+2016-01-12 15:34:30.999 [ INFO  ] [16b0ad4f-51e6-4fb3-ab0f-606c83ea516c] Processing by OcciModelController#index as TEXT (pid:3929)
+2016-01-12 15:34:30.100 [ INFO  ] [16b0ad4f-51e6-4fb3-ab0f-606c83ea516c] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 15:34:33.476 [ INFO  ] [16b0ad4f-51e6-4fb3-ab0f-606c83ea516c] Completed 200 OK in 2947ms (Views: 0.2ms) (pid:3929)
+2016-01-12 15:34:33.896 [ INFO  ] [290b92f5-54eb-470c-9800-2c552880a0e0] Started GET "/-/" for 172.90.0.3 at 2016-01-12 15:34:33 -0500 (pid:3929)
+2016-01-12 15:34:33.897 [ INFO  ] [290b92f5-54eb-470c-9800-2c552880a0e0] Processing by OcciModelController#show as TEXT (pid:3929)
+2016-01-12 15:34:33.898 [ INFO  ] [290b92f5-54eb-470c-9800-2c552880a0e0] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 15:34:36.561 [ INFO  ] [290b92f5-54eb-470c-9800-2c552880a0e0] Completed 200 OK in 2158ms (Views: 5.7ms) (pid:3929)
+2016-01-12 15:51:26.319 [ INFO  ] [66908116-10f8-42e2-b90c-bdbc0e357a30] Started GET "/-/" for 172.90.0.3 at 2016-01-12 15:51:26 -0500 (pid:3929)
+2016-01-12 15:51:26.324 [ INFO  ] [66908116-10f8-42e2-b90c-bdbc0e357a30] Processing by OcciModelController#show as TEXT (pid:3929)
+2016-01-12 15:51:26.326 [ INFO  ] [66908116-10f8-42e2-b90c-bdbc0e357a30] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 15:51:28.550 [ INFO  ] [66908116-10f8-42e2-b90c-bdbc0e357a30] Completed 200 OK in 2225ms (Views: 29.6ms) (pid:3929)
+2016-01-12 15:51:29.651 [ INFO  ] [032e2a1c-181d-441c-b041-a5885d6bad25] Started GET "/" for 172.90.0.3 at 2016-01-12 15:51:29 -0500 (pid:3929)
+2016-01-12 15:51:29.652 [ INFO  ] [032e2a1c-181d-441c-b041-a5885d6bad25] Processing by OcciModelController#index as TEXT (pid:3929)
+2016-01-12 15:51:29.653 [ INFO  ] [032e2a1c-181d-441c-b041-a5885d6bad25] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 15:51:32.491 [ INFO  ] [032e2a1c-181d-441c-b041-a5885d6bad25] Completed 200 OK in 2838ms (Views: 0.2ms) (pid:3929)
+2016-01-12 15:51:33.306 [ INFO  ] [3d19a38a-3ea5-4a4a-9447-26b8c904d832] Started GET "/-/" for 172.90.0.3 at 2016-01-12 15:51:33 -0500 (pid:3929)
+2016-01-12 15:51:33.307 [ INFO  ] [3d19a38a-3ea5-4a4a-9447-26b8c904d832] Processing by OcciModelController#show as TEXT (pid:3929)
+2016-01-12 15:51:33.308 [ INFO  ] [3d19a38a-3ea5-4a4a-9447-26b8c904d832] [Backend] Loading Backends::OpennebulaBackend (pid:3929)
+2016-01-12 15:51:35.581 [ INFO  ] [3d19a38a-3ea5-4a4a-9447-26b8c904d832] Completed 200 OK in 2274ms (Views: 5.8ms) (pid:3929)
+2016-01-12 15:54:59.520 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server for ENV production. (pid:6876)
+2016-01-12 15:54:59.522 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/hooks/dummy for ENV production. (pid:6876)
+2016-01-12 15:54:59.523 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/backends/opennebula for ENV production. (pid:6876)
+2016-01-12 15:54:59.524 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/voms for ENV production. (pid:6876)
+2016-01-12 15:54:59.525 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/x509 for ENV production. (pid:6876)
+2016-01-12 15:54:59.525 [ INFO  ] [Configuration] Loading configuration from /etc/rocci-server/authn_strategies/basic for ENV production. (pid:6876)
+2016-01-12 15:54:59.526 [ INFO  ] [Configuration] Starting rOCCI-server/1.1.7 with rOCCI-core/4.3.2 on Ruby/1.9.3 (pid:6876)
+2016-01-12 15:54:59.526 [ INFO  ] [Backend] Checking backend API version (pid:6876)
+2016-01-12 15:54:59.532 [ INFO  ] [Backend] Loading Backends::OpennebulaBackend (pid:6876)
+2016-01-12 15:54:59.596 [ INFO  ] [AuthN] Registering AuthenticationStrategies::VomsStrategy (pid:6876)
+2016-01-12 15:54:59.599 [ INFO  ] [AuthN] Registering AuthenticationStrategies::X509Strategy (pid:6876)
+2016-01-12 15:54:59.600 [ INFO  ] [AuthN] Registering AuthenticationStrategies::BasicStrategy (pid:6876)
+2016-01-12 15:54:59.614 [ INFO  ] [Hooks] Registering Hooks::DummyHook (pid:6876)
+2016-01-12 15:54:59.614 [ INFO  ] [Hooks] Checking deps for Hooks::DummyHook (pid:6876)
+2016-01-12 15:55:00.643 [ INFO  ] [5c2a9fc2-b9d8-442a-9a73-1daa1be852df] Started GET "/-/" for ::1 at 2016-01-12 15:55:00 -0500 (pid:6896)
+2016-01-12 15:55:00.656 [ INFO  ] [5c2a9fc2-b9d8-442a-9a73-1daa1be852df] Processing by OcciModelController#show as */* (pid:6896)
+2016-01-12 15:55:00.666 [ INFO  ] [5c2a9fc2-b9d8-442a-9a73-1daa1be852df] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 15:55:02.969 [ INFO  ] [5c2a9fc2-b9d8-442a-9a73-1daa1be852df] Completed 200 OK in 2313ms (Views: 6.4ms) (pid:6896)
+2016-01-12 16:52:46.213 [ INFO  ] [516a2706-a540-41ba-abb6-2146c444c2a7] Started GET "/-/" for 172.90.0.3 at 2016-01-12 16:52:46 -0500 (pid:6896)
+2016-01-12 16:52:46.234 [ INFO  ] [516a2706-a540-41ba-abb6-2146c444c2a7] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 16:52:46.243 [ INFO  ] [516a2706-a540-41ba-abb6-2146c444c2a7] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 16:52:48.421 [ INFO  ] [516a2706-a540-41ba-abb6-2146c444c2a7] Completed 200 OK in 2187ms (Views: 5.9ms) (pid:6896)
+2016-01-12 16:52:49.460 [ INFO  ] [97549b06-882e-4aad-ba82-3de933843192] Started GET "/" for 172.90.0.3 at 2016-01-12 16:52:49 -0500 (pid:6896)
+2016-01-12 16:52:49.462 [ INFO  ] [97549b06-882e-4aad-ba82-3de933843192] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 16:52:49.462 [ INFO  ] [97549b06-882e-4aad-ba82-3de933843192] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 16:52:52.312 [ INFO  ] [97549b06-882e-4aad-ba82-3de933843192] Completed 200 OK in 2850ms (Views: 0.2ms) (pid:6896)
+2016-01-12 16:52:53.125 [ INFO  ] [025f2380-d0d1-4fe1-89fa-991f6e0197c1] Started GET "/-/" for 172.90.0.3 at 2016-01-12 16:52:53 -0500 (pid:6896)
+2016-01-12 16:52:53.126 [ INFO  ] [025f2380-d0d1-4fe1-89fa-991f6e0197c1] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 16:52:53.127 [ INFO  ] [025f2380-d0d1-4fe1-89fa-991f6e0197c1] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 16:52:55.350 [ INFO  ] [025f2380-d0d1-4fe1-89fa-991f6e0197c1] Completed 200 OK in 2224ms (Views: 5.6ms) (pid:6896)
+2016-01-12 17:00:47.677 [ INFO  ] [2a55078a-4410-412a-9347-8f020ab71373] Started GET "/-/" for 172.90.0.3 at 2016-01-12 17:00:47 -0500 (pid:6896)
+2016-01-12 17:00:47.679 [ INFO  ] [2a55078a-4410-412a-9347-8f020ab71373] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 17:00:47.680 [ INFO  ] [2a55078a-4410-412a-9347-8f020ab71373] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 17:00:49.947 [ INFO  ] [2a55078a-4410-412a-9347-8f020ab71373] Completed 200 OK in 2268ms (Views: 5.9ms) (pid:6896)
+2016-01-12 17:00:50.926 [ INFO  ] [0fd4826b-c2aa-4ac0-ba08-c58771c621bc] Started GET "/" for 172.90.0.3 at 2016-01-12 17:00:50 -0500 (pid:6896)
+2016-01-12 17:00:50.927 [ INFO  ] [0fd4826b-c2aa-4ac0-ba08-c58771c621bc] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 17:00:50.928 [ INFO  ] [0fd4826b-c2aa-4ac0-ba08-c58771c621bc] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 17:00:53.764 [ INFO  ] [0fd4826b-c2aa-4ac0-ba08-c58771c621bc] Completed 200 OK in 2836ms (Views: 0.3ms) (pid:6896)
+2016-01-12 17:00:54.596 [ INFO  ] [cca61e9c-606a-4399-b9fe-3c92c9ca9a6e] Started GET "/-/" for 172.90.0.3 at 2016-01-12 17:00:54 -0500 (pid:6896)
+2016-01-12 17:00:54.597 [ INFO  ] [cca61e9c-606a-4399-b9fe-3c92c9ca9a6e] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 17:00:54.598 [ INFO  ] [cca61e9c-606a-4399-b9fe-3c92c9ca9a6e] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 17:00:56.856 [ INFO  ] [cca61e9c-606a-4399-b9fe-3c92c9ca9a6e] Completed 200 OK in 2259ms (Views: 5.7ms) (pid:6896)
+2016-01-12 22:26:43.356 [ INFO  ] [c171a4f6-c2c6-42ad-8c45-18b501686f66] Started GET "/-/" for 172.90.0.3 at 2016-01-12 22:26:43 -0500 (pid:6896)
+2016-01-12 22:26:43.360 [ INFO  ] [c171a4f6-c2c6-42ad-8c45-18b501686f66] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 22:26:43.361 [ INFO  ] [c171a4f6-c2c6-42ad-8c45-18b501686f66] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 22:26:45.576 [ INFO  ] [c171a4f6-c2c6-42ad-8c45-18b501686f66] Completed 200 OK in 2216ms (Views: 9.2ms) (pid:6896)
+2016-01-12 22:26:46.493 [ INFO  ] [858410c1-b78c-4b5e-ab59-b10ce1b0a12a] Started GET "/" for 172.90.0.3 at 2016-01-12 22:26:46 -0500 (pid:6896)
+2016-01-12 22:26:46.494 [ INFO  ] [858410c1-b78c-4b5e-ab59-b10ce1b0a12a] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 22:26:46.495 [ INFO  ] [858410c1-b78c-4b5e-ab59-b10ce1b0a12a] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 22:26:49.255 [ INFO  ] [858410c1-b78c-4b5e-ab59-b10ce1b0a12a] Completed 200 OK in 2761ms (Views: 0.2ms) (pid:6896)
+2016-01-12 22:26:50.341 [ INFO  ] [d32aaca1-87d6-4f54-8b91-e70ed33817f0] Started GET "/-/" for 172.90.0.3 at 2016-01-12 22:26:50 -0500 (pid:6896)
+2016-01-12 22:26:50.342 [ INFO  ] [d32aaca1-87d6-4f54-8b91-e70ed33817f0] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 22:26:50.343 [ INFO  ] [d32aaca1-87d6-4f54-8b91-e70ed33817f0] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 22:26:52.632 [ INFO  ] [d32aaca1-87d6-4f54-8b91-e70ed33817f0] Completed 200 OK in 2289ms (Views: 5.8ms) (pid:6896)
+2016-01-12 22:29:02.103 [ INFO  ] [f310a524-f4d4-4416-877b-c36256bbcaca] Started GET "/-/" for 172.90.0.3 at 2016-01-12 22:29:02 -0500 (pid:6896)
+2016-01-12 22:29:02.104 [ INFO  ] [f310a524-f4d4-4416-877b-c36256bbcaca] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 22:29:02.105 [ INFO  ] [f310a524-f4d4-4416-877b-c36256bbcaca] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 22:29:04.290 [ INFO  ] [f310a524-f4d4-4416-877b-c36256bbcaca] Completed 200 OK in 2186ms (Views: 5.6ms) (pid:6896)
+2016-01-12 22:29:05.286 [ INFO  ] [af61cbda-bab3-4678-b793-5c1641681fb2] Started GET "/" for 172.90.0.3 at 2016-01-12 22:29:05 -0500 (pid:6896)
+2016-01-12 22:29:05.287 [ INFO  ] [af61cbda-bab3-4678-b793-5c1641681fb2] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 22:29:05.288 [ INFO  ] [af61cbda-bab3-4678-b793-5c1641681fb2] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 22:29:08.106 [ INFO  ] [af61cbda-bab3-4678-b793-5c1641681fb2] Completed 200 OK in 2819ms (Views: 0.2ms) (pid:6896)
+2016-01-12 22:29:08.976 [ INFO  ] [8fd5576b-34cb-4e53-8962-2ede7d4a1eb0] Started GET "/-/" for 172.90.0.3 at 2016-01-12 22:29:08 -0500 (pid:6896)
+2016-01-12 22:29:08.977 [ INFO  ] [8fd5576b-34cb-4e53-8962-2ede7d4a1eb0] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 22:29:08.977 [ INFO  ] [8fd5576b-34cb-4e53-8962-2ede7d4a1eb0] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 22:29:11.120 [ INFO  ] [8fd5576b-34cb-4e53-8962-2ede7d4a1eb0] Completed 200 OK in 2143ms (Views: 5.7ms) (pid:6896)
+2016-01-12 23:30:24.297 [ INFO  ] [4cf80d2d-66a1-46fd-b54f-60e4e2038b04] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:30:24 -0500 (pid:6896)
+2016-01-12 23:30:24.299 [ INFO  ] [4cf80d2d-66a1-46fd-b54f-60e4e2038b04] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:30:24.300 [ INFO  ] [4cf80d2d-66a1-46fd-b54f-60e4e2038b04] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:30:26.488 [ INFO  ] [4cf80d2d-66a1-46fd-b54f-60e4e2038b04] Completed 200 OK in 2189ms (Views: 5.7ms) (pid:6896)
+2016-01-12 23:30:27.579 [ INFO  ] [c6a6855e-3173-4b2c-9381-23f3696a6f80] Started GET "/" for 172.90.0.3 at 2016-01-12 23:30:27 -0500 (pid:6896)
+2016-01-12 23:30:27.580 [ INFO  ] [c6a6855e-3173-4b2c-9381-23f3696a6f80] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 23:30:27.581 [ INFO  ] [c6a6855e-3173-4b2c-9381-23f3696a6f80] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:30:30.502 [ INFO  ] [c6a6855e-3173-4b2c-9381-23f3696a6f80] Completed 200 OK in 2922ms (Views: 0.2ms) (pid:6896)
+2016-01-12 23:30:31.386 [ INFO  ] [6be0ec3e-5df5-457c-85ae-217c70070c83] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:30:31 -0500 (pid:6896)
+2016-01-12 23:30:31.387 [ INFO  ] [6be0ec3e-5df5-457c-85ae-217c70070c83] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:30:31.388 [ INFO  ] [6be0ec3e-5df5-457c-85ae-217c70070c83] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:30:33.736 [ INFO  ] [6be0ec3e-5df5-457c-85ae-217c70070c83] Completed 200 OK in 2349ms (Views: 28.3ms) (pid:6896)
+2016-01-12 23:31:51.489 [ INFO  ] [d4adf1eb-1725-4d0d-a6fd-8b23478fb743] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:31:51 -0500 (pid:6896)
+2016-01-12 23:31:51.490 [ INFO  ] [d4adf1eb-1725-4d0d-a6fd-8b23478fb743] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:31:51.491 [ INFO  ] [d4adf1eb-1725-4d0d-a6fd-8b23478fb743] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:31:53.768 [ INFO  ] [d4adf1eb-1725-4d0d-a6fd-8b23478fb743] Completed 200 OK in 2277ms (Views: 5.7ms) (pid:6896)
+2016-01-12 23:31:54.721 [ INFO  ] [4cb16716-7187-40bf-a93c-dc497e51e787] Started GET "/" for 172.90.0.3 at 2016-01-12 23:31:54 -0500 (pid:6896)
+2016-01-12 23:31:54.722 [ INFO  ] [4cb16716-7187-40bf-a93c-dc497e51e787] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 23:31:54.723 [ INFO  ] [4cb16716-7187-40bf-a93c-dc497e51e787] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:31:57.593 [ INFO  ] [4cb16716-7187-40bf-a93c-dc497e51e787] Completed 200 OK in 2871ms (Views: 0.2ms) (pid:6896)
+2016-01-12 23:31:58.416 [ INFO  ] [141027dd-fc05-442b-b81c-0030b7e127cb] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:31:58 -0500 (pid:6896)
+2016-01-12 23:31:58.417 [ INFO  ] [141027dd-fc05-442b-b81c-0030b7e127cb] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:31:58.418 [ INFO  ] [141027dd-fc05-442b-b81c-0030b7e127cb] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:32:00.677 [ INFO  ] [141027dd-fc05-442b-b81c-0030b7e127cb] Completed 200 OK in 2259ms (Views: 5.7ms) (pid:6896)
+2016-01-12 23:34:54.313 [ INFO  ] [3bc23fe8-af6e-4138-be59-5fb297f16d94] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:34:54 -0500 (pid:6896)
+2016-01-12 23:34:54.314 [ INFO  ] [3bc23fe8-af6e-4138-be59-5fb297f16d94] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:34:54.315 [ INFO  ] [3bc23fe8-af6e-4138-be59-5fb297f16d94] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:34:56.615 [ INFO  ] [3bc23fe8-af6e-4138-be59-5fb297f16d94] Completed 200 OK in 2300ms (Views: 5.6ms) (pid:6896)
+2016-01-12 23:34:57.678 [ INFO  ] [9949496a-d9f4-4f5a-9d56-2a77c7ec4709] Started GET "/" for 172.90.0.3 at 2016-01-12 23:34:57 -0500 (pid:6896)
+2016-01-12 23:34:57.680 [ INFO  ] [9949496a-d9f4-4f5a-9d56-2a77c7ec4709] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 23:34:57.680 [ INFO  ] [9949496a-d9f4-4f5a-9d56-2a77c7ec4709] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:35:00.546 [ INFO  ] [9949496a-d9f4-4f5a-9d56-2a77c7ec4709] Completed 200 OK in 2866ms (Views: 0.2ms) (pid:6896)
+2016-01-12 23:35:01.451 [ INFO  ] [945329c6-2edc-478d-8aaf-bdcea967414c] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:35:01 -0500 (pid:6896)
+2016-01-12 23:35:01.453 [ INFO  ] [945329c6-2edc-478d-8aaf-bdcea967414c] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:35:01.453 [ INFO  ] [945329c6-2edc-478d-8aaf-bdcea967414c] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:35:03.804 [ INFO  ] [945329c6-2edc-478d-8aaf-bdcea967414c] Completed 200 OK in 2351ms (Views: 6.0ms) (pid:6896)
+2016-01-12 23:36:59.876 [ INFO  ] [4306bab6-951b-45ab-8588-d3138b86dc7c] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:36:59 -0500 (pid:6896)
+2016-01-12 23:36:59.878 [ INFO  ] [4306bab6-951b-45ab-8588-d3138b86dc7c] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:36:59.879 [ INFO  ] [4306bab6-951b-45ab-8588-d3138b86dc7c] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:37:02.226 [ INFO  ] [4306bab6-951b-45ab-8588-d3138b86dc7c] Completed 200 OK in 2347ms (Views: 5.8ms) (pid:6896)
+2016-01-12 23:37:03.217 [ INFO  ] [94527cea-2c11-4a46-a88f-e33a84627ce8] Started GET "/" for 172.90.0.3 at 2016-01-12 23:37:03 -0500 (pid:6896)
+2016-01-12 23:37:03.218 [ INFO  ] [94527cea-2c11-4a46-a88f-e33a84627ce8] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 23:37:03.219 [ INFO  ] [94527cea-2c11-4a46-a88f-e33a84627ce8] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:37:05.980 [ INFO  ] [94527cea-2c11-4a46-a88f-e33a84627ce8] Completed 200 OK in 2762ms (Views: 0.2ms) (pid:6896)
+2016-01-12 23:37:06.824 [ INFO  ] [d53b3833-32ef-4680-89a1-c3b44e39baba] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:37:06 -0500 (pid:6896)
+2016-01-12 23:37:06.825 [ INFO  ] [d53b3833-32ef-4680-89a1-c3b44e39baba] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:37:06.826 [ INFO  ] [d53b3833-32ef-4680-89a1-c3b44e39baba] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:37:09.261 [ INFO  ] [d53b3833-32ef-4680-89a1-c3b44e39baba] Completed 200 OK in 2435ms (Views: 5.8ms) (pid:6896)
+2016-01-12 23:49:15.344 [ INFO  ] [5a075389-c70c-48d0-b9de-235c71896727] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:49:15 -0500 (pid:6896)
+2016-01-12 23:49:15.345 [ INFO  ] [5a075389-c70c-48d0-b9de-235c71896727] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:49:15.345 [ INFO  ] [5a075389-c70c-48d0-b9de-235c71896727] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:49:17.543 [ INFO  ] [5a075389-c70c-48d0-b9de-235c71896727] Completed 200 OK in 2198ms (Views: 5.8ms) (pid:6896)
+2016-01-12 23:49:18.488 [ INFO  ] [dfa503e2-18cc-422a-ae15-b1ff9bbf7699] Started GET "/" for 172.90.0.3 at 2016-01-12 23:49:18 -0500 (pid:6896)
+2016-01-12 23:49:18.490 [ INFO  ] [dfa503e2-18cc-422a-ae15-b1ff9bbf7699] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 23:49:18.490 [ INFO  ] [dfa503e2-18cc-422a-ae15-b1ff9bbf7699] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:49:21.245 [ INFO  ] [dfa503e2-18cc-422a-ae15-b1ff9bbf7699] Completed 200 OK in 2755ms (Views: 0.2ms) (pid:6896)
+2016-01-12 23:49:22.995 [ INFO  ] [15c5e14a-cb06-4e3f-98b5-9a4d597c7b2e] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:49:22 -0500 (pid:6896)
+2016-01-12 23:49:22.100 [ INFO  ] [15c5e14a-cb06-4e3f-98b5-9a4d597c7b2e] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:49:22.101 [ INFO  ] [15c5e14a-cb06-4e3f-98b5-9a4d597c7b2e] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:49:24.311 [ INFO  ] [15c5e14a-cb06-4e3f-98b5-9a4d597c7b2e] Completed 200 OK in 2210ms (Views: 5.6ms) (pid:6896)
+2016-01-12 23:51:53.676 [ INFO  ] [bc004fd0-ed9b-4eeb-a338-497066727a33] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:51:53 -0500 (pid:6896)
+2016-01-12 23:51:53.689 [ INFO  ] [bc004fd0-ed9b-4eeb-a338-497066727a33] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:51:53.696 [ INFO  ] [bc004fd0-ed9b-4eeb-a338-497066727a33] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:51:55.319 [ INFO  ] [bc004fd0-ed9b-4eeb-a338-497066727a33] Completed 200 OK in 2251ms (Views: 8.1ms) (pid:6896)
+2016-01-12 23:51:56.381 [ INFO  ] [0491b752-2da7-4c1a-9c21-13130c6541bb] Started GET "/" for 172.90.0.3 at 2016-01-12 23:51:56 -0500 (pid:6896)
+2016-01-12 23:51:56.382 [ INFO  ] [0491b752-2da7-4c1a-9c21-13130c6541bb] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 23:51:56.383 [ INFO  ] [0491b752-2da7-4c1a-9c21-13130c6541bb] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:51:59.132 [ INFO  ] [0491b752-2da7-4c1a-9c21-13130c6541bb] Completed 200 OK in 2749ms (Views: 0.2ms) (pid:6896)
+2016-01-12 23:51:59.955 [ INFO  ] [e60e161c-6fc8-4029-927e-25dab034a268] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:51:59 -0500 (pid:6896)
+2016-01-12 23:51:59.956 [ INFO  ] [e60e161c-6fc8-4029-927e-25dab034a268] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:51:59.957 [ INFO  ] [e60e161c-6fc8-4029-927e-25dab034a268] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:52:02.169 [ INFO  ] [e60e161c-6fc8-4029-927e-25dab034a268] Completed 200 OK in 2213ms (Views: 5.7ms) (pid:6896)
+2016-01-12 23:53:06.141 [ INFO  ] [ddf3e321-30b9-4416-9798-39bcf29554ac] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:53:06 -0500 (pid:6896)
+2016-01-12 23:53:06.142 [ INFO  ] [ddf3e321-30b9-4416-9798-39bcf29554ac] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:53:06.143 [ INFO  ] [ddf3e321-30b9-4416-9798-39bcf29554ac] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:53:08.313 [ INFO  ] [ddf3e321-30b9-4416-9798-39bcf29554ac] Completed 200 OK in 2171ms (Views: 5.6ms) (pid:6896)
+2016-01-12 23:53:09.268 [ INFO  ] [15104ef8-c98c-48c9-9058-b2770f660f49] Started GET "/" for 172.90.0.3 at 2016-01-12 23:53:09 -0500 (pid:6896)
+2016-01-12 23:53:09.269 [ INFO  ] [15104ef8-c98c-48c9-9058-b2770f660f49] Processing by OcciModelController#index as TEXT (pid:6896)
+2016-01-12 23:53:09.270 [ INFO  ] [15104ef8-c98c-48c9-9058-b2770f660f49] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:53:11.986 [ INFO  ] [15104ef8-c98c-48c9-9058-b2770f660f49] Completed 200 OK in 2716ms (Views: 0.2ms) (pid:6896)
+2016-01-12 23:53:12.846 [ INFO  ] [69b74f55-9c9b-42e0-9511-5f2da5bc4b26] Started GET "/-/" for 172.90.0.3 at 2016-01-12 23:53:12 -0500 (pid:6896)
+2016-01-12 23:53:12.848 [ INFO  ] [69b74f55-9c9b-42e0-9511-5f2da5bc4b26] Processing by OcciModelController#show as TEXT (pid:6896)
+2016-01-12 23:53:12.848 [ INFO  ] [69b74f55-9c9b-42e0-9511-5f2da5bc4b26] [Backend] Loading Backends::OpennebulaBackend (pid:6896)
+2016-01-12 23:53:15.459 [ INFO  ] [69b74f55-9c9b-42e0-9511-5f2da5bc4b26] Completed 200 OK in 2198ms (Views: 5.6ms) (pid:6896)

@@ -32,7 +32,7 @@ gem 'web-console', '~> 2.0', :group => :development
 gem 'whenever', :require => false
 
 # Use passenger for deployment (standalone or in Apache2)
-gem 'passenger', '~> 5.0.22'
+gem 'passenger', '~> 4.0.60'
 gem 'rake', '~> 10.3.2'
 
 # Use simplecov for coverage reports
@@ -45,7 +45,7 @@ gem 'fuubar', '~> 2.0.0', :group => [:development, :test]
 # Use Pry for debugging
 gem 'pry-rails', :group => [:development, :test]
 gem 'pry-rescue', :group => [:development, :test]
-gem 'pry-stack_explorer', :group => [:development, :test]
+#gem 'pry-stack_explorer', :group => [:development, :test]
 
 # Use guard to speed-up devel process
 gem 'guard-bundler', :group => :development
@@ -92,6 +92,10 @@ gem 'ice_nine'
 
 # Use occi-core for OCCI stuff
 gem 'occi-core', '~> 4.3.2'
+gem 'occi-api', '~> 4.3.5'
+gem 'pry-remote'
+gem 'pry-debugger'
+gem 'pry-stack_explorer'
 
 # Install gems for each auth. strategy from Rails.root/lib/authentication_strategies/bundles
 Dir.glob(File.join(File.dirname(__FILE__), 'lib', 'authentication_strategies', 'bundles', "Gemfile.*")) do |gemfile|

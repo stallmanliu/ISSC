@@ -16,6 +16,10 @@ class ComputeController < ApplicationController
     end
 
     respond_with(@computes, options)
+    
+    t = Time.now
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] compute_controller.rb, index(), @computes:\n" + @computes.inspect + "\n End" }
+    
   end
 
   # GET /compute/:id
@@ -33,9 +37,27 @@ class ComputeController < ApplicationController
 
   # POST /compute/
   def create
+    
+    #modified for ec2_occi
+=begin
     compute = request_occi_collection.resources.first
     compute_location = backend_instance.compute_create(compute)
 
+    respond_with("#{server_url}/compute/#{compute_location}", status: 201, flag: :link_only)
+    
+    ?
+=end
+    
+    create_ec2()
+    
+  end
+  
+  def create_ec2
+    compute = request_occi_collection.resources.first
+
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\ncreate_ec2(): compute:" + compute.inspect }
+    
+    compute_location = backend_instance.compute_create(compute)
     respond_with("#{server_url}/compute/#{compute_location}", status: 201, flag: :link_only)
   end
 
@@ -44,6 +66,10 @@ class ComputeController < ApplicationController
   def trigger
     ai = request_occi_collection(Occi::Core::ActionInstance).action
     check_ai!(ai, request.query_string)
+
+    t = Time.now
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] compute_controller.rb:trigger(), enter, params:" + params.inspect + ", ai:" + ai.inspect }
+    
 
     if params[:id]
       result = backend_instance.compute_trigger_action(params[:id], ai)

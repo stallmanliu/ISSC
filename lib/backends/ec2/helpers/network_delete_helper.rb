@@ -2,7 +2,8 @@ module Backends
   module Ec2
     module Helpers
       module NetworkDeleteHelper
-        def delete_dhcp_options(vpc)
+
+        def network_delete_dhcp_options(vpc)
           return false if vpc[:dhcp_options_id].blank?
 
           filters = []
@@ -16,7 +17,7 @@ module Backends
           true
         end
 
-        def delete_route_tables(vpc)
+        def network_delete_route_tables(vpc)
           filters = []
           filters << { name: 'vpc-id', values: [vpc[:vpc_id]] }
 
@@ -36,7 +37,7 @@ module Backends
           true
         end
 
-        def delete_acls(vpc)
+        def network_delete_acls(vpc)
           filters = []
           filters << { name: 'vpc-id', values: [vpc[:vpc_id]] }
 
@@ -51,7 +52,7 @@ module Backends
           true
         end
 
-        def delete_security_groups(vpc)
+        def network_delete_security_groups(vpc)
           filters = []
           filters << { name: 'vpc-id', values: [vpc[:vpc_id]] }
 
@@ -66,7 +67,7 @@ module Backends
           true
         end
 
-        def delete_internet_gateways(vpc)
+        def network_delete_internet_gateways(vpc)
           filters = []
           filters << { name: 'attachment.vpc-id', values: [vpc[:vpc_id]] }
 
@@ -81,7 +82,7 @@ module Backends
           true
         end
 
-        def delete_vpn_gateways(vpc)
+        def network_delete_vpn_gateways(vpc)
           filters = []
           filters << { name: 'attachment.vpc-id', values: [vpc[:vpc_id]] }
           filters << { name: 'attachment.state', values: ['attached'] }
@@ -90,10 +91,10 @@ module Backends
             vpn_gateways = @ec2_client.describe_vpn_gateways(filters: filters).vpn_gateways
             vpn_gateways.each do |vpn_gateway|
               @ec2_client.detach_vpn_gateway(vpn_gateway_id: vpn_gateway[:vpn_gateway_id], vpc_id: vpc[:vpc_id])
-              delete_vpn_gateways_wait4detach(vpn_gateway, vpc[:vpc_id])
+              network_delete_vpn_gateways_wait4detach(vpn_gateway, vpc[:vpc_id])
 
               if @options.network_destroy_vpn_gws
-                delete_vpn_connections(vpn_gateway)
+                network_delete_vpn_connections(vpn_gateway)
                 @ec2_client.delete_vpn_gateway(vpn_gateway_id: vpn_gateway[:vpn_gateway_id]) if vpn_gateway[:vpc_attachments].length == 1
               end
             end if vpn_gateways
@@ -102,7 +103,7 @@ module Backends
           true
         end
 
-        def delete_subnets(vpc)
+        def network_delete_subnets(vpc)
           filters = []
           filters << { name: 'vpc-id', values: [vpc[:vpc_id]] }
 
@@ -114,7 +115,7 @@ module Backends
           true
         end
 
-        def delete_vpn_connections(vpn_gateway)
+        def network_delete_vpn_connections(vpn_gateway)
           filters = []
           filters << { name: 'vpn-gateway-id', values: [vpn_gateway[:vpn_gateway_id]] }
 
@@ -123,12 +124,12 @@ module Backends
             vpn_connections.each { |vpn_connection| @ec2_client.delete_vpn_connection(vpn_connection_id: vpn_connection[:vpn_connection_id]) } if vpn_connections
           end
 
-          delete_vpn_connections_wait4detach(vpn_gateway)
+          network_delete_vpn_connections_wait4detach(vpn_gateway)
 
           true
         end
 
-        def delete_vpn_gateways_wait4detach(vpn_gateway, vpc_id)
+        def network_delete_vpn_gateways_wait4detach(vpn_gateway, vpc_id)
           return false unless vpn_gateway && vpc_id
 
           # TODO: use @ec2_client.wait_until if a waiter becomes available
@@ -149,7 +150,7 @@ module Backends
           true
         end
 
-        def delete_vpn_connections_wait4detach(vpn_gateway)
+        def network_delete_vpn_connections_wait4detach(vpn_gateway)
           return false unless vpn_gateway
 
           # TODO: use @ec2_client.wait_until if a waiter becomes available
@@ -169,6 +170,7 @@ module Backends
 
           true
         end
+
       end
     end
   end

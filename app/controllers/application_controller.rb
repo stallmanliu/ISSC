@@ -1,4 +1,7 @@
 require "application_responder"
+require "pry-remote"
+require "pry-debugger"
+require "pry-stack_explorer"
 
 # Base class for all rOCCI-server's controllers. Implements
 # parsing and authentication callbacks, exposes user information,
@@ -64,6 +67,7 @@ class ApplicationController < ActionController::Base
   #
   # @return [Hashie::Mash] a hash containing authentication data
   def current_user
+    puts "daniel: application_controller.rb enter current_user()"
     if Rails.env.test?
       # turn off caching for tests
       @current_user = warden.user
@@ -76,13 +80,15 @@ class ApplicationController < ActionController::Base
   #
   # @return [Warden::Manager]
   def warden
+    puts "daniel: application_controller.rb enter warden()"
     request.env['warden']
   end
 
   # Performs authentication with Warden. Warden will raise
   # an exception and redirect to UnauthorizedController.
   def authenticate!
-    warden.authenticate!
+    puts "daniel: enter authenticate!()"
+    #warden.authenticate!
   end
 
   # Provides access to a request collection prepared
@@ -91,12 +97,21 @@ class ApplicationController < ActionController::Base
   # @param expected_entity_type [Object] parameter passed as 'entity_type' to Occi::Parser.parse
   # @return [Occi::Collection] collection containig parsed OCCI request
   def request_occi_collection(expected_entity_type = nil)
+    puts "daniel: application_controller.rb enter request_occi_collection()"
+    t = Time.now
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] applicatoin_controller.request_occi_collection(): enter." }
+      
     if Rails.env.test?
       # turn off caching for tests
       @request_collection = parse_request(expected_entity_type)
     else
       @request_collection ||= parse_request(expected_entity_type)
     end
+
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] applicatoin_controller.request_occi_collection(): go to leave, @request_collection:" + @request_collection.inspect }
+     
+    @request_collection
+    
   end
 
   protected
@@ -105,11 +120,16 @@ class ApplicationController < ActionController::Base
   #
   # @return [Backend] instance of the backend
   def backend_instance
+    puts "daniel: application_controller.rb enter backend_instance()"
     if Rails.env.test?
       # turn off caching for tests
       @backend_instance = Backend.new(current_user)
+      #puts "daniel: application_controller.rb backend_instance() after Backend.new()"
+      #@backend_instance
     else
       @backend_instance ||= Backend.new(current_user)
+      #puts "daniel: application_controller.rb backend_instance() after Backend.new()"
+      #@backend_instance
     end
   end
 
@@ -118,11 +138,18 @@ class ApplicationController < ActionController::Base
   # @param expected_entity_type [Object] parameter passed as 'entity_type' to Occi::Parser.parse
   # @return [Occi::Collection] collection of parsed OCCI objects
   def parse_request(expected_entity_type = nil)
+    puts "daniel: application_controller.rb enter parse_request()"
+    t = Time.now
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] parse_request(): enter." }
+      
     request_collection = request.env['rocci_server.request.parser'].parse_occi_messages(expected_entity_type)
+    puts "daniel: going to new Occi::Collection"
     request_collection ||= Occi::Collection.new
 
     request_collection.model = OcciModel.get(backend_instance)
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] parse_request(): go to check request_collection:" +request_collection.inspect + "." }
     request_collection.check(check_categories = true, set_default_attrs = true)
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] parse_request(): going to leave." }
 
     request_collection
   end
@@ -139,7 +166,15 @@ class ApplicationController < ActionController::Base
   # Runs basic checks matching ActionInstance content with action name declared
   # in the 'query_string'
   def check_ai!(ai, query_string)
+    puts "daniel: application_controller.rb enter check_ai()"
+    t = Time.now
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] check_ai!(), enter: " }
+    #binding.remote_pry
+    puts "daniel: go to get action_param:"
     action_param = action_from_query_string(query_string)
+    puts "daniel: get action_param:" + action_param.inspect
+    #File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] check_ai!(), action_params: " + action_params.inspect }
+    puts "daniel: check_ai!(), ai:" + ai.inspect
     fail ::Errors::ArgumentError, 'Provided action does not have a term!' unless ai && ai.action && ai.action.term
     fail ::Errors::ArgumentTypeMismatchError, "Action terms in params and body do not " \
                                               "match! #{action_param.inspect} vs. #{ai.action.term.inspect}" unless ai.action.term == action_param
@@ -204,6 +239,7 @@ class ApplicationController < ActionController::Base
 
   # Action wrapper providing logging capabilities, mostly for debugging purposes.
   def global_request_logging
+    puts "daniel: application_controller.rb enter global_request_logging()"
     http_request_header_keys = request.headers.env.keys.select { |header_name| header_name.match('^HTTP.*') }
     http_request_headers = request.headers.select { |header_name, header_value| http_request_header_keys.index(header_name) }
 
@@ -216,7 +252,7 @@ class ApplicationController < ActionController::Base
     end
 
     # Run Warden if not already done, to avoid incomplete log entries after authN fail
-    authenticate!
+    #authenticate!
 
     begin
       yield
@@ -234,10 +270,12 @@ class ApplicationController < ActionController::Base
   # @param query_string [String] query string
   # @return [String] action term
   def action_from_query_string(query_string)
+    puts "daniel: application_controller.rb enter action_from_query_string()"
     logger.debug "[ApplicationController] Parsing action term from query string #{query_string.inspect}"
     return '' if query_string.blank?
-
+    puts "daniel: action_query_string(): got to matched, querey_string:" + query_string.inspect
     matched = /^action=(?<act>\S+)$/.match(query_string)
+    puts "daniel: matched:" + matched.inspect
     matched[:act]
   end
 

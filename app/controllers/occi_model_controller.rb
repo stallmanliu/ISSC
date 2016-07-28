@@ -1,9 +1,12 @@
+require 'occi-api'
+
 # Controller class handling all model-related requests.
 # Implements listing of resources, retrieval of the model
 # and creation/deletion of mixins.
 class OcciModelController < ApplicationController
   # GET /
   def index
+    
     if INDEX_LINK_FORMATS.include?(request.format)
       @resources = []
 
@@ -21,6 +24,10 @@ class OcciModelController < ApplicationController
     end
 
     respond_with(@resources, options)
+
+    t = Time.now
+    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] occi_model_controller.rb, OcciModelController.index(), @resource:\n" + @resources.inspect + "\n end" }
+
   end
 
   # GET /-/
@@ -28,6 +35,7 @@ class OcciModelController < ApplicationController
   def show
     @model = OcciModel.get(backend_instance, request_occi_collection)
     respond_with(@model)
+    #puts "/-/ show: " + @model.inspect
   end
 
   # POST /-/

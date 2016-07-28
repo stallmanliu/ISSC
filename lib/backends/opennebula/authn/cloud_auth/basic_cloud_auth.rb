@@ -17,10 +17,23 @@
 module Backends::Opennebula::Authn::CloudAuth
   module BasicCloudAuth
     def do_auth(params = {})
+      
+      #set for test
+      params = {}
+      params[:username] = "rocci"
+      params[:password] = "rocci"
+      
       fail Backends::Errors::AuthenticationError, 'Credentials for Basic not set!' unless params && params[:username] && params[:password]
 
-      one_pass = get_password(params[:username], 'core')
+      #one_pass = get_password(params[:username], 'core')
+      puts "daniel: enter one/auth/basic_auth.do_auth(), params:" + params.inspect
+      
+      one_pass = get_password(params[:username], 'server_cipher')
+      puts "daniel: enter one/auth/basic_auth.do_auth(), one_pass:" + one_pass.inspect
+      t = Time.now
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] Backends::Opennebula::Authn::CloudAuth::BasicCloudAuth.do_auth(), one_pass: " + one_pass.inspect + ". " }
       return nil if one_pass.blank?
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] Backends::Opennebula::Authn::CloudAuth::BasicCloudAuth.do_auth(), ::Digest::SHA1.hexdigest: " + ::Digest::SHA1.hexdigest(params[:password]).inspect + ". " }
       return nil unless one_pass == ::Digest::SHA1.hexdigest(params[:password])
 
       params[:username]

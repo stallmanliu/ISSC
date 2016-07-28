@@ -1,0 +1,5 @@
+LoadModule passenger_module /opt/rOCCI-server/vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60/buildout/apache2/mod_passenger.so
+<IfModule mod_passenger.c>
+  PassengerRoot /opt/rOCCI-server/vendor/bundle/ruby/1.9.1/gems/passenger-4.0.60
+  PassengerDefaultRuby /usr/bin/ruby1.9.1
+</IfModule>

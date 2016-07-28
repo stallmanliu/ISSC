@@ -20,6 +20,10 @@ module RequestParsers
     def call(env)
       request = ::ActionDispatch::Request.new(env)
 
+      t = Time.now
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:37, RequestParsers::OcciParser.call(env), request: " + request.inspect }
+      
+
       # make a copy of the request body
       @body = request.body.respond_to?(:read) ? request.body.read : request.body.string
       @body = Marshal.load(Marshal.dump(@body))
@@ -28,15 +32,21 @@ module RequestParsers
       @media_type = request.media_type.to_s
       @headers = sanitize_request_headers(request.headers)
       @fullpath = request.fullpath.to_s
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:37, RequestParsers::OcciParser.call(env), @body: " + @body.inspect + ", @fullpath:" + @fullpath.inspect }
 
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:37, RequestParsers::OcciParser.call(env), env: " + env.inspect }
       env['rocci_server.request.parser'] = self
       @app.call(env)
     end
 
     def parse_occi_messages(entity_type = nil)
+      t = Time.now
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:44, RequestParsers::OcciParser.parse_occi_messages(), enter, @media_type:" + @media_type }
+      
       fail ::Errors::UnsupportedMediaTypeError, "Media type '#{@media_type}' is not supported by the RequestParser" unless AVAILABLE_PARSERS.key?(@media_type)
 
       collection = if entity_type
+      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:44, RequestParsers::OcciParser.parse_occi_messages(), enter, go to parse():" }
                      AVAILABLE_PARSERS[@media_type].parse(@media_type, @body, @headers, @fullpath, entity_type)
                    else
                      AVAILABLE_PARSERS[@media_type].parse(@media_type, @body, @headers, @fullpath)

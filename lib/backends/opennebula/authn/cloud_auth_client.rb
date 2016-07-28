@@ -47,10 +47,16 @@ module Backends::Opennebula::Authn
     # conf a hash with the configuration attributes as symbols
     def initialize(conf)
       @conf   = conf
+      
+      #set for test
+      @conf[:auth] = "basic"
+      
       @lock   = ::Mutex.new
       @token_expiration_time = ::Time.now.to_i + EXPIRE_DELTA
       @upool_expiration_time = 0
       @conf[:use_user_pool_cache] = true
+
+      puts "daniel: opennebula/cloud_auth_client.rb enter initialize(), conf:" + conf.inspect
 
       if AUTH_MODULES.include?(@conf[:auth])
         extend Backends::Opennebula::Authn::CloudAuth.const_get(AUTH_MODULES[@conf[:auth]])
@@ -92,6 +98,7 @@ module Backends::Opennebula::Authn
     # specific do_auth module method. It updates the user cache (if needed)
     # before calling the do_auth module.
     def auth(params = {})
+      puts "daniel: enter one_cloud_auth.auth(), params:" + params.inspect
       update_userpool_cache if @conf[:use_user_pool_cache]
       do_auth(params)
     end
