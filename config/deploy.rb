@@ -7,13 +7,13 @@ Capistrano::CLI.ui.say <<"EOF";
    * Capistrano will NOT make any privileged changes on your server!
    * You need Ruby 1.9.3+ already installed on your server!
    * You need the bundler gem installed on your server!
-   * The server-side user has to be able to write into /opt/rOCCI-server!
+   * The server-side user has to be able to write into /opt/ISSC!
 
-     mkdir /opt/rOCCI-server
-     chown rocci:rocci /opt/rOCCI-server
+     mkdir /opt/ISSC
+     chown rocci:rocci /opt/ISSC
 
    * Apache2 has to be installed and properly configured!
-   * Apache2 VirtualHost must use /opt/rOCCI-server/current/public as DocumentRoot and Directory!
+   * Apache2 VirtualHost must use /opt/ISSC/current/public as DocumentRoot and Directory!
    * Cron has to be installed and the use of crontab allowed for the selected server-side user!
 
 EOF
@@ -26,8 +26,10 @@ Capistrano::CLI.ui.say <<"EOF";
 
 EOF
 
-set :application, 'rOCCI-server'
-set :repository,  'https://github.com/EGI-FCTF/rOCCI-server.git'
+#set :application, 'rOCCI-server'
+set :application, 'ISSC'
+#set :repository,  'https://github.com/EGI-FCTF/rOCCI-server.git'
+set :repository,  'https://github.com/stallmanliu/ISSC.git'
 ssh_options[:forward_agent] = false
 
 set :use_sudo, false

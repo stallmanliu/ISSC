@@ -1,6 +1,6 @@
 require "application_responder"
 
-# Base class for all rOCCI-server's controllers. Implements
+# Base class for all ISSC's controllers. Implements
 # parsing and authentication callbacks, exposes user information,
 # declares supported media formats and handles raised errors.
 class ApplicationController < ActionController::Base
@@ -83,7 +83,7 @@ class ApplicationController < ActionController::Base
   # an exception and redirect to UnauthorizedController.
   def authenticate!
     t = Time.now
-    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] application_controller.rb, ApplicationController.authenticate!, skip. " }
+    File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] application_controller.rb, ApplicationController.authenticate!, skip. " }
     #warden.authenticate!
   end
 

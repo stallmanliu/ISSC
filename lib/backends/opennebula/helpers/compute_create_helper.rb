@@ -153,9 +153,9 @@ module Backends
             compute.summary
           elsif !template['TEMPLATE/DESCRIPTION'].blank?
             "#{template['TEMPLATE/DESCRIPTION']}#{template['TEMPLATE/DESCRIPTION'].end_with?('.') ? '' : '.' }" \
-            " Instantiated with rOCCI-server on #{::DateTime.now.readable_inspect}."
+            " Instantiated with ISSC on #{::DateTime.now.readable_inspect}."
           else
-            "Instantiated with rOCCI-server on #{::DateTime.now.readable_inspect}."
+            "Instantiated with ISSC on #{::DateTime.now.readable_inspect}."
           end
 
           template.delete_element('TEMPLATE/DESCRIPTION')

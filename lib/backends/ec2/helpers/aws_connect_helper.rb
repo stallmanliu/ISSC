@@ -31,7 +31,7 @@ module Backends
           end
         end
 
-        # Converts EC2 error codes to errors understood by rOCCI-server.
+        # Converts EC2 error codes to errors understood by ISSC.
         # This method will ALWAYS raise an error.
         # See http://docs.aws.amazon.com/AWSEC2/latest/APIReference/api-error-codes.html
         #

@@ -51,7 +51,7 @@ class ComputeController < ApplicationController
   def create_ec2
     compute = request_occi_collection.resources.first
 
-    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\ncreate_ec2(): compute:" + compute.inspect }
+    File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts " [daniel]\ncreate_ec2(): compute:" + compute.inspect }
     
     compute_location = backend_instance.compute_create(compute)
     respond_with("#{server_url}/compute/#{compute_location}", status: 201, flag: :link_only)

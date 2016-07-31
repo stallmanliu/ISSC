@@ -95,9 +95,9 @@ gem 'ice_nine'
 # Use occi-core for OCCI stuff
 gem 'occi-core', '~> 4.3.2'
 gem 'occi-api', '~> 4.3.5'
-gem 'pry-remote'
-gem 'pry-debugger'
-gem 'pry-stack_explorer'
+#gem 'pry-remote'
+#gem 'pry-debugger'
+#gem 'pry-stack_explorer'
 
 # Install gems for each auth. strategy from Rails.root/lib/authentication_strategies/bundles
 Dir.glob(File.join(File.dirname(__FILE__), 'lib', 'authentication_strategies', 'bundles', "Gemfile.*")) do |gemfile|

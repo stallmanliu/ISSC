@@ -9,7 +9,7 @@ module Backends
         COMPUTE_DN_BASED_AUTHS = %w(x509 voms).freeze
 
         def compute_create_with_os_tpl(compute)
-          File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\ncompute_create_with_os_tpl(): enter." }
+          File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts " [daniel]\ncompute_create_with_os_tpl(): enter." }
           @logger.debug "[Backends] [Ec2Backend] Deploying #{compute.inspect}"
 
           # generate and amend inst options
@@ -20,7 +20,7 @@ module Backends
           instance_id = nil
           ec2_response = nil
 
-          File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\nOComputeCreateHelper.compute_create_with_os_tpl(): go to @ec2_client.run_instances(instance_opts), compute:" + compute.inspect + ", instance_opts:" + instance_opts.inspect }
+          File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts " [daniel]\nOComputeCreateHelper.compute_create_with_os_tpl(): go to @ec2_client.run_instances(instance_opts), compute:" + compute.inspect + ", instance_opts:" + instance_opts.inspect }
           
           
           Backends::Ec2::Helpers::AwsConnectHelper.rescue_aws_service(@logger) do
@@ -32,12 +32,12 @@ module Backends
               tags: tags
             )
 =end
-          File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\nOComputeCreateHelper.compute_create_with_os_tpl(): after @ec2_client.run_instances(instance_opts), instance_id:" + instance_id.inspect + ", ec2_response:" + ec2_response.inspect }
+          File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts " [daniel]\nOComputeCreateHelper.compute_create_with_os_tpl(): after @ec2_client.run_instances(instance_opts), instance_id:" + instance_id.inspect + ", ec2_response:" + ec2_response.inspect }
           
             
           end
 
-          File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts " [daniel]\nOComputeCreateHelper.compute_create_with_os_tpl(): after @ec2_client.run_instances(instance_opts), instance_id:" + instance_id.inspect + ", ec2_response:" + ec2_response.inspect }
+          File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts " [daniel]\nOComputeCreateHelper.compute_create_with_os_tpl(): after @ec2_client.run_instances(instance_opts), instance_id:" + instance_id.inspect + ", ec2_response:" + ec2_response.inspect }
           
           # run post-inst actions
           compute_create_add_inline_strglnks(compute, instance_id)

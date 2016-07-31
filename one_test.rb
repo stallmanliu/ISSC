@@ -145,7 +145,7 @@ def show_resource_types()
   #puts "\n\nONE:\n\n"
   
   #t = Time.now
-  #File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] occi_model_controller.rb, OcciModelController.show(), enter: " } 
+  #File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] occi_model_controller.rb, OcciModelController.show(), enter: " } 
     
   @one_client.get_resource_types.each do |type|
   puts "\n#{type}"

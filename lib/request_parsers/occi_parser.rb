@@ -15,7 +15,7 @@ module RequestParsers
 
     def initialize(app)
       t = Time.now
-      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:18, RequestParsers::OcciParser.initialize(app), app: " + app.inspect }
+      File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:18, RequestParsers::OcciParser.initialize(app), app: " + app.inspect }
       
       @app = app
     end
@@ -34,14 +34,14 @@ module RequestParsers
 
       env['rocci_server.request.parser'] = self
       t = Time.now
-      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:37, RequestParsers::OcciParser.call(env), before @app.call(env): " }
+      File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:37, RequestParsers::OcciParser.call(env), before @app.call(env): " }
       
       @app.call(env)
     end
 
     def parse_occi_messages(entity_type = nil)
       t = Time.now
-      File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:44, RequestParsers::OcciParser.parse_occi_messages(), enter: " }
+      File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] lib/request_parsers/occi_parser.rb:44, RequestParsers::OcciParser.parse_occi_messages(), enter: " }
       
       fail ::Errors::UnsupportedMediaTypeError, "Media type '#{@media_type}' is not supported by the RequestParser" unless AVAILABLE_PARSERS.key?(@media_type)
 

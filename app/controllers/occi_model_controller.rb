@@ -664,7 +664,7 @@ class OcciModelController < ApplicationController
     #puts "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nONE:"
     
     t = Time.now
-    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] occi_model_controller.rb, OcciModelController.show(), enter: " }
+    File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] occi_model_controller.rb, OcciModelController.show(), enter: " }
       
     
     
@@ -720,7 +720,7 @@ ec2_client = Occi::Api::Client::ClientHttp.new({
 =end
     
     t = Time.now
-    File.open("/opt/rOCCI-server/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] occi_model_controller.rb, OcciModelController.show(), leave: " }
+    File.open("/opt/ISSC/daniel.log", "a+") { |f| f.puts t.strftime("%H:%M:%S:%L") + " [daniel] occi_model_controller.rb, OcciModelController.show(), leave: " }
      
     
     

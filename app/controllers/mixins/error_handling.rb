@@ -1,4 +1,4 @@
-# A set of mixins for rOCCI-server's controllers. Includes
+# A set of mixins for ISSC's controllers. Includes
 # various helpers and handling methods shared among controllers
 # or stuff off-loaded during controller refactoring.
 module Mixins
