@@ -286,11 +286,8 @@ sed -i '/#SetEnv ROCCI_SERVER_HOSTNAME/a\    SetEnv ROCCI_SERVER_HOSTNAME       
 sed -i 's/SetEnv ROCCI_SERVER_BACKEND/#SetEnv ROCCI_SERVER_BACKEND/g' /etc/apache2/sites-available/occi-ssl.conf 
 sed -i '/#SetEnv ROCCI_SERVER_BACKEND/a\    SetEnv ROCCI_SERVER_BACKEND               ec2' /etc/apache2/sites-available/occi-ssl.conf
 
-sed -i 's/SetEnv ROCCI_SERVER_EC2_AWS_ACCESS_KEY_ID/#SetEnv ROCCI_SERVER_EC2_AWS_ACCESS_KEY_ID/g' /etc/apache2/sites-available/occi-ssl.conf 
-sed -i '/#SetEnv ROCCI_SERVER_EC2_AWS_ACCESS_KEY_ID/a\    SetEnv ROCCI_SERVER_EC2_AWS_ACCESS_KEY_ID          AKIAJFZHTZ44OBT26KSQ' /etc/apache2/sites-available/occi-ssl.conf
-
-sed -i 's/SetEnv ROCCI_SERVER_EC2_AWS_SECRET_ACCESS_KEY/#SetEnv ROCCI_SERVER_EC2_AWS_SECRET_ACCESS_KEY/g' /etc/apache2/sites-available/occi-ssl.conf 
-sed -i '/#SetEnv ROCCI_SERVER_EC2_AWS_SECRET_ACCESS_KEY/a\    SetEnv ROCCI_SERVER_EC2_AWS_SECRET_ACCESS_KEY      mhwP6HbIW8EODHD+VUcS6859CShPWmsFK6KqRbVM' /etc/apache2/sites-available/occi-ssl.conf
+#need specify AWS Access Key
+#???
 
 sed -i 's/SetEnv ROCCI_SERVER_EC2_AWS_REGION/#SetEnv ROCCI_SERVER_EC2_AWS_REGION/g' /etc/apache2/sites-available/occi-ssl.conf 
 sed -i '/#SetEnv ROCCI_SERVER_EC2_AWS_REGION/a\    SetEnv ROCCI_SERVER_EC2_AWS_REGION                 us-east-1' /etc/apache2/sites-available/occi-ssl.conf

@@ -23,13 +23,9 @@ ONE_USERNAME = 'rocci'
 ONE_PASSWORD = 'rocci'
 
 EC2_ENDPOINT           = 'https://172.90.0.20:11443'
-#stallmanliu
-#EC2_USERNAME = 'AKIAJFZHTZ44OBT26KSQ'
-#EC2_PASSWORD = 'mhwP6HbIW8EODHD+VUcS6859CShPWmsFK6KqRbVM'
-#daniel
-#AKIAJ27CLZF7UKE66G7A:l2a0ng4T53o4NXUdQuyhBnewXPY0udZDMs8Qcncl
-EC2_USERNAME = 'AKIAJ27CLZF7UKE66G7A'
-EC2_PASSWORD = 'l2a0ng4T53o4NXUdQuyhBnewXPY0udZDMs8Qcncl'
+#need specify AWS Access Key
+EC2_USERNAME = ''
+EC2_PASSWORD = ''
 #default deployment: one/ec2 ratio, e.g: 0.5, 0.75, 1.0, 2.0, 5.0
 
 

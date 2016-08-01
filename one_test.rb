@@ -19,12 +19,9 @@ ONE_USERNAME = 'rocci'
 ONE_PASSWORD = 'rocci'
 
 EC2_ENDPOINT           = 'https://172.90.0.20:11443'
-#stallmanliu
-#EC2_USERNAME = 'AKIAJFZHTZ44OBT26KSQ'
-#EC2_PASSWORD = 'mhwP6HbIW8EODHD+VUcS6859CShPWmsFK6KqRbVM'
-#daniel
-EC2_USERNAME = 'AKIAJVCAU7L335Q2E4OQ'
-EC2_PASSWORD = '3sJ7xNMiSmiywEaZJDANSzSckbOnorxrvHlrPkko'
+#need specify AWS Access Key
+EC2_USERNAME = ''
+EC2_PASSWORD = ''
 @@vm_num = 2
 
 
